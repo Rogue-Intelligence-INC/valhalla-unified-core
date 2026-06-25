@@ -2,18 +2,19 @@
 
 | Document | Description |
 |----------|-------------|
-| [../README.md](../README.md) | Product overview, quick start, layout |
-| [INTRODUCTION.md](./INTRODUCTION.md) | Detailed architecture, benchmarks, roadmap |
-| [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility maximum product goal |
-| [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | **Fate Hub ingress routing — quad_cycle production default** |
+| [../README.md](../README.md) | GitHub landing page · quick start · production config |
+| **[VALHALLA_BASE_PLATFORM.md](./VALHALLA_BASE_PLATFORM.md)** | **完整平台文档** — 新基座、上下文融合、Fate、生产配置 |
+| [INTRODUCTION.md](./INTRODUCTION.md) | Product & investor introduction |
+| [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility maximum goal |
+| [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | Fate Hub ingress — quad_cycle default |
 | [../PROTOCOL.md](../PROTOCOL.md) | `valhalla-unified-core-v1` bake protocol |
-| [../NON_OPEN_SOURCE.md](../NON_OPEN_SOURCE.md) | Proprietary / NOT open source declaration |
-| [../page/index.html](../page/index.html) | Introduction landing page (open in browser) |
+| [../NON_OPEN_SOURCE.md](../NON_OPEN_SOURCE.md) | Proprietary declaration |
+| [../page/index.html](../page/index.html) | Browser intro landing page |
 
-## Related monorepo docs
+## Related monorepo paths
 
 When checked out inside Valhalla:
 
-- `tools/valhalla_inference/` — ValhallaBase, scale benchmarks, context-core fusion tests
-- `reports/valhalla_inference/` — JSON experiment reports
-- `manifestsys/hub-f64/` — runtime source
+- `manifestsys/hub-f64/src/valhalla_base.rs` — ValhallaBase runtime
+- `tools/valhalla_inference/` — Python API & benchmarks
+- `reports/valhalla_inference/` — full JSON report mirror

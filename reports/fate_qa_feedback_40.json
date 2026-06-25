@@ -1,0 +1,4671 @@
+{
+  "timestamp": "2026-06-25T23:45:28.977856+00:00",
+  "protocol": "fate-qa-feedback-v1",
+  "phase1_gradual_rounds": 20,
+  "phase2_free_rounds": 20,
+  "fate_qa_feedback": true,
+  "fate_ingress_routing": "quad_cycle",
+  "threads": [
+    {
+      "thread_id": "physics",
+      "total_rounds": 40,
+      "on_topic_hits": 27,
+      "on_topic_rate": 0.675,
+      "phase_stats": {
+        "gradual": {
+          "hits": 15,
+          "n": 20,
+          "rate": 0.75,
+          "avg_spread": 0.06643780223217949
+        },
+        "free": {
+          "hits": 12,
+          "n": 20,
+          "rate": 0.6,
+          "avg_spread": 0.09519440722554151
+        }
+      },
+      "final_spread": 0.10168,
+      "final_prefs": [
+        0.31395,
+        0.21227,
+        0.22873,
+        0.24505
+      ],
+      "turns": [
+        {
+          "round": 0,
+          "phase": "gradual",
+          "constraint": 1.0,
+          "hub_prefs": [
+            0.27362,
+            0.24213,
+            0.24213,
+            0.24213
+          ],
+          "hub_prefs_spread": 0.03149,
+          "hub_routed": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 24,
+              "MeshBrain": 24,
+              "MultiNova": 24,
+              "BaseForce": 24
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 1,
+          "phase": "gradual",
+          "constraint": 0.95,
+          "hub_prefs": [
+            0.26821,
+            0.23753,
+            0.23753,
+            0.25674
+          ],
+          "hub_prefs_spread": 0.03068,
+          "hub_routed": [
+            40,
+            40,
+            40,
+            40
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 40,
+              "MeshBrain": 40,
+              "MultiNova": 40,
+              "BaseForce": 40
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 2,
+          "phase": "gradual",
+          "constraint": 0.9,
+          "hub_prefs": [
+            0.2638,
+            0.23377,
+            0.23377,
+            0.26866
+          ],
+          "hub_prefs_spread": 0.03489,
+          "hub_routed": [
+            48,
+            48,
+            48,
+            48
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 48,
+              "MeshBrain": 48,
+              "MultiNova": 48,
+              "BaseForce": 48
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 3,
+          "phase": "gradual",
+          "constraint": 0.85,
+          "hub_prefs": [
+            0.27391,
+            0.23062,
+            0.23062,
+            0.26486
+          ],
+          "hub_prefs_spread": 0.0433,
+          "hub_routed": [
+            56,
+            56,
+            56,
+            56
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 56,
+              "MeshBrain": 56,
+              "MultiNova": 56,
+              "BaseForce": 56
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 4,
+          "phase": "gradual",
+          "constraint": 0.8,
+          "hub_prefs": [
+            0.27049,
+            0.2279,
+            0.24002,
+            0.26159
+          ],
+          "hub_prefs_spread": 0.04259,
+          "hub_routed": [
+            64,
+            64,
+            64,
+            64
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 64,
+              "MeshBrain": 64,
+              "MultiNova": 64,
+              "BaseForce": 64
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 5,
+          "phase": "gradual",
+          "constraint": 0.75,
+          "hub_prefs": [
+            0.2783,
+            0.22552,
+            0.23747,
+            0.25872
+          ],
+          "hub_prefs_spread": 0.05278,
+          "hub_routed": [
+            72,
+            72,
+            72,
+            72
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 72,
+              "MeshBrain": 72,
+              "MultiNova": 72,
+              "BaseForce": 72
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 6,
+          "phase": "gradual",
+          "constraint": 0.7,
+          "hub_prefs": [
+            0.28523,
+            0.2234,
+            0.2352,
+            0.25617
+          ],
+          "hub_prefs_spread": 0.06183,
+          "hub_routed": [
+            80,
+            80,
+            80,
+            80
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 80,
+              "MeshBrain": 80,
+              "MultiNova": 80,
+              "BaseForce": 80
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 7,
+          "phase": "gradual",
+          "constraint": 0.65,
+          "hub_prefs": [
+            0.28544,
+            0.22335,
+            0.23513,
+            0.25608
+          ],
+          "hub_prefs_spread": 0.06209,
+          "hub_routed": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 88,
+              "MeshBrain": 88,
+              "MultiNova": 88,
+              "BaseForce": 88
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 8,
+          "phase": "gradual",
+          "constraint": 0.6,
+          "hub_prefs": [
+            0.29115,
+            0.22161,
+            0.23326,
+            0.25398
+          ],
+          "hub_prefs_spread": 0.06955,
+          "hub_routed": [
+            96,
+            96,
+            96,
+            96
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 96,
+              "MeshBrain": 96,
+              "MultiNova": 96,
+              "BaseForce": 96
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 9,
+          "phase": "gradual",
+          "constraint": 0.55,
+          "hub_prefs": [
+            0.296,
+            0.22013,
+            0.23167,
+            0.2522
+          ],
+          "hub_prefs_spread": 0.07588,
+          "hub_routed": [
+            112,
+            112,
+            112,
+            112
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 112,
+              "MeshBrain": 112,
+              "MultiNova": 112,
+              "BaseForce": 112
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 10,
+          "phase": "gradual",
+          "constraint": 0.5,
+          "hub_prefs": [
+            0.29862,
+            0.21934,
+            0.23082,
+            0.25123
+          ],
+          "hub_prefs_spread": 0.07928,
+          "hub_routed": [
+            128,
+            128,
+            128,
+            128
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 128,
+              "MeshBrain": 128,
+              "MultiNova": 128,
+              "BaseForce": 128
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 11,
+          "phase": "gradual",
+          "constraint": 0.45,
+          "hub_prefs": [
+            0.29838,
+            0.21921,
+            0.23067,
+            0.25174
+          ],
+          "hub_prefs_spread": 0.07917,
+          "hub_routed": [
+            144,
+            144,
+            144,
+            144
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 144,
+              "MeshBrain": 144,
+              "MultiNova": 144,
+              "BaseForce": 144
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 12,
+          "phase": "gradual",
+          "constraint": 0.4,
+          "hub_prefs": [
+            0.29816,
+            0.21909,
+            0.23054,
+            0.25221
+          ],
+          "hub_prefs_spread": 0.07907,
+          "hub_routed": [
+            160,
+            160,
+            160,
+            160
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 160,
+              "MeshBrain": 160,
+              "MultiNova": 160,
+              "BaseForce": 160
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 13,
+          "phase": "gradual",
+          "constraint": 0.35,
+          "hub_prefs": [
+            0.30006,
+            0.21852,
+            0.22992,
+            0.2515
+          ],
+          "hub_prefs_spread": 0.08154,
+          "hub_routed": [
+            176,
+            176,
+            176,
+            176
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 176,
+              "MeshBrain": 176,
+              "MultiNova": 176,
+              "BaseForce": 176
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 14,
+          "phase": "gradual",
+          "constraint": 0.3,
+          "hub_prefs": [
+            0.29923,
+            0.218,
+            0.23191,
+            0.25086
+          ],
+          "hub_prefs_spread": 0.08123,
+          "hub_routed": [
+            192,
+            192,
+            192,
+            192
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 192,
+              "MeshBrain": 192,
+              "MultiNova": 192,
+              "BaseForce": 192
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 15,
+          "phase": "gradual",
+          "constraint": 0.25,
+          "hub_prefs": [
+            0.29955,
+            0.21791,
+            0.23181,
+            0.25073
+          ],
+          "hub_prefs_spread": 0.08165,
+          "hub_routed": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 200,
+              "MeshBrain": 200,
+              "MultiNova": 200,
+              "BaseForce": 200
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 16,
+          "phase": "gradual",
+          "constraint": 0.2,
+          "hub_prefs": [
+            0.30115,
+            0.21743,
+            0.23128,
+            0.25014
+          ],
+          "hub_prefs_spread": 0.08373,
+          "hub_routed": [
+            208,
+            208,
+            208,
+            208
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 208,
+              "MeshBrain": 208,
+              "MultiNova": 208,
+              "BaseForce": 208
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 17,
+          "phase": "gradual",
+          "constraint": 0.15,
+          "hub_prefs": [
+            0.30145,
+            0.21734,
+            0.23118,
+            0.25002
+          ],
+          "hub_prefs_spread": 0.08411,
+          "hub_routed": [
+            216,
+            216,
+            216,
+            216
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 216,
+              "MeshBrain": 216,
+              "MultiNova": 216,
+              "BaseForce": 216
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 18,
+          "phase": "gradual",
+          "constraint": 0.1,
+          "hub_prefs": [
+            0.30293,
+            0.2169,
+            0.2307,
+            0.24947
+          ],
+          "hub_prefs_spread": 0.08603,
+          "hub_routed": [
+            224,
+            224,
+            224,
+            224
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 224,
+              "MeshBrain": 224,
+              "MultiNova": 224,
+              "BaseForce": 224
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 19,
+          "phase": "gradual",
+          "constraint": 0.05,
+          "hub_prefs": [
+            0.30436,
+            0.21647,
+            0.23023,
+            0.24895
+          ],
+          "hub_prefs_spread": 0.08788,
+          "hub_routed": [
+            232,
+            232,
+            232,
+            232
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 232,
+              "MeshBrain": 232,
+              "MultiNova": 232,
+              "BaseForce": 232
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 20,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30573,
+            0.21606,
+            0.22977,
+            0.24844
+          ],
+          "hub_prefs_spread": 0.08967,
+          "hub_routed": [
+            240,
+            240,
+            240,
+            240
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 240,
+              "MeshBrain": 240,
+              "MultiNova": 240,
+              "BaseForce": 240
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 21,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30558,
+            0.21599,
+            0.22969,
+            0.24874
+          ],
+          "hub_prefs_spread": 0.0896,
+          "hub_routed": [
+            248,
+            248,
+            248,
+            248
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 248,
+              "MeshBrain": 248,
+              "MultiNova": 248,
+              "BaseForce": 248
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 22,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30544,
+            0.21592,
+            0.22961,
+            0.24903
+          ],
+          "hub_prefs_spread": 0.08952,
+          "hub_routed": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 256,
+              "MeshBrain": 256,
+              "MultiNova": 256,
+              "BaseForce": 256
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 23,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30669,
+            0.21555,
+            0.2292,
+            0.24857
+          ],
+          "hub_prefs_spread": 0.09114,
+          "hub_routed": [
+            264,
+            264,
+            264,
+            264
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 264,
+              "MeshBrain": 264,
+              "MultiNova": 264,
+              "BaseForce": 264
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 24,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30609,
+            0.21518,
+            0.23061,
+            0.24812
+          ],
+          "hub_prefs_spread": 0.0909,
+          "hub_routed": [
+            272,
+            272,
+            272,
+            272
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 272,
+              "MeshBrain": 272,
+              "MultiNova": 272,
+              "BaseForce": 272
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 25,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30631,
+            0.21512,
+            0.23053,
+            0.24803
+          ],
+          "hub_prefs_spread": 0.09119,
+          "hub_routed": [
+            280,
+            280,
+            280,
+            280
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 280,
+              "MeshBrain": 280,
+              "MultiNova": 280,
+              "BaseForce": 280
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 26,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30745,
+            0.21478,
+            0.23015,
+            0.24761
+          ],
+          "hub_prefs_spread": 0.09267,
+          "hub_routed": [
+            288,
+            288,
+            288,
+            288
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 288,
+              "MeshBrain": 288,
+              "MultiNova": 288,
+              "BaseForce": 288
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 27,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30767,
+            0.21472,
+            0.23008,
+            0.24753
+          ],
+          "hub_prefs_spread": 0.09294,
+          "hub_routed": [
+            296,
+            296,
+            296,
+            296
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 296,
+              "MeshBrain": 296,
+              "MultiNova": 296,
+              "BaseForce": 296
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 28,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30874,
+            0.2144,
+            0.22973,
+            0.24713
+          ],
+          "hub_prefs_spread": 0.09434,
+          "hub_routed": [
+            304,
+            304,
+            304,
+            304
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 304,
+              "MeshBrain": 304,
+              "MultiNova": 304,
+              "BaseForce": 304
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 29,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.30979,
+            0.21409,
+            0.22938,
+            0.24674
+          ],
+          "hub_prefs_spread": 0.0957,
+          "hub_routed": [
+            312,
+            312,
+            312,
+            312
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 312,
+              "MeshBrain": 312,
+              "MultiNova": 312,
+              "BaseForce": 312
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 30,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31081,
+            0.21378,
+            0.22904,
+            0.24637
+          ],
+          "hub_prefs_spread": 0.09702,
+          "hub_routed": [
+            320,
+            320,
+            320,
+            320
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 320,
+              "MeshBrain": 320,
+              "MultiNova": 320,
+              "BaseForce": 320
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 31,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31069,
+            0.21373,
+            0.22898,
+            0.2466
+          ],
+          "hub_prefs_spread": 0.09696,
+          "hub_routed": [
+            328,
+            328,
+            328,
+            328
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 328,
+              "MeshBrain": 328,
+              "MultiNova": 328,
+              "BaseForce": 328
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 32,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31058,
+            0.21368,
+            0.22892,
+            0.24682
+          ],
+          "hub_prefs_spread": 0.0969,
+          "hub_routed": [
+            336,
+            336,
+            336,
+            336
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 336,
+              "MeshBrain": 336,
+              "MultiNova": 336,
+              "BaseForce": 336
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 33,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31153,
+            0.2134,
+            0.2286,
+            0.24647
+          ],
+          "hub_prefs_spread": 0.09813,
+          "hub_routed": [
+            344,
+            344,
+            344,
+            344
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 344,
+              "MeshBrain": 344,
+              "MultiNova": 344,
+              "BaseForce": 344
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 34,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31106,
+            0.21312,
+            0.22969,
+            0.24613
+          ],
+          "hub_prefs_spread": 0.09793,
+          "hub_routed": [
+            352,
+            352,
+            352,
+            352
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 352,
+              "MeshBrain": 352,
+              "MultiNova": 352,
+              "BaseForce": 352
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 35,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31123,
+            0.21307,
+            0.22964,
+            0.24606
+          ],
+          "hub_prefs_spread": 0.09815,
+          "hub_routed": [
+            360,
+            360,
+            360,
+            360
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 360,
+              "MeshBrain": 360,
+              "MultiNova": 360,
+              "BaseForce": 360
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 36,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31211,
+            0.21281,
+            0.22934,
+            0.24573
+          ],
+          "hub_prefs_spread": 0.0993,
+          "hub_routed": [
+            368,
+            368,
+            368,
+            368
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 368,
+              "MeshBrain": 368,
+              "MultiNova": 368,
+              "BaseForce": 368
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 37,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31228,
+            0.21277,
+            0.22929,
+            0.24567
+          ],
+          "hub_prefs_spread": 0.09951,
+          "hub_routed": [
+            376,
+            376,
+            376,
+            376
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 376,
+              "MeshBrain": 376,
+              "MultiNova": 376,
+              "BaseForce": 376
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 38,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31312,
+            0.21252,
+            0.22901,
+            0.24536
+          ],
+          "hub_prefs_spread": 0.1006,
+          "hub_routed": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 384,
+              "MeshBrain": 384,
+              "MultiNova": 384,
+              "BaseForce": 384
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 39,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.31395,
+            0.21227,
+            0.22873,
+            0.24505
+          ],
+          "hub_prefs_spread": 0.10168,
+          "hub_routed": [
+            392,
+            392,
+            392,
+            392
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 392,
+              "MeshBrain": 392,
+              "MultiNova": 392,
+              "BaseForce": 392
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        }
+      ]
+    },
+    {
+      "thread_id": "chemistry",
+      "total_rounds": 40,
+      "on_topic_hits": 38,
+      "on_topic_rate": 0.95,
+      "phase_stats": {
+        "gradual": {
+          "hits": 20,
+          "n": 20,
+          "rate": 1.0,
+          "avg_spread": 0.09939777609312005
+        },
+        "free": {
+          "hits": 18,
+          "n": 20,
+          "rate": 0.9,
+          "avg_spread": 0.14180667458640225
+        }
+      },
+      "final_spread": 0.15101,
+      "final_prefs": [
+        0.20734,
+        0.22698,
+        0.35834,
+        0.20734
+      ],
+      "turns": [
+        {
+          "round": 0,
+          "phase": "gradual",
+          "constraint": 1.0,
+          "hub_prefs": [
+            0.24213,
+            0.24213,
+            0.27362,
+            0.24213
+          ],
+          "hub_prefs_spread": 0.03149,
+          "hub_routed": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 24,
+              "MeshBrain": 24,
+              "MultiNova": 24,
+              "BaseForce": 24
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 1,
+          "phase": "gradual",
+          "constraint": 0.95,
+          "hub_prefs": [
+            0.23753,
+            0.23753,
+            0.28742,
+            0.23753
+          ],
+          "hub_prefs_spread": 0.0499,
+          "hub_routed": [
+            40,
+            40,
+            40,
+            40
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 40,
+              "MeshBrain": 40,
+              "MultiNova": 40,
+              "BaseForce": 40
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 2,
+          "phase": "gradual",
+          "constraint": 0.9,
+          "hub_prefs": [
+            0.23377,
+            0.24986,
+            0.2826,
+            0.23377
+          ],
+          "hub_prefs_spread": 0.04883,
+          "hub_routed": [
+            48,
+            48,
+            48,
+            48
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 48,
+              "MeshBrain": 48,
+              "MultiNova": 48,
+              "BaseForce": 48
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 3,
+          "phase": "gradual",
+          "constraint": 0.85,
+          "hub_prefs": [
+            0.23062,
+            0.2464,
+            0.29237,
+            0.23062
+          ],
+          "hub_prefs_spread": 0.06175,
+          "hub_routed": [
+            56,
+            56,
+            56,
+            56
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 56,
+              "MeshBrain": 56,
+              "MultiNova": 56,
+              "BaseForce": 56
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 4,
+          "phase": "gradual",
+          "constraint": 0.8,
+          "hub_prefs": [
+            0.2279,
+            0.24343,
+            0.30078,
+            0.2279
+          ],
+          "hub_prefs_spread": 0.07288,
+          "hub_routed": [
+            64,
+            64,
+            64,
+            64
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 64,
+              "MeshBrain": 64,
+              "MultiNova": 64,
+              "BaseForce": 64
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 5,
+          "phase": "gradual",
+          "constraint": 0.75,
+          "hub_prefs": [
+            0.22552,
+            0.24082,
+            0.30814,
+            0.22552
+          ],
+          "hub_prefs_spread": 0.08263,
+          "hub_routed": [
+            72,
+            72,
+            72,
+            72
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 72,
+              "MeshBrain": 72,
+              "MultiNova": 72,
+              "BaseForce": 72
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 6,
+          "phase": "gradual",
+          "constraint": 0.7,
+          "hub_prefs": [
+            0.2234,
+            0.23851,
+            0.31469,
+            0.2234
+          ],
+          "hub_prefs_spread": 0.09129,
+          "hub_routed": [
+            80,
+            80,
+            80,
+            80
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 80,
+              "MeshBrain": 80,
+              "MultiNova": 80,
+              "BaseForce": 80
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 7,
+          "phase": "gradual",
+          "constraint": 0.65,
+          "hub_prefs": [
+            0.2215,
+            0.23643,
+            0.32057,
+            0.2215
+          ],
+          "hub_prefs_spread": 0.09907,
+          "hub_routed": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 88,
+              "MeshBrain": 88,
+              "MultiNova": 88,
+              "BaseForce": 88
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 8,
+          "phase": "gradual",
+          "constraint": 0.6,
+          "hub_prefs": [
+            0.21978,
+            0.23454,
+            0.3259,
+            0.21978
+          ],
+          "hub_prefs_spread": 0.10612,
+          "hub_routed": [
+            96,
+            96,
+            96,
+            96
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 96,
+              "MeshBrain": 96,
+              "MultiNova": 96,
+              "BaseForce": 96
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 9,
+          "phase": "gradual",
+          "constraint": 0.55,
+          "hub_prefs": [
+            0.21832,
+            0.23294,
+            0.33042,
+            0.21832
+          ],
+          "hub_prefs_spread": 0.11211,
+          "hub_routed": [
+            112,
+            112,
+            112,
+            112
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 112,
+              "MeshBrain": 112,
+              "MultiNova": 112,
+              "BaseForce": 112
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 10,
+          "phase": "gradual",
+          "constraint": 0.5,
+          "hub_prefs": [
+            0.21754,
+            0.23208,
+            0.33285,
+            0.21754
+          ],
+          "hub_prefs_spread": 0.11531,
+          "hub_routed": [
+            128,
+            128,
+            128,
+            128
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 128,
+              "MeshBrain": 128,
+              "MultiNova": 128,
+              "BaseForce": 128
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 11,
+          "phase": "gradual",
+          "constraint": 0.45,
+          "hub_prefs": [
+            0.21685,
+            0.23132,
+            0.33499,
+            0.21684
+          ],
+          "hub_prefs_spread": 0.11814,
+          "hub_routed": [
+            144,
+            144,
+            144,
+            144
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 144,
+              "MeshBrain": 144,
+              "MultiNova": 144,
+              "BaseForce": 144
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 12,
+          "phase": "gradual",
+          "constraint": 0.4,
+          "hub_prefs": [
+            0.21623,
+            0.2337,
+            0.33384,
+            0.21623
+          ],
+          "hub_prefs_spread": 0.11762,
+          "hub_routed": [
+            160,
+            160,
+            160,
+            160
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 160,
+              "MeshBrain": 160,
+              "MultiNova": 160,
+              "BaseForce": 160
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 13,
+          "phase": "gradual",
+          "constraint": 0.35,
+          "hub_prefs": [
+            0.21567,
+            0.23307,
+            0.33559,
+            0.21567
+          ],
+          "hub_prefs_spread": 0.11993,
+          "hub_routed": [
+            176,
+            176,
+            176,
+            176
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 176,
+              "MeshBrain": 176,
+              "MultiNova": 176,
+              "BaseForce": 176
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 14,
+          "phase": "gradual",
+          "constraint": 0.3,
+          "hub_prefs": [
+            0.21516,
+            0.2325,
+            0.33719,
+            0.21516
+          ],
+          "hub_prefs_spread": 0.12204,
+          "hub_routed": [
+            192,
+            192,
+            192,
+            192
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 192,
+              "MeshBrain": 192,
+              "MultiNova": 192,
+              "BaseForce": 192
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 15,
+          "phase": "gradual",
+          "constraint": 0.25,
+          "hub_prefs": [
+            0.21467,
+            0.23195,
+            0.33872,
+            0.21467
+          ],
+          "hub_prefs_spread": 0.12405,
+          "hub_routed": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 200,
+              "MeshBrain": 200,
+              "MultiNova": 200,
+              "BaseForce": 200
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 16,
+          "phase": "gradual",
+          "constraint": 0.2,
+          "hub_prefs": [
+            0.2142,
+            0.23142,
+            0.34019,
+            0.2142
+          ],
+          "hub_prefs_spread": 0.12599,
+          "hub_routed": [
+            208,
+            208,
+            208,
+            208
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 208,
+              "MeshBrain": 208,
+              "MultiNova": 208,
+              "BaseForce": 208
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 17,
+          "phase": "gradual",
+          "constraint": 0.15,
+          "hub_prefs": [
+            0.21375,
+            0.23091,
+            0.34159,
+            0.21375
+          ],
+          "hub_prefs_spread": 0.12784,
+          "hub_routed": [
+            216,
+            216,
+            216,
+            216
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 216,
+              "MeshBrain": 216,
+              "MultiNova": 216,
+              "BaseForce": 216
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 18,
+          "phase": "gradual",
+          "constraint": 0.1,
+          "hub_prefs": [
+            0.21332,
+            0.23042,
+            0.34294,
+            0.21331
+          ],
+          "hub_prefs_spread": 0.12963,
+          "hub_routed": [
+            224,
+            224,
+            224,
+            224
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 224,
+              "MeshBrain": 224,
+              "MultiNova": 224,
+              "BaseForce": 224
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 19,
+          "phase": "gradual",
+          "constraint": 0.05,
+          "hub_prefs": [
+            0.2129,
+            0.22996,
+            0.34424,
+            0.2129
+          ],
+          "hub_prefs_spread": 0.13135,
+          "hub_routed": [
+            232,
+            232,
+            232,
+            232
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 232,
+              "MeshBrain": 232,
+              "MultiNova": 232,
+              "BaseForce": 232
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 20,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.2125,
+            0.2295,
+            0.3455,
+            0.2125
+          ],
+          "hub_prefs_spread": 0.133,
+          "hub_routed": [
+            240,
+            240,
+            240,
+            240
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 240,
+              "MeshBrain": 240,
+              "MultiNova": 240,
+              "BaseForce": 240
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 21,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21243,
+            0.22942,
+            0.34572,
+            0.21243
+          ],
+          "hub_prefs_spread": 0.13329,
+          "hub_routed": [
+            248,
+            248,
+            248,
+            248
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 248,
+              "MeshBrain": 248,
+              "MultiNova": 248,
+              "BaseForce": 248
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 22,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21206,
+            0.23092,
+            0.34497,
+            0.21205
+          ],
+          "hub_prefs_spread": 0.13292,
+          "hub_routed": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 256,
+              "MeshBrain": 256,
+              "MultiNova": 256,
+              "BaseForce": 256
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 23,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21169,
+            0.2305,
+            0.34611,
+            0.21169
+          ],
+          "hub_prefs_spread": 0.13442,
+          "hub_routed": [
+            264,
+            264,
+            264,
+            264
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 264,
+              "MeshBrain": 264,
+              "MultiNova": 264,
+              "BaseForce": 264
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 24,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21134,
+            0.2301,
+            0.34721,
+            0.21134
+          ],
+          "hub_prefs_spread": 0.13587,
+          "hub_routed": [
+            272,
+            272,
+            272,
+            272
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 272,
+              "MeshBrain": 272,
+              "MultiNova": 272,
+              "BaseForce": 272
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 25,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.211,
+            0.22972,
+            0.34828,
+            0.211
+          ],
+          "hub_prefs_spread": 0.13728,
+          "hub_routed": [
+            280,
+            280,
+            280,
+            280
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 280,
+              "MeshBrain": 280,
+              "MultiNova": 280,
+              "BaseForce": 280
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 26,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21067,
+            0.22934,
+            0.34932,
+            0.21067
+          ],
+          "hub_prefs_spread": 0.13865,
+          "hub_routed": [
+            288,
+            288,
+            288,
+            288
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 288,
+              "MeshBrain": 288,
+              "MultiNova": 288,
+              "BaseForce": 288
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 27,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21035,
+            0.22897,
+            0.35032,
+            0.21035
+          ],
+          "hub_prefs_spread": 0.13997,
+          "hub_routed": [
+            296,
+            296,
+            296,
+            296
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 296,
+              "MeshBrain": 296,
+              "MultiNova": 296,
+              "BaseForce": 296
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 28,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21004,
+            0.22862,
+            0.3513,
+            0.21004
+          ],
+          "hub_prefs_spread": 0.14126,
+          "hub_routed": [
+            304,
+            304,
+            304,
+            304
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 304,
+              "MeshBrain": 304,
+              "MultiNova": 304,
+              "BaseForce": 304
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 29,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20974,
+            0.22827,
+            0.35225,
+            0.20974
+          ],
+          "hub_prefs_spread": 0.14251,
+          "hub_routed": [
+            312,
+            312,
+            312,
+            312
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 312,
+              "MeshBrain": 312,
+              "MultiNova": 312,
+              "BaseForce": 312
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 30,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20945,
+            0.22794,
+            0.35317,
+            0.20944
+          ],
+          "hub_prefs_spread": 0.14373,
+          "hub_routed": [
+            320,
+            320,
+            320,
+            320
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 320,
+              "MeshBrain": 320,
+              "MultiNova": 320,
+              "BaseForce": 320
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 31,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.2094,
+            0.22788,
+            0.35334,
+            0.20939
+          ],
+          "hub_prefs_spread": 0.14394,
+          "hub_routed": [
+            328,
+            328,
+            328,
+            328
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 328,
+              "MeshBrain": 328,
+              "MultiNova": 328,
+              "BaseForce": 328
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 32,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20912,
+            0.22902,
+            0.35275,
+            0.20911
+          ],
+          "hub_prefs_spread": 0.14364,
+          "hub_routed": [
+            336,
+            336,
+            336,
+            336
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 336,
+              "MeshBrain": 336,
+              "MultiNova": 336,
+              "BaseForce": 336
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 33,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20884,
+            0.22871,
+            0.35361,
+            0.20884
+          ],
+          "hub_prefs_spread": 0.14477,
+          "hub_routed": [
+            344,
+            344,
+            344,
+            344
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 344,
+              "MeshBrain": 344,
+              "MultiNova": 344,
+              "BaseForce": 344
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 34,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20858,
+            0.2284,
+            0.35444,
+            0.20857
+          ],
+          "hub_prefs_spread": 0.14587,
+          "hub_routed": [
+            352,
+            352,
+            352,
+            352
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 352,
+              "MeshBrain": 352,
+              "MultiNova": 352,
+              "BaseForce": 352
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 35,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20832,
+            0.2281,
+            0.35526,
+            0.20832
+          ],
+          "hub_prefs_spread": 0.14695,
+          "hub_routed": [
+            360,
+            360,
+            360,
+            360
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 360,
+              "MeshBrain": 360,
+              "MultiNova": 360,
+              "BaseForce": 360
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 36,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20807,
+            0.22781,
+            0.35606,
+            0.20806
+          ],
+          "hub_prefs_spread": 0.148,
+          "hub_routed": [
+            368,
+            368,
+            368,
+            368
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 368,
+              "MeshBrain": 368,
+              "MultiNova": 368,
+              "BaseForce": 368
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 37,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20782,
+            0.22753,
+            0.35684,
+            0.20782
+          ],
+          "hub_prefs_spread": 0.14902,
+          "hub_routed": [
+            376,
+            376,
+            376,
+            376
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 376,
+              "MeshBrain": 376,
+              "MultiNova": 376,
+              "BaseForce": 376
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 38,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20758,
+            0.22725,
+            0.3576,
+            0.20757
+          ],
+          "hub_prefs_spread": 0.15003,
+          "hub_routed": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 384,
+              "MeshBrain": 384,
+              "MultiNova": 384,
+              "BaseForce": 384
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 39,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.20734,
+            0.22698,
+            0.35834,
+            0.20734
+          ],
+          "hub_prefs_spread": 0.15101,
+          "hub_routed": [
+            392,
+            392,
+            392,
+            392
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 392,
+              "MeshBrain": 392,
+              "MultiNova": 392,
+              "BaseForce": 392
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        }
+      ]
+    },
+    {
+      "thread_id": "australia",
+      "total_rounds": 40,
+      "on_topic_hits": 28,
+      "on_topic_rate": 0.7,
+      "phase_stats": {
+        "gradual": {
+          "hits": 17,
+          "n": 20,
+          "rate": 0.85,
+          "avg_spread": 0.09980745955824963
+        },
+        "free": {
+          "hits": 11,
+          "n": 20,
+          "rate": 0.55,
+          "avg_spread": 0.13643325692914127
+        }
+      },
+      "final_spread": 0.14387,
+      "final_prefs": [
+        0.21072,
+        0.22398,
+        0.21072,
+        0.35459
+      ],
+      "turns": [
+        {
+          "round": 0,
+          "phase": "gradual",
+          "constraint": 1.0,
+          "hub_prefs": [
+            0.24213,
+            0.24213,
+            0.24213,
+            0.27362
+          ],
+          "hub_prefs_spread": 0.03149,
+          "hub_routed": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 24,
+              "MeshBrain": 24,
+              "MultiNova": 24,
+              "BaseForce": 24
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 1,
+          "phase": "gradual",
+          "constraint": 0.95,
+          "hub_prefs": [
+            0.23753,
+            0.23753,
+            0.23753,
+            0.28742
+          ],
+          "hub_prefs_spread": 0.0499,
+          "hub_routed": [
+            40,
+            40,
+            40,
+            40
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 40,
+              "MeshBrain": 40,
+              "MultiNova": 40,
+              "BaseForce": 40
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 2,
+          "phase": "gradual",
+          "constraint": 0.9,
+          "hub_prefs": [
+            0.23377,
+            0.23377,
+            0.23377,
+            0.29868
+          ],
+          "hub_prefs_spread": 0.06491,
+          "hub_routed": [
+            48,
+            48,
+            48,
+            48
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 48,
+              "MeshBrain": 48,
+              "MultiNova": 48,
+              "BaseForce": 48
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 3,
+          "phase": "gradual",
+          "constraint": 0.85,
+          "hub_prefs": [
+            0.23062,
+            0.24444,
+            0.23062,
+            0.29433
+          ],
+          "hub_prefs_spread": 0.06371,
+          "hub_routed": [
+            56,
+            56,
+            56,
+            56
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 56,
+              "MeshBrain": 56,
+              "MultiNova": 56,
+              "BaseForce": 56
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 4,
+          "phase": "gradual",
+          "constraint": 0.8,
+          "hub_prefs": [
+            0.2279,
+            0.2415,
+            0.2279,
+            0.3027
+          ],
+          "hub_prefs_spread": 0.07481,
+          "hub_routed": [
+            64,
+            64,
+            64,
+            64
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 64,
+              "MeshBrain": 64,
+              "MultiNova": 64,
+              "BaseForce": 64
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 5,
+          "phase": "gradual",
+          "constraint": 0.75,
+          "hub_prefs": [
+            0.22552,
+            0.23892,
+            0.22552,
+            0.31004
+          ],
+          "hub_prefs_spread": 0.08453,
+          "hub_routed": [
+            72,
+            72,
+            72,
+            72
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 72,
+              "MeshBrain": 72,
+              "MultiNova": 72,
+              "BaseForce": 72
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 6,
+          "phase": "gradual",
+          "constraint": 0.7,
+          "hub_prefs": [
+            0.2234,
+            0.23663,
+            0.2234,
+            0.31656
+          ],
+          "hub_prefs_spread": 0.09316,
+          "hub_routed": [
+            80,
+            80,
+            80,
+            80
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 80,
+              "MeshBrain": 80,
+              "MultiNova": 80,
+              "BaseForce": 80
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 7,
+          "phase": "gradual",
+          "constraint": 0.65,
+          "hub_prefs": [
+            0.2215,
+            0.23458,
+            0.2215,
+            0.32242
+          ],
+          "hub_prefs_spread": 0.10092,
+          "hub_routed": [
+            88,
+            88,
+            88,
+            88
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 88,
+              "MeshBrain": 88,
+              "MultiNova": 88,
+              "BaseForce": 88
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 8,
+          "phase": "gradual",
+          "constraint": 0.6,
+          "hub_prefs": [
+            0.21978,
+            0.23271,
+            0.21978,
+            0.32773
+          ],
+          "hub_prefs_spread": 0.10795,
+          "hub_routed": [
+            96,
+            96,
+            96,
+            96
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 96,
+              "MeshBrain": 96,
+              "MultiNova": 96,
+              "BaseForce": 96
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 9,
+          "phase": "gradual",
+          "constraint": 0.55,
+          "hub_prefs": [
+            0.21832,
+            0.23113,
+            0.21832,
+            0.33224
+          ],
+          "hub_prefs_spread": 0.11392,
+          "hub_routed": [
+            112,
+            112,
+            112,
+            112
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 112,
+              "MeshBrain": 112,
+              "MultiNova": 112,
+              "BaseForce": 112
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 10,
+          "phase": "gradual",
+          "constraint": 0.5,
+          "hub_prefs": [
+            0.21817,
+            0.23097,
+            0.21817,
+            0.33269
+          ],
+          "hub_prefs_spread": 0.11452,
+          "hub_routed": [
+            128,
+            128,
+            128,
+            128
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 128,
+              "MeshBrain": 128,
+              "MultiNova": 128,
+              "BaseForce": 128
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 11,
+          "phase": "gradual",
+          "constraint": 0.45,
+          "hub_prefs": [
+            0.21805,
+            0.23082,
+            0.21805,
+            0.33309
+          ],
+          "hub_prefs_spread": 0.11504,
+          "hub_routed": [
+            144,
+            144,
+            144,
+            144
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 144,
+              "MeshBrain": 144,
+              "MultiNova": 144,
+              "BaseForce": 144
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 12,
+          "phase": "gradual",
+          "constraint": 0.4,
+          "hub_prefs": [
+            0.21742,
+            0.23014,
+            0.21742,
+            0.33501
+          ],
+          "hub_prefs_spread": 0.11759,
+          "hub_routed": [
+            160,
+            160,
+            160,
+            160
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 160,
+              "MeshBrain": 160,
+              "MultiNova": 160,
+              "BaseForce": 160
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 13,
+          "phase": "gradual",
+          "constraint": 0.35,
+          "hub_prefs": [
+            0.21732,
+            0.23059,
+            0.21732,
+            0.33478
+          ],
+          "hub_prefs_spread": 0.11746,
+          "hub_routed": [
+            176,
+            176,
+            176,
+            176
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 176,
+              "MeshBrain": 176,
+              "MultiNova": 176,
+              "BaseForce": 176
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 14,
+          "phase": "gradual",
+          "constraint": 0.3,
+          "hub_prefs": [
+            0.2168,
+            0.23002,
+            0.2168,
+            0.33638
+          ],
+          "hub_prefs_spread": 0.11957,
+          "hub_routed": [
+            192,
+            192,
+            192,
+            192
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 192,
+              "MeshBrain": 192,
+              "MultiNova": 192,
+              "BaseForce": 192
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 15,
+          "phase": "gradual",
+          "constraint": 0.25,
+          "hub_prefs": [
+            0.21631,
+            0.22948,
+            0.21631,
+            0.33791
+          ],
+          "hub_prefs_spread": 0.1216,
+          "hub_routed": [
+            200,
+            200,
+            200,
+            200
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 200,
+              "MeshBrain": 200,
+              "MultiNova": 200,
+              "BaseForce": 200
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 16,
+          "phase": "gradual",
+          "constraint": 0.2,
+          "hub_prefs": [
+            0.21583,
+            0.22896,
+            0.21583,
+            0.33937
+          ],
+          "hub_prefs_spread": 0.12354,
+          "hub_routed": [
+            208,
+            208,
+            208,
+            208
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 208,
+              "MeshBrain": 208,
+              "MultiNova": 208,
+              "BaseForce": 208
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 17,
+          "phase": "gradual",
+          "constraint": 0.15,
+          "hub_prefs": [
+            0.21538,
+            0.22846,
+            0.21538,
+            0.34078
+          ],
+          "hub_prefs_spread": 0.12541,
+          "hub_routed": [
+            216,
+            216,
+            216,
+            216
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 216,
+              "MeshBrain": 216,
+              "MultiNova": 216,
+              "BaseForce": 216
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 18,
+          "phase": "gradual",
+          "constraint": 0.1,
+          "hub_prefs": [
+            0.21494,
+            0.22798,
+            0.21494,
+            0.34214
+          ],
+          "hub_prefs_spread": 0.1272,
+          "hub_routed": [
+            224,
+            224,
+            224,
+            224
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 224,
+              "MeshBrain": 224,
+              "MultiNova": 224,
+              "BaseForce": 224
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 19,
+          "phase": "gradual",
+          "constraint": 0.05,
+          "hub_prefs": [
+            0.21452,
+            0.22752,
+            0.21452,
+            0.34344
+          ],
+          "hub_prefs_spread": 0.12892,
+          "hub_routed": [
+            232,
+            232,
+            232,
+            232
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 232,
+              "MeshBrain": 232,
+              "MultiNova": 232,
+              "BaseForce": 232
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 20,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21445,
+            0.22744,
+            0.21445,
+            0.34367
+          ],
+          "hub_prefs_spread": 0.12923,
+          "hub_routed": [
+            240,
+            240,
+            240,
+            240
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 240,
+              "MeshBrain": 240,
+              "MultiNova": 240,
+              "BaseForce": 240
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 21,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21438,
+            0.22736,
+            0.21437,
+            0.34389
+          ],
+          "hub_prefs_spread": 0.12952,
+          "hub_routed": [
+            248,
+            248,
+            248,
+            248
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 248,
+              "MeshBrain": 248,
+              "MultiNova": 248,
+              "BaseForce": 248
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 22,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21431,
+            0.22728,
+            0.21431,
+            0.34411
+          ],
+          "hub_prefs_spread": 0.1298,
+          "hub_routed": [
+            256,
+            256,
+            256,
+            256
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 256,
+              "MeshBrain": 256,
+              "MultiNova": 256,
+              "BaseForce": 256
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 23,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21424,
+            0.22758,
+            0.21424,
+            0.34394
+          ],
+          "hub_prefs_spread": 0.1297,
+          "hub_routed": [
+            264,
+            264,
+            264,
+            264
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 264,
+              "MeshBrain": 264,
+              "MultiNova": 264,
+              "BaseForce": 264
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 24,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21388,
+            0.22718,
+            0.21388,
+            0.34505
+          ],
+          "hub_prefs_spread": 0.13117,
+          "hub_routed": [
+            272,
+            272,
+            272,
+            272
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 272,
+              "MeshBrain": 272,
+              "MultiNova": 272,
+              "BaseForce": 272
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 25,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21354,
+            0.2268,
+            0.21354,
+            0.34612
+          ],
+          "hub_prefs_spread": 0.13259,
+          "hub_routed": [
+            280,
+            280,
+            280,
+            280
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 280,
+              "MeshBrain": 280,
+              "MultiNova": 280,
+              "BaseForce": 280
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 26,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.2132,
+            0.22643,
+            0.2132,
+            0.34716
+          ],
+          "hub_prefs_spread": 0.13396,
+          "hub_routed": [
+            288,
+            288,
+            288,
+            288
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 288,
+              "MeshBrain": 288,
+              "MultiNova": 288,
+              "BaseForce": 288
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 27,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21288,
+            0.22608,
+            0.21287,
+            0.34817
+          ],
+          "hub_prefs_spread": 0.1353,
+          "hub_routed": [
+            296,
+            296,
+            296,
+            296
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 296,
+              "MeshBrain": 296,
+              "MultiNova": 296,
+              "BaseForce": 296
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 28,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21256,
+            0.22573,
+            0.21256,
+            0.34916
+          ],
+          "hub_prefs_spread": 0.1366,
+          "hub_routed": [
+            304,
+            304,
+            304,
+            304
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 304,
+              "MeshBrain": 304,
+              "MultiNova": 304,
+              "BaseForce": 304
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 29,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21225,
+            0.22539,
+            0.21225,
+            0.35011
+          ],
+          "hub_prefs_spread": 0.13786,
+          "hub_routed": [
+            312,
+            312,
+            312,
+            312
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 312,
+              "MeshBrain": 312,
+              "MultiNova": 312,
+              "BaseForce": 312
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 30,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.2122,
+            0.22533,
+            0.2122,
+            0.35028
+          ],
+          "hub_prefs_spread": 0.13808,
+          "hub_routed": [
+            320,
+            320,
+            320,
+            320
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 320,
+              "MeshBrain": 320,
+              "MultiNova": 320,
+              "BaseForce": 320
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 31,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21215,
+            0.22527,
+            0.21214,
+            0.35044
+          ],
+          "hub_prefs_spread": 0.1383,
+          "hub_routed": [
+            328,
+            328,
+            328,
+            328
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 328,
+              "MeshBrain": 328,
+              "MultiNova": 328,
+              "BaseForce": 328
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 32,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21209,
+            0.22521,
+            0.21209,
+            0.3506
+          ],
+          "hub_prefs_spread": 0.13851,
+          "hub_routed": [
+            336,
+            336,
+            336,
+            336
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 336,
+              "MeshBrain": 336,
+              "MultiNova": 336,
+              "BaseForce": 336
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 33,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21204,
+            0.22544,
+            0.21204,
+            0.35047
+          ],
+          "hub_prefs_spread": 0.13843,
+          "hub_routed": [
+            344,
+            344,
+            344,
+            344
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 344,
+              "MeshBrain": 344,
+              "MultiNova": 344,
+              "BaseForce": 344
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 34,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21177,
+            0.22514,
+            0.21177,
+            0.35131
+          ],
+          "hub_prefs_spread": 0.13954,
+          "hub_routed": [
+            352,
+            352,
+            352,
+            352
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 352,
+              "MeshBrain": 352,
+              "MultiNova": 352,
+              "BaseForce": 352
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 35,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21151,
+            0.22485,
+            0.21151,
+            0.35214
+          ],
+          "hub_prefs_spread": 0.14063,
+          "hub_routed": [
+            360,
+            360,
+            360,
+            360
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 360,
+              "MeshBrain": 360,
+              "MultiNova": 360,
+              "BaseForce": 360
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 36,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21146,
+            0.2248,
+            0.21146,
+            0.35228
+          ],
+          "hub_prefs_spread": 0.14082,
+          "hub_routed": [
+            368,
+            368,
+            368,
+            368
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 368,
+              "MeshBrain": 368,
+              "MultiNova": 368,
+              "BaseForce": 368
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": false,
+          "row_correct": false,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 37,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21121,
+            0.22452,
+            0.21121,
+            0.35307
+          ],
+          "hub_prefs_spread": 0.14186,
+          "hub_routed": [
+            376,
+            376,
+            376,
+            376
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 376,
+              "MeshBrain": 376,
+              "MultiNova": 376,
+              "BaseForce": 376
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 38,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21096,
+            0.22424,
+            0.21096,
+            0.35384
+          ],
+          "hub_prefs_spread": 0.14288,
+          "hub_routed": [
+            384,
+            384,
+            384,
+            384
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 384,
+              "MeshBrain": 384,
+              "MultiNova": 384,
+              "BaseForce": 384
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        },
+        {
+          "round": 39,
+          "phase": "free",
+          "constraint": 0.0,
+          "hub_prefs": [
+            0.21072,
+            0.22398,
+            0.21072,
+            0.35459
+          ],
+          "hub_prefs_spread": 0.14387,
+          "hub_routed": [
+            392,
+            392,
+            392,
+            392
+          ],
+          "quad_balance": {
+            "hub_routed": {
+              "BlackHole": 392,
+              "MeshBrain": 392,
+              "MultiNova": 392,
+              "BaseForce": 392
+            },
+            "shares": {
+              "BlackHole": 0.25,
+              "MeshBrain": 0.25,
+              "MultiNova": 0.25,
+              "BaseForce": 0.25
+            },
+            "active_quads": 4,
+            "share_spread": 0.0,
+            "balance_score": 1.0
+          },
+          "on_topic": true,
+          "row_correct": true,
+          "fate_qa_feedback": true
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "gradual": {
+      "hits": 52,
+      "n": 60,
+      "rate": 0.8666666666666667,
+      "avg_hub_prefs_spread": 0.08854767929451639
+    },
+    "free": {
+      "hits": 41,
+      "n": 60,
+      "rate": 0.6833333333333333,
+      "avg_hub_prefs_spread": 0.12447811291369501
+    }
+  }
+}
