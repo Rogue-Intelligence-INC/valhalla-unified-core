@@ -1,0 +1,54 @@
+{
+  "model": "/home/jouly/AI/Valhalla/models/hf/Qwen2.5-0.5B-Instruct-Valhalla-FreeMultimodal-Fusion-v2-test-s0.10",
+  "manifest": {
+    "product": "valhalla-free-multimodal-fusion-v2",
+    "manifest_version": "valhalla-bake-1.0",
+    "base_model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "bake_mode": "full",
+    "strength": 0.1,
+    "weight_delta_norm": 298.6595374084187,
+    "body": "triad",
+    "tile_count": 132,
+    "stem_cell_count": 216,
+    "corpus_lines": 107,
+    "unified_core": null,
+    "load_mode": "baked_hf (runtime_patch=false, weights already contain Valhalla structure)"
+  },
+  "transformers": {
+    "loader": "transformers.AutoModelForCausalLM.from_pretrained",
+    "prompt": "What is the SI unit of force? Answer briefly.",
+    "output": "The SI unit of force is Newton (N).",
+    "param_count_M": 494.0,
+    "device": "cuda:0"
+  },
+  "valhalla_fused_lm": {
+    "loader": "valhalla_fused_lm (reads valhalla_manifest.json, baked_lm track)",
+    "summary": {
+      "n": 12,
+      "correct": 10,
+      "acc": 0.8333333333333334
+    },
+    "samples": [
+      {
+        "id": "MCQ_BIO_01",
+        "correct": true,
+        "output": "ANSWER: C"
+      },
+      {
+        "id": "MCQ_GEO_01",
+        "correct": true,
+        "output": "ANSWER: C"
+      },
+      {
+        "id": "MCQ_ECON_01",
+        "correct": false,
+        "output": "ANSWER: A"
+      },
+      {
+        "id": "MCQ_PHIL_01",
+        "correct": true,
+        "output": "ANSWER: B"
+      }
+    ]
+  }
+}

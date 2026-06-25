@@ -1,0 +1,124 @@
+{
+  "layout": "compare",
+  "phase": "test",
+  "sample_count": 12,
+  "avg_shared_patch_isolated": 0.8480810883366527,
+  "avg_shared_patch_non_isolated": 0.9997586857079122,
+  "avg_fusion_centroid_isolated": 0.8654938646835909,
+  "avg_fusion_centroid_non_isolated": 0.9989678319725787,
+  "avg_universal_score_isolated": 0.7623634370023681,
+  "avg_universal_score_non_isolated": 0.8777367903562144,
+  "non_isolated_wins": 12,
+  "isolated_wins": 0,
+  "verdict": "NON_ISOLATED_BETTER: single-session concurrent fusion tightens universal core more",
+  "per_task": [
+    {
+      "id": "MCQ_BIO_01",
+      "isolated_shared": 0.8824036440839479,
+      "non_isolated_shared": 0.9997746035518765,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.10226712526283954,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_GEO_01",
+      "isolated_shared": 0.8797079377067435,
+      "non_isolated_shared": 0.9998484092425439,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.11270018504316304,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_ECON_01",
+      "isolated_shared": 0.8233107874079533,
+      "non_isolated_shared": 0.9998314528280169,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.12360756869261169,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_PHIL_01",
+      "isolated_shared": 0.8323017930743485,
+      "non_isolated_shared": 0.9997566717807529,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.11715645547257791,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_MED_01",
+      "isolated_shared": 0.8292437758766024,
+      "non_isolated_shared": 0.9996793731430192,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.1167383705071231,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_PHYS_01",
+      "isolated_shared": 0.8115512262105159,
+      "non_isolated_shared": 0.9998365961478418,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.1281593514232745,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_CHEM_01",
+      "isolated_shared": 0.8739652883020336,
+      "non_isolated_shared": 0.9998056875623229,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.110020107359045,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_BIO_01",
+      "isolated_shared": 0.8797516600673413,
+      "non_isolated_shared": 0.9997323750261812,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.11007527602490641,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_HIST_01",
+      "isolated_shared": 0.821018388916222,
+      "non_isolated_shared": 0.9997778494031992,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.12397554224450069,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_GEO_01",
+      "isolated_shared": 0.8860221532048366,
+      "non_isolated_shared": 0.9996173244395181,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.10245544749245539,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_ECON_01",
+      "isolated_shared": 0.8232070638226766,
+      "non_isolated_shared": 0.9997194549921328,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.11988447239713329,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_ECON_02",
+      "isolated_shared": 0.8344893413666113,
+      "non_isolated_shared": 0.9997244303775407,
+      "isolated_universal": true,
+      "non_isolated_universal": true,
+      "score_delta": 0.11744033832652667,
+      "non_isolated_better": true
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "fused_product_version": "fused-1.0-valhalla-lm",
+  "fair_benchmark_version": "fair-1.2",
+  "protocol": "baked_lm_forward_logprob_mcq",
+  "summary": {
+    "total": {
+      "n": 12,
+      "correct": 10,
+      "acc": 0.8333333333333334
+    },
+    "open": {
+      "n": 7,
+      "correct": 7,
+      "acc": 1.0
+    },
+    "mcq": {
+      "n": 5,
+      "correct": 3,
+      "acc": 0.6
+    },
+    "numeric": {
+      "n": 0,
+      "correct": 0,
+      "acc": 0.0
+    },
+    "other": {
+      "n": 0,
+      "correct": 0,
+      "acc": 0.0
+    },
+    "decode_path_counts": {
+      "baked_lm_mcq/baked_mcq_logprob": 5,
+      "baked_lm_open/gen": 7
+    }
+  },
+  "fused_rows": [
+    {
+      "id": "MCQ_BIO_01",
+      "score_type": "mcq",
+      "correct": true,
+      "score": {
+        "score_type": "mcq",
+        "correct": true,
+        "extracted": "C",
+        "reference": "C"
+      },
+      "answer": "ANSWER: C",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_GEO_01",
+      "score_type": "mcq",
+      "correct": true,
+      "score": {
+        "score_type": "mcq",
+        "correct": true,
+        "extracted": "C",
+        "reference": "C"
+      },
+      "answer": "ANSWER: C",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_ECON_01",
+      "score_type": "mcq",
+      "correct": false,
+      "score": {
+        "score_type": "mcq",
+        "correct": false,
+        "extracted": "A",
+        "reference": "B"
+      },
+      "answer": "ANSWER: A",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_PHIL_01",
+      "score_type": "mcq",
+      "correct": true,
+      "score": {
+        "score_type": "mcq",
+        "correct": true,
+        "extracted": "B",
+        "reference": "B"
+      },
+      "answer": "ANSWER: B",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_MED_01",
+      "score_type": "mcq",
+      "correct": false,
+      "score": {
+        "score_type": "mcq",
+        "correct": false,
+        "extracted": "A",
+        "reference": "C"
+      },
+      "answer": "ANSWER: A",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_PHYS_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "F=ma"
+      },
+      "answer": "Newton's second law states that the acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. Mathematically, it can be expressed as \\( F = ma \\), where \\( F \\) is the net force, \\( m \\) is the mass of the object, and \\( a \\) is the acceleration.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_CHEM_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "100"
+      },
+      "answer": "At standard pressure, water boils at 100 degrees Celsius. This is a fundamental property of water and is a key factor in the cooking and heating of food.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_BIO_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "ATP"
+      },
+      "answer": "The main function of mitochondria is to provide energy to cells by converting nutrients into energy. They are responsible for the majority of cellular respiration, which is the process by which cells convert nutrients into energy. This process is crucial for the survival and growth of organisms.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_HIST_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "1945"
+      },
+      "answer": "World War II ended in 1945.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_GEO_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "Canberra"
+      },
+      "answer": "The capital of Australia is Canberra.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_ECON_01",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "Gross Domestic Product"
+      },
+      "answer": "GDP stands for Gross Domestic Product. It is a measure of the total value of all goods and services produced within a country's borders in a specific time period. This measure is often used as a key indicator of a country's economic health and growth.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "OPEN_ECON_02",
+      "score_type": "open",
+      "correct": true,
+      "score": {
+        "score_type": "open",
+        "correct": true,
+        "reference": "price level"
+      },
+      "answer": "Inflation refers to the sustained increase in the general price level of goods and services, which can erode the purchasing power of consumers and businesses.",
+      "decode_path": "baked_lm_open/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    }
+  ]
+}

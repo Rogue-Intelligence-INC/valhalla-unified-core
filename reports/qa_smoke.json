@@ -1,0 +1,206 @@
+{
+  "fused_product_version": "fused-1.0-valhalla-lm",
+  "fair_benchmark_version": "fair-1.2",
+  "protocol": "baked_lm_forward_logprob_mcq",
+  "summary": {
+    "total": {
+      "n": 12,
+      "correct": 1,
+      "acc": 0.08333333333333333
+    },
+    "open": {
+      "n": 0,
+      "correct": 0,
+      "acc": 0.0
+    },
+    "mcq": {
+      "n": 4,
+      "correct": 1,
+      "acc": 0.25
+    },
+    "numeric": {
+      "n": 8,
+      "correct": 0,
+      "acc": 0.0
+    },
+    "other": {
+      "n": 0,
+      "correct": 0,
+      "acc": 0.0
+    },
+    "decode_path_counts": {
+      "baked_lm_numeric/gen": 8,
+      "baked_lm_mcq/baked_mcq_logprob": 4
+    }
+  },
+  "fused_rows": [
+    {
+      "id": "GSM_01",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "14.000.00.00.00.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.",
+        "reference": "72"
+      },
+      "answer": "14.000.00.00.00.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "GSM_02",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "120.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "reference": "18"
+      },
+      "answer": "120.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "GSM_03",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "23.000",
+        "reference": "18"
+      },
+      "answer": "23.000",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "GSM_04",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "10.",
+        "reference": "28"
+      },
+      "answer": "10.",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MATH_01",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "381",
+        "reference": "391"
+      },
+      "answer": "381",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MATH_02",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "10.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "reference": "12"
+      },
+      "answer": "10.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MATH_03",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "1.0001200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "reference": "9"
+      },
+      "answer": "1.0001200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MATH_04",
+      "score_type": "numeric",
+      "correct": false,
+      "score": {
+        "score_type": "numeric",
+        "correct": false,
+        "extracted": "22.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "reference": "27"
+      },
+      "answer": "22.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "decode_path": "baked_lm_numeric/gen",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_PHYS_01",
+      "score_type": "mcq",
+      "correct": true,
+      "score": {
+        "score_type": "mcq",
+        "correct": true,
+        "extracted": "B",
+        "reference": "B"
+      },
+      "answer": "ANSWER: B",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_PHYS_02",
+      "score_type": "mcq",
+      "correct": false,
+      "score": {
+        "score_type": "mcq",
+        "correct": false,
+        "extracted": "A",
+        "reference": "B"
+      },
+      "answer": "ANSWER: A",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_CHEM_01",
+      "score_type": "mcq",
+      "correct": false,
+      "score": {
+        "score_type": "mcq",
+        "correct": false,
+        "extracted": "A",
+        "reference": "C"
+      },
+      "answer": "ANSWER: A",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    },
+    {
+      "id": "MCQ_CHEM_02",
+      "score_type": "mcq",
+      "correct": false,
+      "score": {
+        "score_type": "mcq",
+        "correct": false,
+        "extracted": "A",
+        "reference": "B"
+      },
+      "answer": "ANSWER: A",
+      "decode_path": "baked_lm_mcq/baked_mcq_logprob",
+      "fused_product_version": "fused-1.0-valhalla-lm"
+    }
+  ]
+}

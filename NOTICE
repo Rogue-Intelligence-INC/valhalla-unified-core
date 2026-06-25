@@ -1,0 +1,13 @@
+Valhalla Unified Core (VUC)
+Copyright © 2026 Rogue Intelligence LNC. All Rights Reserved.
+
+This product is NOT open source. No license is granted except as set forth in
+LICENSE and NON_OPEN_SOURCE.md.
+
+Core runtime (Hub / Tile / StemCell / Fate / hub-f64 binaries) lives in the
+Rogue Intelligence Valhalla monorepo and is separately licensed.
+
+Third-party components used at runtime (when built against the monorepo) may
+include Qwen2.5 weights and Hugging Face tooling under their respective terms;
+those terms do not apply to Rogue Intelligence proprietary code or docs in
+this repository.

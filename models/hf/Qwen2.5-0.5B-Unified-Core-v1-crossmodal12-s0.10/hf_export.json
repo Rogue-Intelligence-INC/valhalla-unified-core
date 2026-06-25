@@ -1,0 +1,9 @@
+{
+  "format": "huggingface-transformers",
+  "finalized_at": "2026-06-25T18:42:27.313373+00:00",
+  "repo_id": null,
+  "loadable_via": [
+    "transformers.AutoModelForCausalLM",
+    "valhalla_fused_lm"
+  ]
+}

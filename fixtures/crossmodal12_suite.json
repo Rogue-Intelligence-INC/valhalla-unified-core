@@ -1,0 +1,286 @@
+{
+  "prompts": [
+    {
+      "id": "MCQ_BIO_01",
+      "domain": "biology",
+      "source": "MMLU high_school_biology",
+      "text": "Which organelle is the site of photosynthesis?\nA) Mitochondria\nB) Ribosome\nC) Chloroplast\nD) Nucleus\nAnswer: A/B/C/D only.",
+      "reference_answer": "C",
+      "keywords": [
+        "chloroplast",
+        "c"
+      ],
+      "score_type": "mcq"
+    },
+    {
+      "id": "MCQ_GEO_01",
+      "domain": "geography",
+      "source": "MMLU high_school_geography",
+      "text": "What is the capital of France?\nA) Berlin\nB) Madrid\nC) Paris\nD) Rome\nAnswer: A/B/C/D only.",
+      "reference_answer": "C",
+      "keywords": [
+        "paris",
+        "c"
+      ],
+      "score_type": "mcq"
+    },
+    {
+      "id": "MCQ_ECON_01",
+      "domain": "economics",
+      "source": "MMLU high_school_microeconomics",
+      "text": "When price increases, quantity supplied typically (ceteris paribus):\nA) decreases\nB) increases\nC) stays the same\nD) becomes zero\nAnswer: A/B/C/D only.",
+      "reference_answer": "B",
+      "keywords": [
+        "increase",
+        "b"
+      ],
+      "score_type": "mcq"
+    },
+    {
+      "id": "MCQ_PHIL_01",
+      "domain": "philosophy_logic",
+      "source": "MMLU philosophy",
+      "text": "Who wrote 'The Republic'?\nA) Aristotle\nB) Plato\nC) Socrates\nD) Kant\nAnswer: A/B/C/D only.",
+      "reference_answer": "B",
+      "keywords": [
+        "plato",
+        "b"
+      ],
+      "score_type": "mcq"
+    },
+    {
+      "id": "MCQ_MED_01",
+      "domain": "medicine",
+      "source": "MMLU clinical_knowledge",
+      "text": "Scurvy is caused by deficiency of:\nA) Vitamin A\nB) Vitamin B12\nC) Vitamin C\nD) Vitamin D\nAnswer: A/B/C/D only.",
+      "reference_answer": "C",
+      "keywords": [
+        "vitamin c",
+        "c"
+      ],
+      "score_type": "mcq"
+    },
+    {
+      "id": "OPEN_PHYS_01",
+      "domain": "physics",
+      "source": "MMLU style open",
+      "text": "State Newton's second law in one sentence and give the formula.",
+      "reference_answer": "F=ma",
+      "keywords": [
+        "force",
+        "mass",
+        "acceleration",
+        "f",
+        "ma"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_CHEM_01",
+      "domain": "chemistry",
+      "source": "MMLU style open",
+      "text": "At standard pressure, at what Celsius temperature does water boil?",
+      "reference_answer": "100",
+      "keywords": [
+        "100",
+        "celsius"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_BIO_01",
+      "domain": "biology",
+      "source": "MMLU style open",
+      "text": "What is the main function of mitochondria? One or two sentences.",
+      "reference_answer": "ATP",
+      "keywords": [
+        "atp",
+        "energy",
+        "respiration"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_HIST_01",
+      "domain": "history",
+      "source": "TriviaQA/MMLU",
+      "text": "In which year did World War II end?",
+      "reference_answer": "1945",
+      "keywords": [
+        "1945"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_GEO_01",
+      "domain": "geography",
+      "source": "TriviaQA",
+      "text": "What is the capital of Australia?",
+      "reference_answer": "Canberra",
+      "keywords": [
+        "canberra"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_ECON_01",
+      "domain": "economics",
+      "source": "MMLU macro",
+      "text": "What does GDP stand for?",
+      "reference_answer": "Gross Domestic Product",
+      "keywords": [
+        "gross",
+        "domestic",
+        "product",
+        "gdp"
+      ],
+      "score_type": "open"
+    },
+    {
+      "id": "OPEN_ECON_02",
+      "domain": "economics",
+      "source": "MMLU micro",
+      "text": "Define inflation in one sentence.",
+      "reference_answer": "price level",
+      "keywords": [
+        "price",
+        "increase",
+        "inflation"
+      ],
+      "score_type": "open"
+    }
+  ],
+  "corpus": {
+    "ingest_clean": [
+      "Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts.",
+      "World War Two ended in 1945 with Germany's unconditional surrender.",
+      "The capital city of Australia is Canberra not Sydney or Melbourne.",
+      "Newton's second law states force equals mass times acceleration F equals m a.",
+      "DNA uses four nucleotide bases adenine thymine guanine and cytosine.",
+      "Supply increases when price rises according to basic microeconomic theory.",
+      "Binary search requires a sorted array and halves the search interval each step.",
+      "Scurvy is caused by deficiency of vitamin C also called ascorbic acid.",
+      "The Yangtze River originates from glaciers on the Tibetan Plateau in China.",
+      "William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England.",
+      "Water boils at 100 degrees Celsius at standard atmospheric pressure.",
+      "The Pacific Ocean is the largest ocean covering more area than all land combined.",
+      "Python list comprehension builds lists from iterables with optional filters.",
+      "The French Revolution began in 1789 with the storming of the Bastille.",
+      "Mitochondria produce ATP through cellular respiration in eukaryotes.",
+      "Euler's formula e to the i pi plus one equals zero links five constants.",
+      "Inflation means a sustained increase in the general price level of goods.",
+      "Mercury is the smallest planet and closest to the Sun in our solar system.",
+      "George Washington was the first President of the United States.",
+      "GDP measures the total value of goods and services produced in a country.",
+      "光合作用在叶绿体中将二氧化碳和水转化为葡萄糖。",
+      "1945年8月日本宣布投降标志二战结束。",
+      "秦朝是中国第一个统一的中央集权封建王朝。",
+      "勾股定理：直角三角形斜边平方等于两直角边平方之和。",
+      "The SI unit of force is the Newton defined as kg times m per s squared.",
+      "Electrons carry negative charge and orbit the atomic nucleus.",
+      "Chloroplasts contain chlorophyll for capturing light energy.",
+      "Binary search runs in O log n time on sorted arrays.",
+      "Plato wrote The Republic describing an ideal state and philosopher kings.",
+      "Type 2 diabetes involves insulin resistance and relative insulin deficiency.",
+      "The Nile River in Africa is traditionally cited as the longest river.",
+      "Thomas Jefferson was primary author of the US Declaration of Independence.",
+      "George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949.",
+      "There are twenty four solar terms in the traditional Chinese calendar.",
+      "Cao Xueqin is credited as author of the novel Dream of the Red Chamber.",
+      "Contrapositive of P implies Q is not Q implies not P.",
+      "Whales are mammals and must surface to breathe air through lungs.",
+      "Paris is the capital and largest city of France on the River Seine.",
+      "Aristotle was student of Plato and tutor of Alexander the Great.",
+      "Central Processing Unit executes instructions in a computer system.",
+      "Gross Domestic Product sums consumption investment government and net exports.",
+      "CPU memory and storage are core hardware components of computers.",
+      "Supply and demand curves intersect at market equilibrium price.",
+      "Vitamin C deficiency causes scurvy with bleeding gums and weakness.",
+      "World War II involved Allied and Axis powers from 1939 to 1945.",
+      "Canberra was selected as Australian capital as compromise between Sydney and Melbourne.",
+      "Mercury orbits closest to the Sun with year of about eighty eight Earth days.",
+      "红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹。",
+      "二十四节气反映中国古代农历对太阳周年的划分。"
+    ],
+    "ingest_legacy_contaminated": [
+      "Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts.",
+      "World War Two ended in 1945 with Germany's unconditional surrender.",
+      "The capital city of Australia is Canberra not Sydney or Melbourne.",
+      "Newton's second law states force equals mass times acceleration F equals m a.",
+      "DNA uses four nucleotide bases adenine thymine guanine and cytosine.",
+      "Supply increases when price rises according to basic microeconomic theory.",
+      "Binary search requires a sorted array and halves the search interval each step.",
+      "Scurvy is caused by deficiency of vitamin C also called ascorbic acid.",
+      "The Yangtze River originates from glaciers on the Tibetan Plateau in China.",
+      "William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England.",
+      "Water boils at 100 degrees Celsius at standard atmospheric pressure.",
+      "The Pacific Ocean is the largest ocean covering more area than all land combined.",
+      "Python list comprehension builds lists from iterables with optional filters.",
+      "The French Revolution began in 1789 with the storming of the Bastille.",
+      "Mitochondria produce ATP through cellular respiration in eukaryotes.",
+      "Euler's formula e to the i pi plus one equals zero links five constants.",
+      "Inflation means a sustained increase in the general price level of goods.",
+      "Mercury is the smallest planet and closest to the Sun in our solar system.",
+      "George Washington was the first President of the United States.",
+      "GDP measures the total value of goods and services produced in a country.",
+      "光合作用在叶绿体中将二氧化碳和水转化为葡萄糖。",
+      "1945年8月日本宣布投降标志二战结束。",
+      "秦朝是中国第一个统一的中央集权封建王朝。",
+      "勾股定理：直角三角形斜边平方等于两直角边平方之和。",
+      "The SI unit of force is the Newton defined as kg times m per s squared.",
+      "Electrons carry negative charge and orbit the atomic nucleus.",
+      "Chloroplasts contain chlorophyll for capturing light energy.",
+      "Binary search runs in O log n time on sorted arrays.",
+      "Plato wrote The Republic describing an ideal state and philosopher kings.",
+      "Type 2 diabetes involves insulin resistance and relative insulin deficiency.",
+      "The Nile River in Africa is traditionally cited as the longest river.",
+      "Thomas Jefferson was primary author of the US Declaration of Independence.",
+      "George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949.",
+      "There are twenty four solar terms in the traditional Chinese calendar.",
+      "Cao Xueqin is credited as author of the novel Dream of the Red Chamber.",
+      "Contrapositive of P implies Q is not Q implies not P.",
+      "Whales are mammals and must surface to breathe air through lungs.",
+      "Paris is the capital and largest city of France on the River Seine.",
+      "Aristotle was student of Plato and tutor of Alexander the Great.",
+      "Central Processing Unit executes instructions in a computer system.",
+      "Gross Domestic Product sums consumption investment government and net exports.",
+      "Janet sells duck eggs after eating and baking with some daily.",
+      "Natalia sold half as many clips in May as in April totaling seventy two.",
+      "Tom had twenty four apples gave six bought ten ending with twenty eight.",
+      "One hundred forty four divided by twelve equals twelve exactly.",
+      "Square root of eighty one is nine because nine times nine is eighty one.",
+      "If x plus fifteen equals forty two then x equals twenty seven.",
+      "Seventeen times twenty three equals three hundred ninety one.",
+      "CPU memory and storage are core hardware components of computers.",
+      "Supply and demand curves intersect at market equilibrium price.",
+      "Vitamin C deficiency causes scurvy with bleeding gums and weakness.",
+      "World War II involved Allied and Axis powers from 1939 to 1945.",
+      "Canberra was selected as Australian capital as compromise between Sydney and Melbourne.",
+      "Mercury orbits closest to the Sun with year of about eighty eight Earth days.",
+      "红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹。",
+      "二十四节气反映中国古代农历对太阳周年的划分。"
+    ]
+  },
+  "splits": {
+    "crossmodal12": [
+      "MCQ_BIO_01",
+      "MCQ_GEO_01",
+      "MCQ_ECON_01",
+      "MCQ_PHIL_01",
+      "MCQ_MED_01",
+      "OPEN_PHYS_01",
+      "OPEN_CHEM_01",
+      "OPEN_BIO_01",
+      "OPEN_HIST_01",
+      "OPEN_GEO_01",
+      "OPEN_ECON_01",
+      "OPEN_ECON_02"
+    ]
+  },
+  "phases": {
+    "crossmodal12": {
+      "split": "crossmodal12",
+      "corpus": "ingest_clean"
+    }
+  }
+}

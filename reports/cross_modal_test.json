@@ -1,0 +1,272 @@
+{
+  "product": "valhalla-unified-core-v1",
+  "phase": "test",
+  "layout": "compare",
+  "task_count": 12,
+  "summary": {
+    "sample_count": 12,
+    "avg_shared_patch_isolated": 0.8480810883366527,
+    "avg_shared_patch_non_isolated": 0.9997586857079122,
+    "avg_fusion_centroid_isolated": 0.8654938646835909,
+    "avg_fusion_centroid_non_isolated": 0.9989678319725787,
+    "avg_universal_score_isolated": 0.7623634370023681,
+    "avg_universal_score_non_isolated": 0.8777367903562144,
+    "non_isolated_wins": 12,
+    "isolated_wins": 0,
+    "verdict": "NON_ISOLATED_BETTER: single-session concurrent fusion tightens universal core more"
+  },
+  "per_task": [
+    {
+      "id": "MCQ_BIO_01",
+      "isolated": {
+        "shared_patch": 0.8824,
+        "text_tts": 0.8459,
+        "text_image": 0.9541,
+        "tts_image": 0.8472,
+        "common_core": true,
+        "universal_score": 0.7789
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9997,
+        "tts_image": 0.9996,
+        "common_core": true,
+        "universal_score": 0.8811
+      },
+      "score_delta": 0.1023,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_GEO_01",
+      "isolated": {
+        "shared_patch": 0.8797,
+        "text_tts": 0.8572,
+        "text_image": 0.9611,
+        "tts_image": 0.8208,
+        "common_core": true,
+        "universal_score": 0.7666
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9998,
+        "tts_image": 0.9998,
+        "common_core": true,
+        "universal_score": 0.8793
+      },
+      "score_delta": 0.1127,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_ECON_01",
+      "isolated": {
+        "shared_patch": 0.8233,
+        "text_tts": 0.8501,
+        "text_image": 0.7923,
+        "tts_image": 0.8274,
+        "common_core": true,
+        "universal_score": 0.7548
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9998,
+        "tts_image": 0.9997,
+        "common_core": true,
+        "universal_score": 0.8784
+      },
+      "score_delta": 0.1236,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_PHIL_01",
+      "isolated": {
+        "shared_patch": 0.8323,
+        "text_tts": 0.8361,
+        "text_image": 0.8156,
+        "tts_image": 0.8452,
+        "common_core": true,
+        "universal_score": 0.7596
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9997,
+        "tts_image": 0.9996,
+        "common_core": true,
+        "universal_score": 0.8768
+      },
+      "score_delta": 0.1172,
+      "non_isolated_better": true
+    },
+    {
+      "id": "MCQ_MED_01",
+      "isolated": {
+        "shared_patch": 0.8292,
+        "text_tts": 0.8437,
+        "text_image": 0.7866,
+        "tts_image": 0.8575,
+        "common_core": true,
+        "universal_score": 0.7611
+      },
+      "non_isolated": {
+        "shared_patch": 0.9997,
+        "text_tts": 1.0,
+        "text_image": 0.9996,
+        "tts_image": 0.9995,
+        "common_core": true,
+        "universal_score": 0.8778
+      },
+      "score_delta": 0.1167,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_PHYS_01",
+      "isolated": {
+        "shared_patch": 0.8116,
+        "text_tts": 0.828,
+        "text_image": 0.7696,
+        "tts_image": 0.837,
+        "common_core": true,
+        "universal_score": 0.7503
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9998,
+        "tts_image": 0.9997,
+        "common_core": true,
+        "universal_score": 0.8784
+      },
+      "score_delta": 0.1282,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_CHEM_01",
+      "isolated": {
+        "shared_patch": 0.874,
+        "text_tts": 0.8332,
+        "text_image": 0.9627,
+        "tts_image": 0.8259,
+        "common_core": true,
+        "universal_score": 0.7687
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9998,
+        "tts_image": 0.9997,
+        "common_core": true,
+        "universal_score": 0.8787
+      },
+      "score_delta": 0.11,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_BIO_01",
+      "isolated": {
+        "shared_patch": 0.8798,
+        "text_tts": 0.831,
+        "text_image": 0.9609,
+        "tts_image": 0.8473,
+        "common_core": true,
+        "universal_score": 0.7682
+      },
+      "non_isolated": {
+        "shared_patch": 0.9997,
+        "text_tts": 1.0,
+        "text_image": 0.9997,
+        "tts_image": 0.9996,
+        "common_core": true,
+        "universal_score": 0.8783
+      },
+      "score_delta": 0.1101,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_HIST_01",
+      "isolated": {
+        "shared_patch": 0.821,
+        "text_tts": 0.8318,
+        "text_image": 0.7943,
+        "tts_image": 0.837,
+        "common_core": true,
+        "universal_score": 0.7567
+      },
+      "non_isolated": {
+        "shared_patch": 0.9998,
+        "text_tts": 1.0,
+        "text_image": 0.9997,
+        "tts_image": 0.9996,
+        "common_core": true,
+        "universal_score": 0.8807
+      },
+      "score_delta": 0.124,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_GEO_01",
+      "isolated": {
+        "shared_patch": 0.886,
+        "text_tts": 0.8461,
+        "text_image": 0.9677,
+        "tts_image": 0.8443,
+        "common_core": true,
+        "universal_score": 0.7695
+      },
+      "non_isolated": {
+        "shared_patch": 0.9996,
+        "text_tts": 0.9997,
+        "text_image": 0.9995,
+        "tts_image": 0.9997,
+        "common_core": true,
+        "universal_score": 0.872
+      },
+      "score_delta": 0.1025,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_ECON_01",
+      "isolated": {
+        "shared_patch": 0.8232,
+        "text_tts": 0.836,
+        "text_image": 0.7744,
+        "tts_image": 0.8592,
+        "common_core": true,
+        "universal_score": 0.756
+      },
+      "non_isolated": {
+        "shared_patch": 0.9997,
+        "text_tts": 1.0,
+        "text_image": 0.9996,
+        "tts_image": 0.9995,
+        "common_core": true,
+        "universal_score": 0.8759
+      },
+      "score_delta": 0.1199,
+      "non_isolated_better": true
+    },
+    {
+      "id": "OPEN_ECON_02",
+      "isolated": {
+        "shared_patch": 0.8345,
+        "text_tts": 0.8638,
+        "text_image": 0.7973,
+        "tts_image": 0.8425,
+        "common_core": true,
+        "universal_score": 0.758
+      },
+      "non_isolated": {
+        "shared_patch": 0.9997,
+        "text_tts": 1.0,
+        "text_image": 0.9996,
+        "tts_image": 0.9996,
+        "common_core": true,
+        "universal_score": 0.8754
+      },
+      "score_delta": 0.1174,
+      "non_isolated_better": true
+    }
+  ]
+}

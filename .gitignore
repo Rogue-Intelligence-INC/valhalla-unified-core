@@ -1,0 +1,24 @@
+# Weights & large binaries
+models/hf/**/*.safetensors
+models/hf/**/*.bin
+models/hf/**/*.pt
+models/hf/**/*.pth
+*.wav
+*.png
+*.jpg
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Optional local secrets
+.env
+*.pem

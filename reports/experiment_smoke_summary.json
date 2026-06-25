@@ -1,0 +1,13 @@
+{
+  "protocol": "valhalla-universal-core-v1-non-isolated",
+  "layout": "non_isolated",
+  "phase": "smoke",
+  "sample_count": 4,
+  "common_core_rate": 1.0,
+  "universal_core_formation_rate": 1.0,
+  "avg_shared_patch": 0.9997027789679396,
+  "avg_fusion_vs_centroid": 0.9994520224158268,
+  "avg_core_tightening": -0.00025075655211281855,
+  "avg_universal_core_score": 0.880195524044056,
+  "verdict": "UNIVERSAL_CORE_CONFIRMED (non-isolated): concurrent session forms shared core"
+}

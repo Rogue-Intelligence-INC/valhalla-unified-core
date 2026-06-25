@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valhalla Unified Core — Rogue Intelligence</title>
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --surface: #121820;
+      --border: #1e2a3a;
+      --text: #e6edf3;
+      --muted: #8b9cb3;
+      --accent: #3d9eff;
+      --accent2: #7ee787;
+      --warn: #f0b429;
+      --proprietary: #ff7b72;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .banner {
+      background: linear-gradient(90deg, #1a2332 0%, #0f1620 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--proprietary);
+      text-align: center;
+    }
+    header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+    .meta {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+    p { margin-bottom: 1rem; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .card strong {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--accent2);
+      margin-bottom: 0.25rem;
+    }
+    .card span { font-size: 0.85rem; color: var(--muted); }
+    .flow {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      font-family: ui-monospace, monospace;
+      font-size: 0.85rem;
+      overflow-x: auto;
+      white-space: pre;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.65rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: var(--text); font-weight: 600; }
+    td { color: var(--muted); }
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--accent);
+      color: #0a0e14;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .cta:hover { text-decoration: none; opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    PROPRIETARY · NOT OPEN SOURCE · Rogue Intelligence LNC. © 2026 · Evaluation by written agreement only
+  </div>
+
+  <header>
+    <h1>Valhalla Unified Core</h1>
+    <p class="tagline">
+      One Triad session. One universal core. Text, speech, and image fused before language-model decode.
+    </p>
+    <div class="meta">
+      <span class="pill">Protocol valhalla-unified-core-v1</span>
+      <span class="pill">ValhallaBase valhalla-base-v1</span>
+      <span class="pill">Context × Core Fusion</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>What we built</h2>
+      <p>
+        Transformers typically fuse modalities late inside token layers. Valhalla Unified Core (VUC)
+        incubates <strong style="color:var(--text)">structure first</strong> — Hub, Tile, StemCell, and Fate —
+        in a single non-isolated session. The same task pulses through text, TTS, and image channels;
+        cross-modal Fate patches align near unity before any LM head runs.
+      </p>
+      <p>
+        <strong style="color:var(--text)">ValhallaBase</strong> sits on that substrate: dynamic context,
+        persistent sessions, hybrid decode (native retrieval for open questions, LM logprob for MCQ),
+        and optional core fusion that merges task modalities into the context snapshot.
+      </p>
+    </section>
+
+    <section>
+      <h2>Measured at scale</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>107/107</strong>
+          <span>Non-isolated universal core wins vs isolated (fair test)</span>
+        </div>
+        <div class="card">
+          <strong>~1.00</strong>
+          <span>Avg shared patch (non-isolated, 107 tasks)</span>
+        </div>
+        <div class="card">
+          <strong>97%</strong>
+          <span>Open retrieval slice (30/31, targeted context)</span>
+        </div>
+        <div class="card">
+          <strong>63%</strong>
+          <span>MCQ hybrid LM decode (46 tasks)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pipeline</h2>
+      <div class="flow">Context corpus + multimodal items
+        → Triad incubation snapshot
+        → [optional] Task core fusion (text / TTS / image pulses)
+        → Decode
+            open  → native corpus retrieval
+            mcq   → LM logprob batch (MVP) or structure mcq_fate
+        → Answer + protocol metrics</div>
+    </section>
+
+    <section>
+      <h2>Isolated vs non-isolated</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Layout</th>
+            <th>Session model</th>
+            <th>Typical shared patch</th>
+            <th>Use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Isolated</td>
+            <td>Separate runs per modality, then fuse</td>
+            <td>~0.85 – 0.98</td>
+            <td>Ablation / research compare</td>
+          </tr>
+          <tr>
+            <td><strong style="color:var(--accent2)">Non-isolated (VUC)</strong></td>
+            <td>Single session, interleaved pulses</td>
+            <td>~1.00</td>
+            <td>Production bake &amp; deployment</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Repository &amp; runtime</h2>
+      <p>
+        This page documents the <strong style="color:var(--text)">valhalla-unified-core</strong> product repo
+        (protocols, scripts, reports, documentation). Core binaries
+        (<code>valhalla_universal_core</code>, <code>valhalla_base</code>) are built from the
+        proprietary Valhalla monorepo under separate license.
+      </p>
+      <a class="cta" href="../docs/INTRODUCTION.md">Read detailed introduction (Markdown)</a>
+      <a class="cta" href="../README.md" style="margin-left:0.5rem;background:var(--surface);color:var(--text);border:1px solid var(--border)">README</a>
+    </section>
+
+    <section>
+      <h2>Legal</h2>
+      <p>
+        Copyright © 2026 Rogue Intelligence LNC. All Rights Reserved.
+        <strong style="color:var(--proprietary)">NOT OPEN SOURCE.</strong>
+        No license is granted except by written agreement.
+        Contact <a href="mailto:licensing@rogue-intelligence.com">licensing@rogue-intelligence.com</a>
+        for diligence or commercial licensing.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Valhalla Unified Core · Rogue Intelligence LNC. · Protocol valhalla-unified-core-v1 · Page v1.0
+  </footer>
+</body>
+</html>
