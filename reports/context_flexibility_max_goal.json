@@ -1,0 +1,1734 @@
+{
+  "timestamp": "2026-06-25T22:40:32.888895+00:00",
+  "protocol": "context-flexibility-max-goal-v1",
+  "max_goal": "flexible context + topic continuity + multi-Q disambiguation",
+  "improvements": {
+    "1_hybrid_follow_up_lm": "decode=hybrid + follow_up_decode=lm_patch_on_follow_up",
+    "2_follow_up_aware_retrieval": "decode=hybrid + follow_up_decode=native_follow_up_aware",
+    "3_extended_threads": "10 turns × 3 topics with session append"
+  },
+  "growth_curve": {
+    "seed_lines": 4,
+    "append_steps": 12,
+    "final_context_lines": 16,
+    "final_context_chars": 638,
+    "fingerprint_changes": 13,
+    "new_arch_avg_incremental_payload_chars": 64.3,
+    "new_arch_final_incremental_payload_chars": 66,
+    "trad_final_full_prompt_chars": 752,
+    "trad_growth_ratio": 3.62,
+    "steps": [
+      {
+        "step": 0,
+        "mode": "full_ingest",
+        "context_lines": 4,
+        "context_chars": 130,
+        "fingerprint": "ae2a1ada905ec523",
+        "payload_chars": 159,
+        "incremental": false
+      },
+      {
+        "step": 1,
+        "mode": "append",
+        "context_lines": 5,
+        "context_chars": 168,
+        "fingerprint": "d103cf81a7375d83",
+        "payload_chars": 60,
+        "incremental": true
+      },
+      {
+        "step": 2,
+        "mode": "append",
+        "context_lines": 6,
+        "context_chars": 204,
+        "fingerprint": "66192c153f09b8d9",
+        "payload_chars": 58,
+        "incremental": true
+      },
+      {
+        "step": 3,
+        "mode": "append",
+        "context_lines": 7,
+        "context_chars": 247,
+        "fingerprint": "6e9f6cb33b8f7530",
+        "payload_chars": 65,
+        "incremental": true
+      },
+      {
+        "step": 4,
+        "mode": "append",
+        "context_lines": 8,
+        "context_chars": 282,
+        "fingerprint": "a09e6ca78d40fba8",
+        "payload_chars": 57,
+        "incremental": true
+      },
+      {
+        "step": 5,
+        "mode": "append",
+        "context_lines": 9,
+        "context_chars": 314,
+        "fingerprint": "548aa6045e86ad44",
+        "payload_chars": 54,
+        "incremental": true
+      },
+      {
+        "step": 6,
+        "mode": "append",
+        "context_lines": 10,
+        "context_chars": 365,
+        "fingerprint": "e209e8b9ca290920",
+        "payload_chars": 73,
+        "incremental": true
+      },
+      {
+        "step": 7,
+        "mode": "append",
+        "context_lines": 11,
+        "context_chars": 415,
+        "fingerprint": "0507d03848b56999",
+        "payload_chars": 72,
+        "incremental": true
+      },
+      {
+        "step": 8,
+        "mode": "append",
+        "context_lines": 12,
+        "context_chars": 461,
+        "fingerprint": "9d85e2f6a78acb68",
+        "payload_chars": 68,
+        "incremental": true
+      },
+      {
+        "step": 9,
+        "mode": "append",
+        "context_lines": 13,
+        "context_chars": 501,
+        "fingerprint": "b907925cdf2e80b3",
+        "payload_chars": 62,
+        "incremental": true
+      },
+      {
+        "step": 10,
+        "mode": "append",
+        "context_lines": 14,
+        "context_chars": 553,
+        "fingerprint": "2a6fb5e31b1f7701",
+        "payload_chars": 74,
+        "incremental": true
+      },
+      {
+        "step": 11,
+        "mode": "append",
+        "context_lines": 15,
+        "context_chars": 594,
+        "fingerprint": "1391ef938b2e6ed0",
+        "payload_chars": 63,
+        "incremental": true
+      },
+      {
+        "step": 12,
+        "mode": "append",
+        "context_lines": 16,
+        "context_chars": 638,
+        "fingerprint": "4c0e970c69d96ae7",
+        "payload_chars": 66,
+        "incremental": true
+      }
+    ],
+    "trad_prompt_sizes": [
+      208,
+      249,
+      288,
+      334,
+      372,
+      407,
+      461,
+      514,
+      563,
+      606,
+      661,
+      705,
+      752
+    ]
+  },
+  "extended_topic_continuity": {
+    "native_baseline": {
+      "total_on_topic": 29,
+      "total_turns": 30,
+      "rate": 0.9666666666666667,
+      "threads": [
+        {
+          "thread_id": "australia",
+          "turns": 10,
+          "on_topic_hits": 10,
+          "on_topic_rate": 1.0,
+          "final_context_lines": 13,
+          "final_context_chars": 729,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 131
+            },
+            {
+              "turn": 1,
+              "question": "Which continent is Australia located in?",
+              "answer": "[corpus:1] Australia is a country in Oceania",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 246
+            },
+            {
+              "turn": 2,
+              "question": "What is the largest city in Australia?",
+              "answer": "[corpus:3] Sydney is the largest city in Australia but not the capital",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 313
+            },
+            {
+              "turn": 3,
+              "question": "What language is most widely spoken in Australia?",
+              "answer": "[corpus:4] English is the de facto national language of Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 362
+            },
+            {
+              "turn": 4,
+              "question": "What is the second largest city in Australia?",
+              "answer": "[corpus:7] Melbourne is the second largest city in Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 412
+            },
+            {
+              "turn": 5,
+              "question": "What stars appear on the Australian flag?",
+              "answer": "[corpus:8] The Australian flag features the Union Jack and Southern Cross",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 475
+            },
+            {
+              "turn": 6,
+              "question": "What famous rock formation is in central Australia?",
+              "answer": "[corpus:9] Uluru is a large sandstone monolith in central Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 532
+            },
+            {
+              "turn": 7,
+              "question": "What native marsupial is mentioned for Australia?",
+              "answer": "[corpus:10] Kangaroos are native marsupials found across Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 587
+            },
+            {
+              "turn": 8,
+              "question": "What term describes remote arid interior of Australia?",
+              "answer": "[corpus:11] The Outback refers to remote arid interior regions of Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 651
+            },
+            {
+              "turn": 9,
+              "question": "Why was Canberra chosen as capital?",
+              "answer": "[corpus:12] Canberra was selected as capital as a compromise between Sydney and Melbourne",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 729
+            }
+          ]
+        },
+        {
+          "thread_id": "chemistry",
+          "turns": 10,
+          "on_topic_hits": 10,
+          "on_topic_rate": 1.0,
+          "final_context_lines": 13,
+          "final_context_chars": 672,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "At what temperature does water boil at standard pressure?",
+              "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 180
+            },
+            {
+              "turn": 1,
+              "question": "At what temperature does water freeze?",
+              "answer": "[corpus:1] Water freezes at 0 degrees Celsius at standard pressure",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 279
+            },
+            {
+              "turn": 2,
+              "question": "What is the chemical formula for water?",
+              "answer": "[corpus:5] The chemical formula for water is H2O",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 317
+            },
+            {
+              "turn": 3,
+              "question": "Does salt water boil at same temperature as pure water?",
+              "answer": "[corpus:6] Salt water boils at a slightly higher temperature than pure water",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 383
+            },
+            {
+              "turn": 4,
+              "question": "What process turns liquid water into vapor?",
+              "answer": "[corpus:7] Evaporation turns liquid water into water vapor",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 431
+            },
+            {
+              "turn": 5,
+              "question": "What process forms clouds from vapor?",
+              "answer": "[corpus:8] Condensation forms clouds when water vapor cools",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 480
+            },
+            {
+              "turn": 6,
+              "question": "Which elements combine to form water?",
+              "answer": "[corpus:9] Hydrogen and oxygen combine to form water",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 522
+            },
+            {
+              "turn": 7,
+              "question": "Does water expand or contract when it freezes?",
+              "answer": "[corpus:10] Water expands when it freezes, unlike most liquids",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 573
+            },
+            {
+              "turn": 8,
+              "question": "What process separates water from dissolved salts?",
+              "answer": "[corpus:11] Distillation separates water from dissolved salts by boiling",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 634
+            },
+            {
+              "turn": 9,
+              "question": "What pH is neutral for pure water?",
+              "answer": "[corpus:12] pH 7 is neutral for pure water at 25C",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 672
+            }
+          ]
+        },
+        {
+          "thread_id": "physics",
+          "turns": 10,
+          "on_topic_hits": 9,
+          "on_topic_rate": 0.9,
+          "final_context_lines": 13,
+          "final_context_chars": 605,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the SI unit of force?",
+              "answer": "[corpus:0] The SI unit of force is the Newton",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 137
+            },
+            {
+              "turn": 1,
+              "question": "In F=ma, what does m represent?",
+              "answer": "[corpus:4] Mass is measured in kilograms in the SI system",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 240
+            },
+            {
+              "turn": 2,
+              "question": "In F=ma, what does a represent?",
+              "answer": "[corpus:5] Acceleration is the rate of change of velocity",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 287
+            },
+            {
+              "turn": 3,
+              "question": "What is weight in terms of force and gravity?",
+              "answer": "[corpus:6] Weight is force due to gravity on a mass",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 328
+            },
+            {
+              "turn": 4,
+              "question": "What quantity combines speed with direction?",
+              "answer": "[corpus:7] Velocity is speed with direction",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 361
+            },
+            {
+              "turn": 5,
+              "question": "What energy depends on mass and velocity squared?",
+              "answer": "[corpus:8] Kinetic energy is one half m v squared",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 400
+            },
+            {
+              "turn": 6,
+              "question": "What force opposes relative motion between surfaces?",
+              "answer": "[corpus:9] Friction opposes relative motion between surfaces",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 450
+            },
+            {
+              "turn": 7,
+              "question": "What is approximate gravity on Earth in m/s²?",
+              "answer": "[corpus:10] Gravity on Earth is approximately 9",
+              "on_topic": false,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 514
+            },
+            {
+              "turn": 8,
+              "question": "What equals mass times velocity?",
+              "answer": "[corpus:11] Momentum equals mass times velocity",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 550
+            },
+            {
+              "turn": 9,
+              "question": "What is force times distance in direction of force?",
+              "answer": "[corpus:12] Work is force times distance in the direction of force",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 605
+            }
+          ]
+        }
+      ]
+    },
+    "follow_up_aware": {
+      "total_on_topic": 29,
+      "total_turns": 30,
+      "rate": 0.9666666666666667,
+      "threads": [
+        {
+          "thread_id": "australia",
+          "turns": 10,
+          "on_topic_hits": 10,
+          "on_topic_rate": 1.0,
+          "final_context_lines": 13,
+          "final_context_chars": 729,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 131
+            },
+            {
+              "turn": 1,
+              "question": "Which continent is Australia located in?",
+              "answer": "[corpus:1] Australia is a country in Oceania",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 246
+            },
+            {
+              "turn": 2,
+              "question": "What is the largest city in Australia?",
+              "answer": "[corpus:3] Sydney is the largest city in Australia but not the capital",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 313
+            },
+            {
+              "turn": 3,
+              "question": "What language is most widely spoken in Australia?",
+              "answer": "[corpus:4] English is the de facto national language of Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 362
+            },
+            {
+              "turn": 4,
+              "question": "What is the second largest city in Australia?",
+              "answer": "[corpus:7] Melbourne is the second largest city in Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 412
+            },
+            {
+              "turn": 5,
+              "question": "What stars appear on the Australian flag?",
+              "answer": "[corpus:8] The Australian flag features the Union Jack and Southern Cross",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 475
+            },
+            {
+              "turn": 6,
+              "question": "What famous rock formation is in central Australia?",
+              "answer": "[corpus:9] Uluru is a large sandstone monolith in central Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 532
+            },
+            {
+              "turn": 7,
+              "question": "What native marsupial is mentioned for Australia?",
+              "answer": "[corpus:10] Kangaroos are native marsupials found across Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 587
+            },
+            {
+              "turn": 8,
+              "question": "What term describes remote arid interior of Australia?",
+              "answer": "[corpus:11] The Outback refers to remote arid interior regions of Australia",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 651
+            },
+            {
+              "turn": 9,
+              "question": "Why was Canberra chosen as capital?",
+              "answer": "[corpus:12] Canberra was selected as capital as a compromise between Sydney and Melbourne",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 729
+            }
+          ]
+        },
+        {
+          "thread_id": "chemistry",
+          "turns": 10,
+          "on_topic_hits": 10,
+          "on_topic_rate": 1.0,
+          "final_context_lines": 13,
+          "final_context_chars": 672,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "At what temperature does water boil at standard pressure?",
+              "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 180
+            },
+            {
+              "turn": 1,
+              "question": "At what temperature does water freeze?",
+              "answer": "[corpus:1] Water freezes at 0 degrees Celsius at standard pressure",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 279
+            },
+            {
+              "turn": 2,
+              "question": "What is the chemical formula for water?",
+              "answer": "[corpus:5] The chemical formula for water is H2O",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 317
+            },
+            {
+              "turn": 3,
+              "question": "Does salt water boil at same temperature as pure water?",
+              "answer": "[corpus:6] Salt water boils at a slightly higher temperature than pure water",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 383
+            },
+            {
+              "turn": 4,
+              "question": "What process turns liquid water into vapor?",
+              "answer": "[corpus:7] Evaporation turns liquid water into water vapor",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 431
+            },
+            {
+              "turn": 5,
+              "question": "What process forms clouds from vapor?",
+              "answer": "[corpus:8] Condensation forms clouds when water vapor cools",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 480
+            },
+            {
+              "turn": 6,
+              "question": "Which elements combine to form water?",
+              "answer": "[corpus:9] Hydrogen and oxygen combine to form water",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 522
+            },
+            {
+              "turn": 7,
+              "question": "Does water expand or contract when it freezes?",
+              "answer": "[corpus:10] Water expands when it freezes, unlike most liquids",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 573
+            },
+            {
+              "turn": 8,
+              "question": "What process separates water from dissolved salts?",
+              "answer": "[corpus:11] Distillation separates water from dissolved salts by boiling",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 634
+            },
+            {
+              "turn": 9,
+              "question": "What pH is neutral for pure water?",
+              "answer": "[corpus:12] pH 7 is neutral for pure water at 25C",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 672
+            }
+          ]
+        },
+        {
+          "thread_id": "physics",
+          "turns": 10,
+          "on_topic_hits": 9,
+          "on_topic_rate": 0.9,
+          "final_context_lines": 13,
+          "final_context_chars": 605,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the SI unit of force?",
+              "answer": "[corpus:0] The SI unit of force is the Newton",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 137
+            },
+            {
+              "turn": 1,
+              "question": "In F=ma, what does m represent?",
+              "answer": "[corpus:4] Mass is measured in kilograms in the SI system",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 5,
+              "context_chars": 240
+            },
+            {
+              "turn": 2,
+              "question": "In F=ma, what does a represent?",
+              "answer": "[corpus:5] Acceleration is the rate of change of velocity",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 6,
+              "context_chars": 287
+            },
+            {
+              "turn": 3,
+              "question": "What is weight in terms of force and gravity?",
+              "answer": "[corpus:6] Weight is force due to gravity on a mass",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 7,
+              "context_chars": 328
+            },
+            {
+              "turn": 4,
+              "question": "What quantity combines speed with direction?",
+              "answer": "[corpus:7] Velocity is speed with direction",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 8,
+              "context_chars": 361
+            },
+            {
+              "turn": 5,
+              "question": "What energy depends on mass and velocity squared?",
+              "answer": "[corpus:8] Kinetic energy is one half m v squared",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 9,
+              "context_chars": 400
+            },
+            {
+              "turn": 6,
+              "question": "What force opposes relative motion between surfaces?",
+              "answer": "[corpus:9] Friction opposes relative motion between surfaces",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 10,
+              "context_chars": 450
+            },
+            {
+              "turn": 7,
+              "question": "What is approximate gravity on Earth in m/s²?",
+              "answer": "[corpus:10] Gravity on Earth is approximately 9",
+              "on_topic": false,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 11,
+              "context_chars": 514
+            },
+            {
+              "turn": 8,
+              "question": "What equals mass times velocity?",
+              "answer": "[corpus:11] Momentum equals mass times velocity",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 12,
+              "context_chars": 550
+            },
+            {
+              "turn": 9,
+              "question": "What is force times distance in direction of force?",
+              "answer": "[corpus:12] Work is force times distance in the direction of force",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 13,
+              "context_chars": 605
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid_follow_up_lm": {
+      "total_on_topic": 19,
+      "total_turns": 30,
+      "rate": 0.6333333333333333,
+      "threads": [
+        {
+          "thread_id": "australia",
+          "turns": 10,
+          "on_topic_hits": 5,
+          "on_topic_rate": 0.5,
+          "final_context_lines": 13,
+          "final_context_chars": 729,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 131
+            },
+            {
+              "turn": 1,
+              "question": "Which continent is Australia located in?",
+              "answer": "Australia is located in the southern hemisphere, specifically in the southern part of the Australian continent. It is surrounded by the Indian Ocean to the east, the Pacific Ocean ",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 5,
+              "context_chars": 246
+            },
+            {
+              "turn": 2,
+              "question": "What is the largest city in Australia?",
+              "answer": "The largest city in Australia is Sydney, located in the state of New South Wales. It is the capital city of the state of New South Wales and is the largest city in Australia by pop",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 6,
+              "context_chars": 313
+            },
+            {
+              "turn": 3,
+              "question": "What language is most widely spoken in Australia?",
+              "answer": "The most widely spoken language in Australia is English. Approximately 95% of the population in Australia speaks English as their first language, and it is the language of instruct",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 7,
+              "context_chars": 362
+            },
+            {
+              "turn": 4,
+              "question": "What is the second largest city in Australia?",
+              "answer": "The second largest city in Australia is Sydney. It is the capital and largest city of New South Wales, Australia. Sydney is known for its beautiful beaches, vibrant culture, and ri",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 8,
+              "context_chars": 412
+            },
+            {
+              "turn": 5,
+              "question": "What stars appear on the Australian flag?",
+              "answer": "The Australian flag features three stars, one on each side. The design of the flag is based on the Australian flag of the same name, which was adopted in 1901. The three stars repr",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 9,
+              "context_chars": 475
+            },
+            {
+              "turn": 6,
+              "question": "What famous rock formation is in central Australia?",
+              "answer": "The famous rock formation in central Australia is the \"Ghan\" formation. This formation is a large, massive rock formation that covers an area of about 1,000 square kilometers. It i",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 10,
+              "context_chars": 532
+            },
+            {
+              "turn": 7,
+              "question": "What native marsupial is mentioned for Australia?",
+              "answer": "The native marsupial of Australia is the kangaroo. The kangaroo is a marsupial, which means it gives birth to its young in a pouch that it uses to nurse them. This is different fro",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 11,
+              "context_chars": 587
+            },
+            {
+              "turn": 8,
+              "question": "What term describes remote arid interior of Australia?",
+              "answer": "The term that describes the remote arid interior of Australia is the \"Outback.\" The Outback is a popular term used to describe the vast, arid regions of Australia, particularly in ",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 12,
+              "context_chars": 651
+            },
+            {
+              "turn": 9,
+              "question": "Why was Canberra chosen as capital?",
+              "answer": "Canberra, the capital of Australia, was chosen as the site for its capital city due to several strategic and historical reasons:\n\n1. Historical Significance: Canberra was founded i",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 13,
+              "context_chars": 729
+            }
+          ]
+        },
+        {
+          "thread_id": "chemistry",
+          "turns": 10,
+          "on_topic_hits": 7,
+          "on_topic_rate": 0.7,
+          "final_context_lines": 13,
+          "final_context_chars": 672,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "At what temperature does water boil at standard pressure?",
+              "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 180
+            },
+            {
+              "turn": 1,
+              "question": "At what temperature does water freeze?",
+              "answer": "Water freezes at 0 degrees Celsius (32 degrees Fahrenheit) at standard atmospheric pressure. This temperature is known as the freezing point of water.",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 5,
+              "context_chars": 279
+            },
+            {
+              "turn": 2,
+              "question": "What is the chemical formula for water?",
+              "answer": "The chemical formula for water is H₂O.",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 6,
+              "context_chars": 317
+            },
+            {
+              "turn": 3,
+              "question": "Does salt water boil at same temperature as pure water?",
+              "answer": "No, salt water does not boil at the same temperature as pure water. The boiling point of a substance depends on its temperature and the amount of heat energy available to it. In th",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 7,
+              "context_chars": 383
+            },
+            {
+              "turn": 4,
+              "question": "What process turns liquid water into vapor?",
+              "answer": "The process that turns liquid water into vapor is called evaporation. Evaporation is a chemical process where water molecules gain energy and move from a liquid state to a gas stat",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 8,
+              "context_chars": 431
+            },
+            {
+              "turn": 5,
+              "question": "What process forms clouds from vapor?",
+              "answer": "Clouds are formed by the condensation of water vapor in the atmosphere. When water vapor in the air cools and turns into liquid water droplets, it forms clouds. The process of clou",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 9,
+              "context_chars": 480
+            },
+            {
+              "turn": 6,
+              "question": "Which elements combine to form water?",
+              "answer": "Water is composed of hydrogen and oxygen atoms. The elements that combine to form water are hydrogen and oxygen.",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 10,
+              "context_chars": 522
+            },
+            {
+              "turn": 7,
+              "question": "Does water expand or contract when it freezes?",
+              "answer": "When water freezes, it expands. This is a fundamental property of water, which is why we say that water expands when it freezes. The expansion of water occurs because the water mol",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 11,
+              "context_chars": 573
+            },
+            {
+              "turn": 8,
+              "question": "What process separates water from dissolved salts?",
+              "answer": "Water and dissolved salts are separated from each other through a process called distillation. This process involves heating water to a high temperature, typically around 140-160 d",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 12,
+              "context_chars": 634
+            },
+            {
+              "turn": 9,
+              "question": "What pH is neutral for pure water?",
+              "answer": "The pH of pure water is 7.0. This is a standard value that applies to all solutions, including pure water. The pH scale ranges from 0 to 14, with 7 being neutral. Solutions with a ",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 13,
+              "context_chars": 672
+            }
+          ]
+        },
+        {
+          "thread_id": "physics",
+          "turns": 10,
+          "on_topic_hits": 7,
+          "on_topic_rate": 0.7,
+          "final_context_lines": 13,
+          "final_context_chars": 605,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the SI unit of force?",
+              "answer": "[corpus:0] The SI unit of force is the Newton",
+              "on_topic": true,
+              "decode_path": "valhalla_base/native/pipeline_open",
+              "context_lines": 3,
+              "context_chars": 137
+            },
+            {
+              "turn": 1,
+              "question": "In F=ma, what does m represent?",
+              "answer": "In the equation \\( F = ma \\), \\( m \\) represents mass. The equation states that the force \\( F \\) acting on an object is equal to the product of its mass \\( m \\) and its accelerati",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 5,
+              "context_chars": 240
+            },
+            {
+              "turn": 2,
+              "question": "In F=ma, what does a represent?",
+              "answer": "In the equation \\( F = ma \\), the letter \\( a \\) represents acceleration. The equation states that the force \\( F \\) acting on an object is equal to the product of the object's mas",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 6,
+              "context_chars": 287
+            },
+            {
+              "turn": 3,
+              "question": "What is weight in terms of force and gravity?",
+              "answer": "In physics, weight is a measure of the force of gravity acting on an object. It is the force that an object exerts on the surface of the Earth due to gravity. The weight of an obje",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 7,
+              "context_chars": 328
+            },
+            {
+              "turn": 4,
+              "question": "What quantity combines speed with direction?",
+              "answer": "Combining speed and direction is a common theme in various fields, including sports, navigation, and even in everyday life. Here are a few examples:\n\n1. **Speed and Direction in Sp",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 8,
+              "context_chars": 361
+            },
+            {
+              "turn": 5,
+              "question": "What energy depends on mass and velocity squared?",
+              "answer": "The energy that depends on mass and velocity squared is primarily related to the energy of a particle or a system of particles. This energy is known as relativistic energy and is g",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 9,
+              "context_chars": 400
+            },
+            {
+              "turn": 6,
+              "question": "What force opposes relative motion between surfaces?",
+              "answer": "The force that opposes relative motion between surfaces is called friction. Friction is a force that resists the relative motion between two surfaces that are in contact with each ",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 10,
+              "context_chars": 450
+            },
+            {
+              "turn": 7,
+              "question": "What is approximate gravity on Earth in m/s²?",
+              "answer": "Approximate gravity on Earth is approximately 9.81 m/s². This value is based on the average density of Earth and the gravitational force exerted by the planet's mass.",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 11,
+              "context_chars": 514
+            },
+            {
+              "turn": 8,
+              "question": "What equals mass times velocity?",
+              "answer": "The equation that equals mass times velocity is:\n\n\\[ \\text{mass} \\times \\text{velocity} = \\text{force} \\]\n\nIn physics, force is defined as the product of mass and velocity. This eq",
+              "on_topic": false,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 12,
+              "context_chars": 550
+            },
+            {
+              "turn": 9,
+              "question": "What is force times distance in direction of force?",
+              "answer": "The force times the distance in the direction of the force is equal to the work done by the force. This is a fundamental principle in physics, known as the work-energy theorem. The",
+              "on_topic": true,
+              "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+              "context_lines": 13,
+              "context_chars": 605
+            }
+          ]
+        }
+      ]
+    },
+    "traditional_lm": {
+      "total_on_topic": 24,
+      "total_turns": 30,
+      "rate": 0.8,
+      "threads": [
+        {
+          "thread_id": "australia",
+          "turns": 10,
+          "on_topic_hits": 7,
+          "on_topic_rate": 0.7,
+          "final_context_lines": 12,
+          "final_context_chars": 669,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the capital of Australia?",
+              "answer": "The capital of Australia is Canberra.",
+              "on_topic": true,
+              "context_lines": 3,
+              "context_chars": 131,
+              "prompt_chars": 209
+            },
+            {
+              "turn": 1,
+              "question": "Which continent is Australia located in?",
+              "answer": "Australia is located in the southern hemisphere and is part of Oceania.",
+              "on_topic": true,
+              "context_lines": 4,
+              "context_chars": 186,
+              "prompt_chars": 274
+            },
+            {
+              "turn": 2,
+              "question": "What is the largest city in Australia?",
+              "answer": "The largest city in Australia is Sydney.",
+              "on_topic": true,
+              "context_lines": 5,
+              "context_chars": 253,
+              "prompt_chars": 342
+            },
+            {
+              "turn": 3,
+              "question": "What language is most widely spoken in Australia?",
+              "answer": "The most widely spoken language in Australia is English. This can be inferred from the fact that English is the de facto national language of Australia and is used for official pur",
+              "on_topic": true,
+              "context_lines": 6,
+              "context_chars": 302,
+              "prompt_chars": 405
+            },
+            {
+              "turn": 4,
+              "question": "What is the second largest city in Australia?",
+              "answer": "The second largest city in Australia is Brisbane.",
+              "on_topic": false,
+              "context_lines": 7,
+              "context_chars": 352,
+              "prompt_chars": 454
+            },
+            {
+              "turn": 5,
+              "question": "What stars appear on the Australian flag?",
+              "answer": "The Australian flag features two horizontal bands of red, white, and blue, with a yellow star in the upper left corner.",
+              "on_topic": false,
+              "context_lines": 8,
+              "context_chars": 415,
+              "prompt_chars": 516
+            },
+            {
+              "turn": 6,
+              "question": "What famous rock formation is in central Australia?",
+              "answer": "The famous rock formation in central Australia that is known for its striking beauty and historical significance is Uluru (also spelled Ayers Rock). This iconic feature stands as o",
+              "on_topic": true,
+              "context_lines": 9,
+              "context_chars": 472,
+              "prompt_chars": 586
+            },
+            {
+              "turn": 7,
+              "question": "What native marsupial is mentioned for Australia?",
+              "answer": "The native marsupial that is mentioned for Australia is the kangaroo. This is because kangaroos are indeed native to Australia, with the species being one of the most widespread an",
+              "on_topic": true,
+              "context_lines": 10,
+              "context_chars": 527,
+              "prompt_chars": 642
+            },
+            {
+              "turn": 8,
+              "question": "What term describes remote arid interior of Australia?",
+              "answer": "The term that describes remote arid interior of Australia is \"Outback.\"",
+              "on_topic": true,
+              "context_lines": 11,
+              "context_chars": 591,
+              "prompt_chars": 714
+            },
+            {
+              "turn": 9,
+              "question": "Why was Canberra chosen as capital?",
+              "answer": "Canberra was chosen as the capital of Australia due to its strategic location, cultural significance, and historical importance. Here are some key reasons why it was selected:\n\n1. ",
+              "on_topic": false,
+              "context_lines": 12,
+              "context_chars": 669,
+              "prompt_chars": 776
+            }
+          ]
+        },
+        {
+          "thread_id": "chemistry",
+          "turns": 10,
+          "on_topic_hits": 8,
+          "on_topic_rate": 0.8,
+          "final_context_lines": 12,
+          "final_context_chars": 616,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "At what temperature does water boil at standard pressure?",
+              "answer": "Water boils at 100 degrees Celsius at standard pressure. This is the specific temperature at which water changes from a liquid to a gas under normal conditions of temperature and p",
+              "on_topic": true,
+              "context_lines": 3,
+              "context_chars": 180,
+              "prompt_chars": 282
+            },
+            {
+              "turn": 1,
+              "question": "At what temperature does water freeze?",
+              "answer": "Water freezes at 0 degrees Celsius at standard pressure. This is the freezing point of water, which is the temperature below which water turns into ice and above which it remains i",
+              "on_topic": true,
+              "context_lines": 4,
+              "context_chars": 223,
+              "prompt_chars": 309
+            },
+            {
+              "turn": 2,
+              "question": "What is the chemical formula for water?",
+              "answer": "The chemical formula for water is H2O.",
+              "on_topic": true,
+              "context_lines": 5,
+              "context_chars": 261,
+              "prompt_chars": 351
+            },
+            {
+              "turn": 3,
+              "question": "Does salt water boil at same temperature as pure water?",
+              "answer": "No, salt water does not boil at the same temperature as pure water. While both substances contain equal amounts of dissolved salts and have similar molecular structures, their boil",
+              "on_topic": false,
+              "context_lines": 6,
+              "context_chars": 327,
+              "prompt_chars": 436
+            },
+            {
+              "turn": 4,
+              "question": "What process turns liquid water into vapor?",
+              "answer": "The process that turns liquid water into vapor is evaporation. This occurs when the temperature of the liquid water rises above its boiling point and begins to turn into steam or v",
+              "on_topic": true,
+              "context_lines": 7,
+              "context_chars": 375,
+              "prompt_chars": 475
+            },
+            {
+              "turn": 5,
+              "question": "What process forms clouds from vapor?",
+              "answer": "Clouds form from the condensation of water vapor in the atmosphere. When water vapor rises and cools, it turns into tiny droplets or ice crystals that fall to the ground as precipi",
+              "on_topic": false,
+              "context_lines": 8,
+              "context_chars": 424,
+              "prompt_chars": 521
+            },
+            {
+              "turn": 6,
+              "question": "Which elements combine to form water?",
+              "answer": "Water is formed through the combination of hydrogen and oxygen atoms. This process involves the following steps:\n\n1. **Hydrogen and Oxygen**: These two elements combine in a ratio ",
+              "on_topic": true,
+              "context_lines": 9,
+              "context_chars": 466,
+              "prompt_chars": 566
+            },
+            {
+              "turn": 7,
+              "question": "Does water expand or contract when it freezes?",
+              "answer": "When water freezes, it contracts rather than expands. This phenomenon is known as the freezing process of water. At standard atmospheric pressure, water freezes at 0 degrees Celsiu",
+              "on_topic": true,
+              "context_lines": 10,
+              "context_chars": 517,
+              "prompt_chars": 629
+            },
+            {
+              "turn": 8,
+              "question": "What process separates water from dissolved salts?",
+              "answer": "Water separation from dissolved salts occurs through the process of distillation. This method involves heating a mixture of water and other substances until all the dissolved salts",
+              "on_topic": true,
+              "context_lines": 11,
+              "context_chars": 578,
+              "prompt_chars": 697
+            },
+            {
+              "turn": 9,
+              "question": "What pH is neutral for pure water?",
+              "answer": "Pure water has a pH of 7. This is the neutral pH value that occurs naturally in the human body and many other environments where water is present in significant quantities. At this",
+              "on_topic": true,
+              "context_lines": 12,
+              "context_chars": 616,
+              "prompt_chars": 722
+            }
+          ]
+        },
+        {
+          "thread_id": "physics",
+          "turns": 10,
+          "on_topic_hits": 9,
+          "on_topic_rate": 0.9,
+          "final_context_lines": 12,
+          "final_context_chars": 549,
+          "turn_details": [
+            {
+              "turn": 0,
+              "question": "What is the SI unit of force?",
+              "answer": "The SI unit of force is the newton (N).",
+              "on_topic": true,
+              "context_lines": 3,
+              "context_chars": 137,
+              "prompt_chars": 211
+            },
+            {
+              "turn": 1,
+              "question": "In F=ma, what does m represent?",
+              "answer": "In the equation \\( F = ma \\), \\( m \\) represents mass. This means that the product of mass and acceleration (\\( m \\times a \\)) gives the force acting on an object. In other words, ",
+              "on_topic": true,
+              "context_lines": 4,
+              "context_chars": 184,
+              "prompt_chars": 263
+            },
+            {
+              "turn": 2,
+              "question": "In F=ma, what does a represent?",
+              "answer": "In the equation \\( F = ma \\), \\( a \\) represents acceleration. This means that the product of mass and its acceleration gives the force acting on an object. In other words, it tell",
+              "on_topic": true,
+              "context_lines": 5,
+              "context_chars": 231,
+              "prompt_chars": 313
+            },
+            {
+              "turn": 3,
+              "question": "What is weight in terms of force and gravity?",
+              "answer": "Weight is defined as the force exerted on an object due to gravity. In other words, it is the force that acts downward on an object when placed on Earth's surface. The relationship",
+              "on_topic": true,
+              "context_lines": 6,
+              "context_chars": 272,
+              "prompt_chars": 371
+            },
+            {
+              "turn": 4,
+              "question": "What quantity combines speed with direction?",
+              "answer": "The quantity that combines speed and direction is **velocity**. Velocity is defined as the rate of change of position with respect to time, which includes both speed and direction.",
+              "on_topic": true,
+              "context_lines": 7,
+              "context_chars": 305,
+              "prompt_chars": 406
+            },
+            {
+              "turn": 5,
+              "question": "What energy depends on mass and velocity squared?",
+              "answer": "The energy that depends on both mass and the square of the velocity is kinetic energy. This can be mathematically expressed as:\n\n\\[ \\text{Kinetic Energy} = \\frac{1}{2} m v^2 \\]\n\nwh",
+              "on_topic": true,
+              "context_lines": 8,
+              "context_chars": 344,
+              "prompt_chars": 453
+            },
+            {
+              "turn": 6,
+              "question": "What force opposes relative motion between surfaces?",
+              "answer": "The force that opposes relative motion between surfaces is **friction**. Friction is a fundamental force that resists the relative motion or tendency of objects to move past each o",
+              "on_topic": true,
+              "context_lines": 9,
+              "context_chars": 394,
+              "prompt_chars": 509
+            },
+            {
+              "turn": 7,
+              "question": "What is approximate gravity on Earth in m/s²?",
+              "answer": "The approximate value of gravitational acceleration on Earth is about 9.81 meters per second squared (m/s²). This value has been determined through extensive scientific research an",
+              "on_topic": true,
+              "context_lines": 10,
+              "context_chars": 458,
+              "prompt_chars": 569
+            },
+            {
+              "turn": 8,
+              "question": "What equals mass times velocity?",
+              "answer": "The equation that equals mass times velocity is:\n\n\\[ \\text{Mass} \\times \\text{Velocity} = \\text{Force} \\]\n\nIn other words, the product of an object's mass and its velocity results ",
+              "on_topic": false,
+              "context_lines": 11,
+              "context_chars": 494,
+              "prompt_chars": 595
+            },
+            {
+              "turn": 9,
+              "question": "What is force times distance in direction of force?",
+              "answer": "In the context of physics and mechanics, when we talk about force times distance in the direction of the force, it refers to the work done by that force over a given distance. This",
+              "on_topic": true,
+              "context_lines": 12,
+              "context_chars": 549,
+              "prompt_chars": 672
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "multi_question_disambiguation": {
+    "native_baseline": {
+      "hits": 9,
+      "n": 9,
+      "rate": 1.0,
+      "batches": [
+        {
+          "batch_id": "france_water",
+          "n_questions": 2,
+          "disambiguation_hits": 2,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_fr",
+              "question": "What is the capital of France?",
+              "answer": "[corpus:0] The capital of France is Paris",
+              "correct_topic": true
+            },
+            {
+              "id": "q_boil",
+              "question": "At what temperature does water boil?",
+              "answer": "[corpus:2] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "triple_mix",
+          "n_questions": 3,
+          "disambiguation_hits": 3,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_au_cap",
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "correct_topic": true
+            },
+            {
+              "id": "q_force",
+              "question": "What is the SI unit of force?",
+              "answer": "[corpus:1] The SI unit of force is the Newton",
+              "correct_topic": true
+            },
+            {
+              "id": "q_photo",
+              "question": "Where does photosynthesis occur?",
+              "answer": "[corpus:2] Photosynthesis occurs in chloroplasts using light energy",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "four_way",
+          "n_questions": 4,
+          "disambiguation_hits": 4,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_merc",
+              "question": "Which planet is closest to the Sun?",
+              "answer": "[corpus:0] Mercury is the closest planet to the Sun",
+              "correct_topic": true
+            },
+            {
+              "id": "q_heart",
+              "question": "How many chambers does the human heart have?",
+              "answer": "[corpus:1] The human heart has four chambers",
+              "correct_topic": true
+            },
+            {
+              "id": "q_py",
+              "question": "Name one programming language mentioned in the context.",
+              "answer": "[corpus:2] Python is a programming language",
+              "correct_topic": true
+            },
+            {
+              "id": "q_pac",
+              "question": "What is the largest ocean?",
+              "answer": "[corpus:3] The Pacific Ocean is the largest ocean on Earth",
+              "correct_topic": true
+            }
+          ]
+        }
+      ]
+    },
+    "follow_up_aware": {
+      "hits": 9,
+      "n": 9,
+      "rate": 1.0,
+      "batches": [
+        {
+          "batch_id": "france_water",
+          "n_questions": 2,
+          "disambiguation_hits": 2,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_fr",
+              "question": "What is the capital of France?",
+              "answer": "[corpus:0] The capital of France is Paris",
+              "correct_topic": true
+            },
+            {
+              "id": "q_boil",
+              "question": "At what temperature does water boil?",
+              "answer": "[corpus:2] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "triple_mix",
+          "n_questions": 3,
+          "disambiguation_hits": 3,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_au_cap",
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "correct_topic": true
+            },
+            {
+              "id": "q_force",
+              "question": "What is the SI unit of force?",
+              "answer": "[corpus:1] The SI unit of force is the Newton",
+              "correct_topic": true
+            },
+            {
+              "id": "q_photo",
+              "question": "Where does photosynthesis occur?",
+              "answer": "[corpus:2] Photosynthesis occurs in chloroplasts using light energy",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "four_way",
+          "n_questions": 4,
+          "disambiguation_hits": 4,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_merc",
+              "question": "Which planet is closest to the Sun?",
+              "answer": "[corpus:0] Mercury is the closest planet to the Sun",
+              "correct_topic": true
+            },
+            {
+              "id": "q_heart",
+              "question": "How many chambers does the human heart have?",
+              "answer": "[corpus:1] The human heart has four chambers",
+              "correct_topic": true
+            },
+            {
+              "id": "q_py",
+              "question": "Name one programming language mentioned in the context.",
+              "answer": "[corpus:2] Python is a programming language",
+              "correct_topic": true
+            },
+            {
+              "id": "q_pac",
+              "question": "What is the largest ocean?",
+              "answer": "[corpus:3] The Pacific Ocean is the largest ocean on Earth",
+              "correct_topic": true
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid_follow_up_lm": {
+      "hits": 8,
+      "n": 9,
+      "rate": 0.8888888888888888,
+      "batches": [
+        {
+          "batch_id": "france_water",
+          "n_questions": 2,
+          "disambiguation_hits": 2,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_fr",
+              "question": "What is the capital of France?",
+              "answer": "[corpus:0] The capital of France is Paris",
+              "correct_topic": true
+            },
+            {
+              "id": "q_boil",
+              "question": "At what temperature does water boil?",
+              "answer": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) under standard atmospheric pressure. This temperature is the boiling point of water at sea level and",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "triple_mix",
+          "n_questions": 3,
+          "disambiguation_hits": 2,
+          "disambiguation_rate": 0.6666666666666666,
+          "details": [
+            {
+              "id": "q_au_cap",
+              "question": "What is the capital of Australia?",
+              "answer": "[corpus:0] The capital of Australia is Canberra",
+              "correct_topic": true
+            },
+            {
+              "id": "q_force",
+              "question": "What is the SI unit of force?",
+              "answer": "The SI unit of force is the newton (N).",
+              "correct_topic": true
+            },
+            {
+              "id": "q_photo",
+              "question": "Where does photosynthesis occur?",
+              "answer": "Photosynthesis occurs in plants, algae, and some bacteria. It is a process by which plants, algae, and some bacteria convert light energy, usually from the sun,",
+              "correct_topic": false
+            }
+          ]
+        },
+        {
+          "batch_id": "four_way",
+          "n_questions": 4,
+          "disambiguation_hits": 4,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_merc",
+              "question": "Which planet is closest to the Sun?",
+              "answer": "[corpus:0] Mercury is the closest planet to the Sun",
+              "correct_topic": true
+            },
+            {
+              "id": "q_heart",
+              "question": "How many chambers does the human heart have?",
+              "answer": "The human heart has four chambers. These chambers are located in the center of the heart and are responsible for pumping blood throughout the body. The four cha",
+              "correct_topic": true
+            },
+            {
+              "id": "q_py",
+              "question": "Name one programming language mentioned in the context.",
+              "answer": "One programming language mentioned in the context is Python. Python is a high-level, interpreted programming language that is widely used for a variety of appli",
+              "correct_topic": true
+            },
+            {
+              "id": "q_pac",
+              "question": "What is the largest ocean?",
+              "answer": "The largest ocean is the Pacific Ocean, which covers an area of approximately 14 million square kilometers. It is the second-largest ocean in the world, after t",
+              "correct_topic": true
+            }
+          ]
+        }
+      ]
+    },
+    "traditional_lm": {
+      "hits": 9,
+      "n": 9,
+      "rate": 1.0,
+      "batches": [
+        {
+          "batch_id": "france_water",
+          "n_questions": 2,
+          "disambiguation_hits": 2,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_fr",
+              "question": "What is the capital of France?",
+              "answer": "The capital of France is Paris.",
+              "correct_topic": true
+            },
+            {
+              "id": "q_boil",
+              "question": "At what temperature does water boil?",
+              "answer": "Water boils at 100 degrees Celsius at standard atmospheric pressure. This means that when the temperature reaches this point, all molecules in the liquid state ",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "triple_mix",
+          "n_questions": 3,
+          "disambiguation_hits": 3,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_au_cap",
+              "question": "What is the capital of Australia?",
+              "answer": "The capital of Australia is Canberra.",
+              "correct_topic": true
+            },
+            {
+              "id": "q_force",
+              "question": "What is the SI unit of force?",
+              "answer": "The SI unit of force is the newton (N).",
+              "correct_topic": true
+            },
+            {
+              "id": "q_photo",
+              "question": "Where does photosynthesis occur?",
+              "answer": "Photosynthesis occurs primarily in the leaves of plants, which contain chloroplasts. Chloroplasts are specialized organelles found in plant cells that contain t",
+              "correct_topic": true
+            }
+          ]
+        },
+        {
+          "batch_id": "four_way",
+          "n_questions": 4,
+          "disambiguation_hits": 4,
+          "disambiguation_rate": 1.0,
+          "details": [
+            {
+              "id": "q_merc",
+              "question": "Which planet is closest to the Sun?",
+              "answer": "Mercury is the planet that is closest to the Sun.",
+              "correct_topic": true
+            },
+            {
+              "id": "q_heart",
+              "question": "How many chambers does the human heart have?",
+              "answer": "The human heart has four chambers.",
+              "correct_topic": true
+            },
+            {
+              "id": "q_py",
+              "question": "Name one programming language mentioned in the context.",
+              "answer": "Python is mentioned in the context of the given information.",
+              "correct_topic": true
+            },
+            {
+              "id": "q_pac",
+              "question": "What is the largest ocean?",
+              "answer": "The largest ocean is the Pacific Ocean.",
+              "correct_topic": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "improvement_deltas": {
+    "follow_up_aware_vs_baseline": 0.0,
+    "hybrid_follow_up_vs_baseline": -0.33333333333333337,
+    "hybrid_follow_up_vs_traditional": -0.16666666666666674,
+    "follow_up_aware_vs_traditional": 0.16666666666666663
+  },
+  "verdict": "GOAL_IN_PROGRESS"
+}

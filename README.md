@@ -28,6 +28,42 @@ On top of that substrate sits **ValhallaBase** — a context-flexible inference 
 - **Persistent session** — incremental context append without full re-ingest
 - **Multimodal context** — text / audio features / image features in one context bundle
 - **Core fusion** — fuse task modalities into the context snapshot before structure→LM decode
+- **Follow-up-aware context** — session `question_history` + corpus ranking that penalizes prior-turn sticky retrieval ([max goal doc](./docs/CONTEXT_FLEXIBILITY_MAX_GOAL.md))
+- **Fate ingress routing** — **`quad_cycle` (production default)**: each corpus line evenly activates all four Hub quads (25% each); see [Fate ingress summary](./docs/FATE_INGRESS_ROUTING.md)
+
+---
+
+## Fate ingress routing (production default: `quad_cycle`)
+
+When Fate routing is locked (`fate_routing_free=false`), Hub distributes each corpus line's signals evenly across **BlackHole / MeshBrain / MultiNova / BaseForce** (8 signals per quad per line). This maximizes four-system activation and gave the best accuracy in our 15+15 × 3-thread compare (**93.3% Phase1**, **80.0% Phase2**).
+
+| Mode | Phase1 | Four-quad balance | Fate spread |
+|------|--------|-------------------|-------------|
+| **`quad_cycle`** ✅ | **93.3%** | **1.00** (25% each) | 0 (symmetric) |
+| semantic | 91.1% | 0.51 (one quad ~60%) | ~0.93 |
+| hybrid_quad_semantic | 91.1% | 0.75 | ~0.88 |
+
+Full experiment write-up: **[docs/FATE_INGRESS_ROUTING.md](./docs/FATE_INGRESS_ROUTING.md)** · reports in `reports/fate_weight_ladder_*.json`
+
+```python
+ValhallaBase(
+    decode="hybrid",
+    follow_up_decode="native_follow_up_aware",
+    fate_ingress_routing="quad_cycle",  # default
+)
+```
+
+---
+
+## Maximum goal: context flexibility
+
+See **[docs/CONTEXT_FLEXIBILITY_MAX_GOAL.md](./docs/CONTEXT_FLEXIBILITY_MAX_GOAL.md)** — one of VUC's primary product targets.
+
+| Dimension | Best architecture | Result |
+|-----------|-------------------|--------|
+| Context growth (12 appends) | ValhallaBase session | 16 lines / 638 chars internal; ~64 chars/step wire |
+| Extended topic continuity (30 turns) | **follow_up_aware native** | **29/30 (96.7%)** vs traditional 24/30 (80%) |
+| Multi-Q disambiguation (9 Q) | native / follow_up_aware / trad | **9/9** |
 
 ---
 
@@ -52,7 +88,9 @@ Full reports live in the Valhalla monorepo under `reports/valhalla_inference/` a
 valhalla-unified-core/
 ├── PROTOCOL.md              Core fusion protocol (non-isolated bake)
 ├── docs/
-│   └── INTRODUCTION.md      Detailed English product & architecture guide
+│   ├── INTRODUCTION.md      Detailed English product & architecture guide
+│   ├── CONTEXT_FLEXIBILITY_MAX_GOAL.md
+│   └── FATE_INGRESS_ROUTING.md   Quad ingress modes & production default
 ├── page/
 │   └── index.html           Public-style introduction landing page
 ├── scripts/
