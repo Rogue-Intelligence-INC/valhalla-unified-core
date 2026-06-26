@@ -241,14 +241,34 @@ Non-isolated wins **107/107** fair-benchmark tasks.
 
 Real modalities (espeak TTS + SD-Turbo): non-isolated gain **+0.11** vs hash proxies **+0.01** — fusion matters most when channels are genuinely different.
 
-### 4.2 Core fusion QA impact
+### 4.2 Core fusion QA impact (baseline vs fused)
 
-| Pipeline | 12 cross-modal tasks |
-|----------|---------------------|
-| Context + core fusion + hybrid | **9/12** |
-| Baseline without fusion | 8/12 |
+Report: `reports/context_core_fusion.json` · protocol `context-core-fusion-v2`
 
-Enable: `config.core_fusion=true` when task carries `audio_features` / `image_features`.
+| Scope | Baseline (`core_fusion=false`) | Fused (`core_fusion=true`) | Δ |
+|-------|-------------------------------|----------------------------|---|
+| All 12 tasks | 8/12 (66.7%) | **9/12 (75.0%)** | +8.3pp |
+| **MCQ only (5)** | **2/5 (40%)** | **3/5 (60%)** | **+20pp** |
+| Open (7) | 6/7 | 6/7 | 0 |
+
+**Per-MCQ (multimodal context — text + TTS + image ingress on both arms):**
+
+| ID | Baseline | Fused | Note |
+|----|----------|-------|------|
+| MCQ_BIO_01 | A ✗ | **C ✓** | **Only flip** — mitochondria vs chloroplast confusion |
+| MCQ_GEO_01 | C ✓ | C ✓ | Already correct |
+| MCQ_ECON_01 | A ✗ | A ✗ | LM supply-law prior dominates |
+| MCQ_PHIL_01 | B ✓ | B ✓ | Already correct |
+| MCQ_MED_01 | A ✗ | A ✗ | Vit A/C confusion; patch nudge insufficient |
+
+**Why fusion helps narrowly (not a general MCQ booster):**
+
+1. **Multimodal without fusion can regress** — same BIO question is **correct** in 46-Q text-only scale test (`scale_benchmark_test.json`, no audio/image) but **wrong (A)** with multimodal context baseline. Fusion realigns patch → fixes that regression.
+2. **Structural score ≠ MCQ accuracy** — non-isolated universal_score wins 107/107 and +0.10 on all 5 MCQ tasks, yet only BIO crosses the logprob threshold.
+3. **Baked weights already encode fusion** — `base_load_fused_crossmodal12.json` MCQ **3/5 (60%)** matches runtime `core_fusion=true`; runtime baseline **2/5** is the gap fusion closes.
+4. **46-Q fusion ablation not yet run** — current 63% MCQ is text-only, `core_fusion=false`. Expect at most ~+2–4 questions if multimodal sessions are common.
+
+Enable: `config.core_fusion=true` when task carries `audio_features` / `image_features` (no-op on text-only tasks).
 
 ---
 
@@ -407,9 +427,11 @@ RUSTFLAGS="-L /opt/cuda/lib64" cargo build -p hub-f64 --release \
 | Report | Test | Key metric |
 |--------|------|------------|
 | `context_flexibility_max_goal.json` | 30-turn extended threads | 96.7% follow_up_aware |
-| `fate_weight_ladder_quad_cycle_30.json` | Ingress mode compare | 93.3% quad_cycle P1 |
+| `fate_weight_ladder_compare_30.json` | Ingress mode compare (3 modes) | 93.3% quad_cycle P1 |
 | `fate_qa_feedback_40.json` | QA→Fate 20+20 | prefs differentiate by topic |
-| `base_load_fused_crossmodal12.json` | Core fusion load | fused vs unfused |
+| `context_core_fusion.json` | Baseline vs core_fusion (12 tasks) | MCQ 40%→60% |
+| `scale_benchmark_test.json` | 107-task scale (46 MCQ text-only) | MCQ 63% · open 97% |
+| `base_load_fused_crossmodal12.json` | Baked fused LM load | MCQ 3/5 |
 | `cross_modal_test_summary.json` | 12-task tri-modal | non-iso patch ~1.0 |
 | `bake_crossmodal12.json` | HF bake smoke | export validation |
 | `qa_smoke_summary.json` | Baked model QA | post-bake inference |
@@ -477,14 +499,15 @@ python3 scripts/run_qa.py --phase smoke
 
 ---
 
-## 13. Roadmap
+## 13. Roadmap (priority order)
 
-1. **Retrieval ↔ Fate coupling** — increase `hub_prefs` weight in `score_memories`
-2. **DeformationSignal direction** — pass corpus embedding, not `vec![0.0;4]`
-3. **Free-phase stability** — cap `incubation_cycles` on release; fix −18pp drop
-4. **mcq_fate tuning** — close gap vs LM logprob (35% → 63% target)
-5. **Real-modality bake @ 107 scale** — TTS + SD full pipeline export
-6. **Per-batch snapshot reuse** — single LM load for multi-question session
+1. **46×2 MCQ ablation** — `run_scale_benchmark.py` with `core_fusion=true` + multimodal samples; quantify fusion on full fair MCQ slice
+2. **LM prior fixes for ECON/MED-class errors** — corpus-aware logprob compose or stronger patch strength on mcq_fate fallback items
+3. **Retrieval ↔ Fate coupling** — increase `hub_prefs` weight in `score_memories` (currently ~0.02 logprob bias)
+4. **DeformationSignal direction** — pass corpus embedding, not `vec![0.0;4]`
+5. **Free-phase stability** — cap `incubation_cycles` on release; fix −13~−18pp constraint-release drop
+6. **Real-modality bake @ 107 scale** — TTS + SD full pipeline export (runtime fusion ≈ bake for BIO-class fixes)
+7. **Per-batch snapshot reuse** — single LM load for multi-question session
 
 ---
 

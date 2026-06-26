@@ -223,7 +223,7 @@ base = ValhallaBase(
 cd /path/to/Valhalla
 RUSTFLAGS="-L /opt/cuda/lib64" cargo build -p hub-f64 --release --bin valhalla_base
 
-# Default quad_cycle (15+15 quick)
+# Default quad_cycle (15+15 quick) — full compare in fate_weight_ladder_compare_30.json
 python3 tools/valhalla_inference/test_fate_weight_ladder_200.py
 
 # Compare all three modes

@@ -71,7 +71,10 @@ base.run(follow_up_questions, append_only=True)
 | **Fate QA feedback** (40 rounds) | prefs learn topic→quad (BH/MN/BF **~32–36%**) |
 | **MCQ hybrid** (46 tasks) | **63%** LM logprob |
 
-Reports in [`reports/`](./reports/) · methodology in [platform doc](./docs/VALHALLA_BASE_PLATFORM.md).
+| **Core fusion MCQ** (5 multimodal) | **40% → 60%** (baseline vs fused) |
+
+Reports in [`reports/`](./reports/) · methodology in [platform doc](./docs/VALHALLA_BASE_PLATFORM.md).  
+Key: `context_core_fusion.json` · `scale_benchmark_test.json` · `fate_weight_ladder_compare_30.json`
 
 ---
 

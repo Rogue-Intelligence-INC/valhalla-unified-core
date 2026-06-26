@@ -1,0 +1,559 @@
+{
+  "timestamp": "2026-06-25T19:34:48.644931+00:00",
+  "protocol": "context-core-fusion-v2",
+  "task_count": 12,
+  "core_formation_rate": 1.0,
+  "baseline_qa_accuracy": 0.6666666666666666,
+  "core_fusion_qa_accuracy": 0.75,
+  "fusion_improved_count": 1,
+  "fusion_regressed_count": 0,
+  "avg_universal_score": 0.8773696851352432,
+  "context_swap_ablation": {
+    "question": "What is the capital of Australia?",
+    "with_canberra_context": "[corpus:1] The capital of Australia is Canberra",
+    "with_paris_context": "[corpus:0] The capital of France is Paris"
+  },
+  "tasks": [
+    {
+      "id": "MCQ_BIO_01",
+      "score_type": "mcq",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.999615287776998,
+        "universal_score": 0.8824518336846188,
+        "universal_formed": true,
+        "text_tts": 0.9999608198222396,
+        "text_image": 0.9995065165445397,
+        "tts_image": 0.9993785269642145
+      },
+      "baseline": {
+        "correct": false,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: A",
+        "core_fusion": null,
+        "context_fingerprint": "eac8425b03a147f8",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: C",
+        "core_fusion": {
+          "universal_score": 0.8789620014935187,
+          "universal_formed": true,
+          "shared_patch": 0.9945918965846773,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "eac8425b03a147f8",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": true,
+      "fusion_regressed": false
+    },
+    {
+      "id": "MCQ_GEO_01",
+      "score_type": "mcq",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9997359157664043,
+        "universal_score": 0.8789702401151394,
+        "universal_formed": true,
+        "text_tts": 0.9999637871619612,
+        "text_image": 0.9996712476765519,
+        "tts_image": 0.9995727124606998
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: C",
+        "core_fusion": null,
+        "context_fingerprint": "e96e0a83b7c1ae2f",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: C",
+        "core_fusion": {
+          "universal_score": 0.8760887637920246,
+          "universal_formed": true,
+          "shared_patch": 0.9996490350956062,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "e96e0a83b7c1ae2f",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "MCQ_ECON_01",
+      "score_type": "mcq",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9997075320096068,
+        "universal_score": 0.8771120914653197,
+        "universal_formed": true,
+        "text_tts": 0.9999619197547668,
+        "text_image": 0.9996357416413637,
+        "tts_image": 0.9995249346326899
+      },
+      "baseline": {
+        "correct": false,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: A",
+        "core_fusion": null,
+        "context_fingerprint": "dd172a3f3700b66c",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": false,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: A",
+        "core_fusion": {
+          "universal_score": 0.876437770853523,
+          "universal_formed": true,
+          "shared_patch": 0.9994770886825818,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "dd172a3f3700b66c",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "MCQ_PHIL_01",
+      "score_type": "mcq",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9995905773059074,
+        "universal_score": 0.8766064538314489,
+        "universal_formed": true,
+        "text_tts": 0.9999573982779894,
+        "text_image": 0.9994796560741902,
+        "tts_image": 0.9993346775655425
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: B",
+        "core_fusion": null,
+        "context_fingerprint": "36de881a1c8293d3",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: B",
+        "core_fusion": {
+          "universal_score": 0.8768937133160372,
+          "universal_formed": true,
+          "shared_patch": 0.9994848035541503,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "36de881a1c8293d3",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "MCQ_MED_01",
+      "score_type": "mcq",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9995478687891323,
+        "universal_score": 0.8776373098217806,
+        "universal_formed": true,
+        "text_tts": 0.9999569303253609,
+        "text_image": 0.9994194139816441,
+        "tts_image": 0.999267262060392
+      },
+      "baseline": {
+        "correct": false,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: A",
+        "core_fusion": null,
+        "context_fingerprint": "90937f0b3934d879",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": false,
+        "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+        "answer": "ANSWER: A",
+        "core_fusion": {
+          "universal_score": 0.8771933130679435,
+          "universal_formed": true,
+          "shared_patch": 0.9994036797424224,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "90937f0b3934d879",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_PHYS_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9997185340367781,
+        "universal_score": 0.8768862117219007,
+        "universal_formed": true,
+        "text_tts": 0.999962665541787,
+        "text_image": 0.99964930595878,
+        "tts_image": 0.9995436306097675
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a",
+        "core_fusion": null,
+        "context_fingerprint": "0dbf7cb49aa95b6e",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a",
+        "core_fusion": {
+          "universal_score": 0.8761336867682883,
+          "universal_formed": true,
+          "shared_patch": 0.9962480194963165,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "0dbf7cb49aa95b6e",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_CHEM_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9996492906345975,
+        "universal_score": 0.878443399303368,
+        "universal_formed": true,
+        "text_tts": 0.9999539765703287,
+        "text_image": 0.9995577158121863,
+        "tts_image": 0.9994361795212775
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "core_fusion": null,
+        "context_fingerprint": "1cd21a2552498cef",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "core_fusion": {
+          "universal_score": 0.8784801180753391,
+          "universal_formed": true,
+          "shared_patch": 0.9996008097229828,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "1cd21a2552498cef",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_BIO_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9995572536355937,
+        "universal_score": 0.8781570607431495,
+        "universal_formed": true,
+        "text_tts": 0.9999576344915332,
+        "text_image": 0.9994310801010362,
+        "tts_image": 0.9992830463142115
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+        "core_fusion": null,
+        "context_fingerprint": "7f011d68681671d5",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+        "core_fusion": {
+          "universal_score": 0.8780763960653913,
+          "universal_formed": true,
+          "shared_patch": 0.9994685481702693,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "7f011d68681671d5",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_HIST_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9968077273167362,
+        "universal_score": 0.8788082821618172,
+        "universal_formed": true,
+        "text_tts": 0.996015653196059,
+        "text_image": 0.9991885788246346,
+        "tts_image": 0.995218949929515
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+        "core_fusion": null,
+        "context_fingerprint": "a6de940eda6aeb3e",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+        "core_fusion": {
+          "universal_score": 0.8785789656245674,
+          "universal_formed": true,
+          "shared_patch": 0.9964703479668787,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "a6de940eda6aeb3e",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_GEO_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9996618267683081,
+        "universal_score": 0.8718633767373136,
+        "universal_formed": true,
+        "text_tts": 0.9999617831729231,
+        "text_image": 0.9995704982110224,
+        "tts_image": 0.9994531989209787
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+        "core_fusion": null,
+        "context_fingerprint": "c639b32e228f5014",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+        "core_fusion": {
+          "universal_score": 0.8717031442592826,
+          "universal_formed": true,
+          "shared_patch": 0.9996231139232855,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "c639b32e228f5014",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_ECON_01",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9995394667762484,
+        "universal_score": 0.8757166701999901,
+        "universal_formed": true,
+        "text_tts": 0.9999576979576041,
+        "text_image": 0.9994058957847671,
+        "tts_image": 0.999254806586374
+      },
+      "baseline": {
+        "correct": false,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country",
+        "core_fusion": null,
+        "context_fingerprint": "1d9d04d34a02be2b",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": false,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country",
+        "core_fusion": {
+          "universal_score": 0.8729051451943856,
+          "universal_formed": true,
+          "shared_patch": 0.9994687876815534,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "1d9d04d34a02be2b",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    },
+    {
+      "id": "OPEN_ECON_02",
+      "score_type": "open",
+      "corpus_supported": true,
+      "core_reference": {
+        "shared_patch": 0.9995390924117512,
+        "universal_score": 0.8757832918370729,
+        "universal_formed": true,
+        "text_tts": 0.9999573906142969,
+        "text_image": 0.99940580074685,
+        "tts_image": 0.9992540858741069
+      },
+      "baseline": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+        "core_fusion": null,
+        "context_fingerprint": "dba9cb9989358ec2",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "multimodal_context"
+        ]
+      },
+      "core_fusion_path": {
+        "correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+        "core_fusion": {
+          "universal_score": 0.8756906591513329,
+          "universal_formed": true,
+          "shared_patch": 0.9994352094077064,
+          "decode_snap": "context+task_non_isolated"
+        },
+        "context_fingerprint": "dba9cb9989358ec2",
+        "features": [
+          "context_flex",
+          "hybrid_routing",
+          "core_fusion",
+          "multimodal_context"
+        ]
+      },
+      "fusion_improved": false,
+      "fusion_regressed": false
+    }
+  ],
+  "verdict": "CORE_FUSION_WINS"
+}
