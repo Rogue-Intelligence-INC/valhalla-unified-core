@@ -1,0 +1,1818 @@
+{
+  "timestamp": "2026-06-26T19:53:31.318571+00:00",
+  "protocol": "context-topic-drift-v1",
+  "fair_benchmark_version": "fair-1.2",
+  "phase": "test",
+  "fairness": {
+    "isolated_session_per_trial": true,
+    "text_only_context": true,
+    "matched_context_lines_k": 8,
+    "fixed_question_spec": true,
+    "open_retrieval_count": 31,
+    "arms": [
+      "production",
+      "native_inherit"
+    ]
+  },
+  "traditional_lm_error": null,
+  "arms": {
+    "production": {
+      "config": {
+        "decode": "hybrid",
+        "follow_up_decode": "native_follow_up_aware"
+      },
+      "swap": {
+        "trials": 12,
+        "swap_fidelity": 12,
+        "swap_fidelity_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "rows": [
+          {
+            "pair_id": "swap_au_fr",
+            "side": "a",
+            "question": "What is the capital of Australia?",
+            "hint": "canberra",
+            "answer": "[corpus:0] The capital of Australia is Canberra",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fr",
+            "side": "b",
+            "question": "What is the capital of Australia?",
+            "hint": "paris",
+            "answer": "[corpus:0] The capital of France is Paris",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_boil_freeze",
+            "side": "a",
+            "question": "At what temperature does water boil at standard pressure?",
+            "hint": "100",
+            "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_boil_freeze",
+            "side": "b",
+            "question": "At what temperature does water boil at standard pressure?",
+            "hint": "0",
+            "answer": "[corpus:0] Water freezes at 0 degrees Celsius at standard pressure",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fe",
+            "side": "a",
+            "question": "What is the chemical symbol for gold?",
+            "hint": "au",
+            "answer": "[corpus:0] The chemical symbol for gold is Au",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fe",
+            "side": "b",
+            "question": "What is the chemical symbol for gold?",
+            "hint": "fe",
+            "answer": "[corpus:0] The chemical symbol for iron is Fe",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_newton_joule",
+            "side": "a",
+            "question": "What is the SI unit of force?",
+            "hint": "newton",
+            "answer": "[corpus:0] The SI unit of force is the Newton",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_newton_joule",
+            "side": "b",
+            "question": "What is the SI unit of force?",
+            "hint": "joule",
+            "answer": "[corpus:0] The SI unit of energy is the Joule",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_chloro_mito",
+            "side": "a",
+            "question": "Which organelle is the site of photosynthesis?",
+            "hint": "chloroplast",
+            "answer": "[corpus:0] Photosynthesis occurs in chloroplasts using light energy",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_chloro_mito",
+            "side": "b",
+            "question": "Which organelle is the site of photosynthesis?",
+            "hint": "mitochondri",
+            "answer": "[corpus:1] The mitochondrion is the powerhouse of the cell",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_ww2_ww1",
+            "side": "a",
+            "question": "In what year did World War Two end?",
+            "hint": "1945",
+            "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_ww2_ww1",
+            "side": "b",
+            "question": "In what year did World War Two end?",
+            "hint": "1918",
+            "answer": "[corpus:0] World War One ended in 1918 with the Armistice",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          }
+        ]
+      },
+      "distractor": {
+        "modes": {
+          "targeted": {
+            "n": 31,
+            "accuracy": 0.967741935483871,
+            "hallucination_rate": 0.0,
+            "false_confidence_rate": null,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:2] The SI unit of force is the Newton defined as kg times m per s squared",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 秦朝是中国第一个统一的中央集权封建王朝",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_03",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 二十四节气反映中国古代农历对太阳周年的划分",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_04",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LIT_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LIT_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "MED_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Type 2 diabetes involves insulin resistance and relative insulin deficiency",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Thomas Jefferson was primary author of the US Declaration of Independence",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Binary search requires a sorted array and halves the search interval each step",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The French Revolution began in 1789 with the storming of the Bastille",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Aristotle was student of Plato and tutor of Alexander the Great",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] GDP measures the total value of goods and services produced in a country",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] The Yangtze River originates from glaciers on the Tibetan Plateau in China",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+                "context_mode": "targeted"
+              }
+            ]
+          },
+          "distractor": {
+            "n": 31,
+            "accuracy": 0.0,
+            "hallucination_rate": 0.0,
+            "false_confidence_rate": 0.0,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LIT_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LIT_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "MED_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:2] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:7] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:7] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              }
+            ]
+          },
+          "minimal": {
+            "n": 31,
+            "accuracy": 0.12903225806451613,
+            "hallucination_rate": 0.12903225806451613,
+            "false_confidence_rate": null,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LIT_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LIT_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "MED_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              }
+            ]
+          }
+        }
+      },
+      "interleave": {
+        "probes": 6,
+        "on_topic": 6,
+        "on_topic_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "rows": [
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 2,
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:2] The capital of Australia is Canberra",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 4,
+            "question": "What is the capital of France?",
+            "answer": "[corpus:0] The capital of France is Paris",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 6,
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:9] Canberra is in the Australian Capital Territory",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 2,
+            "question": "What is the SI unit of force?",
+            "answer": "[corpus:2] The SI unit of force is the Newton",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 4,
+            "question": "At what temperature does water freeze?",
+            "answer": "[corpus:6] Water freezes at 0 degrees Celsius at standard pressure",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 6,
+            "question": "In F=ma, what does a represent?",
+            "answer": "[corpus:9] Acceleration is the rate of change of velocity",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          }
+        ]
+      },
+      "recency": {
+        "trials": 2,
+        "on_topic": 2,
+        "on_topic_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "recency_bias_failure_rate": 0.0,
+        "rows": [
+          {
+            "trap_id": "france_then_canberra",
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:6] The capital of Australia is Canberra",
+            "on_topic": true,
+            "cross_topic_hallucination": false,
+            "recency_bias_failure": false
+          },
+          {
+            "trap_id": "boil_then_freeze",
+            "question": "At what temperature does water freeze at standard pressure?",
+            "answer": "[corpus:3] Water freezes at 0 degrees Celsius at standard pressure",
+            "on_topic": true,
+            "cross_topic_hallucination": false,
+            "recency_bias_failure": false
+          }
+        ]
+      }
+    },
+    "native_inherit": {
+      "config": {
+        "decode": "native",
+        "follow_up_decode": "inherit"
+      },
+      "swap": {
+        "trials": 12,
+        "swap_fidelity": 12,
+        "swap_fidelity_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "rows": [
+          {
+            "pair_id": "swap_au_fr",
+            "side": "a",
+            "question": "What is the capital of Australia?",
+            "hint": "canberra",
+            "answer": "[corpus:0] The capital of Australia is Canberra",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fr",
+            "side": "b",
+            "question": "What is the capital of Australia?",
+            "hint": "paris",
+            "answer": "[corpus:0] The capital of France is Paris",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_boil_freeze",
+            "side": "a",
+            "question": "At what temperature does water boil at standard pressure?",
+            "hint": "100",
+            "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_boil_freeze",
+            "side": "b",
+            "question": "At what temperature does water boil at standard pressure?",
+            "hint": "0",
+            "answer": "[corpus:0] Water freezes at 0 degrees Celsius at standard pressure",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fe",
+            "side": "a",
+            "question": "What is the chemical symbol for gold?",
+            "hint": "au",
+            "answer": "[corpus:0] The chemical symbol for gold is Au",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_au_fe",
+            "side": "b",
+            "question": "What is the chemical symbol for gold?",
+            "hint": "fe",
+            "answer": "[corpus:0] The chemical symbol for iron is Fe",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_newton_joule",
+            "side": "a",
+            "question": "What is the SI unit of force?",
+            "hint": "newton",
+            "answer": "[corpus:0] The SI unit of force is the Newton",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_newton_joule",
+            "side": "b",
+            "question": "What is the SI unit of force?",
+            "hint": "joule",
+            "answer": "[corpus:0] The SI unit of energy is the Joule",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_chloro_mito",
+            "side": "a",
+            "question": "Which organelle is the site of photosynthesis?",
+            "hint": "chloroplast",
+            "answer": "[corpus:0] Photosynthesis occurs in chloroplasts using light energy",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_chloro_mito",
+            "side": "b",
+            "question": "Which organelle is the site of photosynthesis?",
+            "hint": "mitochondri",
+            "answer": "[corpus:1] The mitochondrion is the powerhouse of the cell",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_ww2_ww1",
+            "side": "a",
+            "question": "In what year did World War Two end?",
+            "hint": "1945",
+            "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "pair_id": "swap_ww2_ww1",
+            "side": "b",
+            "question": "In what year did World War Two end?",
+            "hint": "1918",
+            "answer": "[corpus:0] World War One ended in 1918 with the Armistice",
+            "swap_fidelity": true,
+            "cross_topic_hallucination": false
+          }
+        ]
+      },
+      "distractor": {
+        "modes": {
+          "targeted": {
+            "n": 31,
+            "accuracy": 0.967741935483871,
+            "hallucination_rate": 0.0,
+            "false_confidence_rate": null,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:2] The SI unit of force is the Newton defined as kg times m per s squared",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 秦朝是中国第一个统一的中央集权封建王朝",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_03",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 二十四节气反映中国古代农历对太阳周年的划分",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ZH_04",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LIT_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LIT_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "MED_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Type 2 diabetes involves insulin resistance and relative insulin deficiency",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Thomas Jefferson was primary author of the US Declaration of Independence",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Binary search requires a sorted array and halves the search interval each step",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] The French Revolution began in 1789 with the storming of the Bastille",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Aristotle was student of Plato and tutor of Alexander the Great",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] GDP measures the total value of goods and services produced in a country",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] The Yangtze River originates from glaciers on the Tibetan Plateau in China",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "targeted"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": true,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+                "context_mode": "targeted"
+              }
+            ]
+          },
+          "distractor": {
+            "n": 31,
+            "accuracy": 0.0,
+            "hallucination_rate": 0.0,
+            "false_confidence_rate": 0.0,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ZH_04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LIT_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LIT_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "MED_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:2] Newton's second law states force equals mass times acceleration F equals m a",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:7] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] The capital city of Australia is Canberra not Sydney or Melbourne",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:7] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:5] Supply increases when price rises according to basic microeconomic theory",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine",
+                "context_mode": "distractor"
+              }
+            ]
+          },
+          "minimal": {
+            "n": 31,
+            "accuracy": 0.12903225806451613,
+            "hallucination_rate": 0.12903225806451613,
+            "false_confidence_rate": null,
+            "rows": [
+              {
+                "id": "OPEN_PHYS_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_CHEM_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_BIO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_HIST_01",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_GEO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_ECON_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_ECON_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_CS_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ZH_04",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LIT_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LIT_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "MED_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "ASTRO_01",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "LOGIC_02",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F03",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F04",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F05",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F06",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F14",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F16",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F17",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F25",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F26",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F29",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F33",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F39",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F42",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F43",
+                "correct": true,
+                "hallucination_flag": true,
+                "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+                "context_mode": "minimal"
+              },
+              {
+                "id": "OPEN_F50",
+                "correct": false,
+                "hallucination_flag": false,
+                "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender",
+                "context_mode": "minimal"
+              }
+            ]
+          }
+        }
+      },
+      "interleave": {
+        "probes": 6,
+        "on_topic": 6,
+        "on_topic_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "rows": [
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 2,
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:2] The capital of Australia is Canberra",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 4,
+            "question": "What is the capital of France?",
+            "answer": "[corpus:0] The capital of France is Paris",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "capitals_interleave",
+            "after_append": 6,
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:9] Canberra is in the Australian Capital Territory",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 2,
+            "question": "What is the SI unit of force?",
+            "answer": "[corpus:2] The SI unit of force is the Newton",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 4,
+            "question": "At what temperature does water freeze?",
+            "answer": "[corpus:6] Water freezes at 0 degrees Celsius at standard pressure",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          },
+          {
+            "session_id": "physics_chem_interleave",
+            "after_append": 6,
+            "question": "In F=ma, what does a represent?",
+            "answer": "[corpus:9] Acceleration is the rate of change of velocity",
+            "on_topic": true,
+            "cross_topic_hallucination": false
+          }
+        ]
+      },
+      "recency": {
+        "trials": 2,
+        "on_topic": 2,
+        "on_topic_rate": 1.0,
+        "cross_topic_hallucination_count": 0,
+        "cross_topic_hallucination_rate": 0.0,
+        "recency_bias_failure_rate": 0.0,
+        "rows": [
+          {
+            "trap_id": "france_then_canberra",
+            "question": "What is the capital of Australia?",
+            "answer": "[corpus:6] The capital of Australia is Canberra",
+            "on_topic": true,
+            "cross_topic_hallucination": false,
+            "recency_bias_failure": false
+          },
+          {
+            "trap_id": "boil_then_freeze",
+            "question": "At what temperature does water freeze at standard pressure?",
+            "answer": "[corpus:3] Water freezes at 0 degrees Celsius at standard pressure",
+            "on_topic": true,
+            "cross_topic_hallucination": false,
+            "recency_bias_failure": false
+          }
+        ]
+      }
+    }
+  },
+  "summary": {
+    "production": {
+      "swap_fidelity_rate": 1.0,
+      "swap_hallucination_rate": 0.0,
+      "distractor_targeted_acc": 0.967741935483871,
+      "distractor_false_confidence": 0.0,
+      "interleave_on_topic_rate": 1.0,
+      "interleave_hallucination_rate": 0.0,
+      "recency_on_topic_rate": 1.0,
+      "recency_bias_failure_rate": 0.0
+    },
+    "native_inherit": {
+      "swap_fidelity_rate": 1.0,
+      "swap_hallucination_rate": 0.0,
+      "distractor_targeted_acc": 0.967741935483871,
+      "distractor_false_confidence": 0.0,
+      "interleave_on_topic_rate": 1.0,
+      "interleave_hallucination_rate": 0.0,
+      "recency_on_topic_rate": 1.0,
+      "recency_bias_failure_rate": 0.0
+    }
+  },
+  "verdict": [
+    "SWAP_FIDELITY_OK",
+    "PRODUCTION_INTERLEAVE_GTE_NATIVE",
+    "TARGETED_RETRIEVAL_OK",
+    "RECENCY_TRAP_PARTIAL_OK"
+  ]
+}

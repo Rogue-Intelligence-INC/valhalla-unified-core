@@ -13,7 +13,7 @@ One Triad session · persistent context · multimodal fusion · structure-first 
 | **Model base** | **ValhallaBase** (`valhalla-base-v1`) |
 | **Protocols** | `valhalla-base-v1` · `valhalla-unified-core-v1` · `context-core-fusion-v2` |
 | **Runtime** | [Valhalla monorepo](https://github.com/Rogue-Intelligence-INC/Valhalla) (`hub-f64`, proprietary) |
-| **Full documentation** | **[docs/VALHALLA_BASE_PLATFORM.md](./docs/VALHALLA_BASE_PLATFORM.md)** ← start here |
+| **Full documentation** | **[docs/EN_ENGINEERING_WHITEPAPER.md](./docs/EN_ENGINEERING_WHITEPAPER.md)** · [Platform](./docs/VALHALLA_BASE_PLATFORM.md) |
 | **Intro page** | [page/index.html](./page/index.html) |
 
 ---
@@ -63,18 +63,16 @@ base.run(follow_up_questions, append_only=True)
 
 | Capability | Result |
 |------------|--------|
+| **Zero cross-topic hallucination** | **0/48** drift probes (swap + interleave + 30-turn) |
+| **Context swap fidelity** | **12/12 (100%)** |
 | **Context flexibility** (30-turn threads) | **29/30 (96.7%)** follow-up-aware native |
 | **Open retrieval** (targeted corpus) | **30/31 (97%)** |
 | **Universal core** (107 tasks, non-isolated) | **107/107** wins vs isolated; score **0.964** |
-| **Cross-modal patch alignment** (12 tasks) | Non-isolated **~1.00** vs isolated **~0.85** |
-| **Session append** (12 steps) | 16 lines internal; **~64 chars/step** wire |
-| **Fate QA feedback** (40 rounds) | prefs learn topic→quad (BH/MN/BF **~32–36%**) |
+| **Cross-modal fusion** (12 tasks) | Non-isolated **~1.00** vs isolated **~0.85** |
+| **Core fusion QA** (12 tasks) | **75%** vs baseline **66.7%** |
 | **MCQ hybrid** (46 tasks) | **63%** LM logprob |
 
-| **Core fusion MCQ** (5 multimodal) | **40% → 60%** (baseline vs fused) |
-
-Reports in [`reports/`](./reports/) · methodology in [platform doc](./docs/VALHALLA_BASE_PLATFORM.md).  
-Key: `context_core_fusion.json` · `scale_benchmark_test.json` · `fate_weight_ladder_compare_30.json`
+Reports in [`reports/`](./reports/) · **Engineering pack:** [Whitepaper](./docs/EN_ENGINEERING_WHITEPAPER.md) · [BP](./docs/EN_ENGINEERING_BUSINESS_PLAN.md) · [DD](./docs/EN_ENGINEERING_DUE_DILIGENCE.md)
 
 ---
 
@@ -110,10 +108,13 @@ Optional **HF bake** exports structure into `models/hf/` (`valhalla-unified-core
 
 | Document | Description |
 |----------|-------------|
-| **[VALHALLA_BASE_PLATFORM.md](./docs/VALHALLA_BASE_PLATFORM.md)** | **Complete platform doc** — base, context, fusion, Fate, configs |
+| **[VALHALLA_BASE_PLATFORM.md](./docs/VALHALLA_BASE_PLATFORM.md)** | Complete platform doc — base, context, fusion, Fate |
+| **[EN_ENGINEERING_WHITEPAPER.md](./docs/EN_ENGINEERING_WHITEPAPER.md)** | Engineering whitepaper (architecture & benchmarks) |
+| **[EN_ENGINEERING_BUSINESS_PLAN.md](./docs/EN_ENGINEERING_BUSINESS_PLAN.md)** | Engineering business plan (GTM & KPIs) |
+| **[EN_ENGINEERING_DUE_DILIGENCE.md](./docs/EN_ENGINEERING_DUE_DILIGENCE.md)** | Due diligence pack (claims matrix & risks) |
 | [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./docs/CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility product goal |
 | [FATE_INGRESS_ROUTING.md](./docs/FATE_INGRESS_ROUTING.md) | Quad ingress modes & benchmarks |
-| [INTRODUCTION.md](./docs/INTRODUCTION.md) | Investor / product introduction |
+| [INTRODUCTION.md](./docs/INTRODUCTION.md) | Product introduction |
 | [PROTOCOL.md](./PROTOCOL.md) | Universal core bake protocol |
 
 ---
