@@ -31,7 +31,8 @@
 | `valhalla-new-paradigm-potential-v1` | `tools/valhalla_inference/test_new_paradigm_potential.py` | `new_paradigm_potential_test.json` |
 | `context-topic-drift-v1/v2` | `tools/valhalla_inference/test_context_topic_drift.py` | `context_topic_drift_*.json` |
 | `local-corpus-demo-v1` | `tools/valhalla_inference/run_local_corpus_demo.py` | `local_corpus_demo_test.json` |
-| `fate-output-gate-v1` | `tools/valhalla_inference/test_fate_output_gate.py` | `fate_output_gate_test.json` |
+| `fate-output-gate-v1/v2` | `tools/valhalla_inference/test_fate_output_gate.py` | `fate_output_gate_test.json` |
+| `proactive-fate-v1/v2` | `tools/valhalla_inference/test_proactive_fate_v2.py` | `proactive_fate_v2_test.json` |
 
 生产栈（所有实验默认）：
 
@@ -148,7 +149,45 @@ python3 tools/valhalla_inference/test_context_topic_drift.py
 
 ---
 
-## 8. Fate Output Gate v1（2026-06-27）
+## 9. Fate Output Gate v2 代数（2026-06-27）
+
+见 [FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md) §v2。公式 τ=12/(138+k)，Δ≥s₁/28；native margin 由 Rust 导出。
+
+| 模式 | G1 coverage | emitted precision |
+|------|-------------|-------------------|
+| v2_algebraic | **93.5%** | **96.6%** |
+
+Verdict: `FOG_V2_ALGEBRAIC_OK`
+
+Verdict: `FOG_V2_ALGEBRAIC_OK`
+
+---
+
+## 10. Proactive Fate v2（2026-06-27）
+
+**协议:** `proactive-fate-v2` · 40 trials（3 gates + 7 handcraft + 30 fair holdout pairs）
+
+| 指标 | 值 | 含义 |
+|------|-----|------|
+| **PPI-v2** | **0.930** | 综合主动能力指数 |
+| UP_on_topic | **100%** | 对齐语料+对话后，emit 的 nudge 全部 grounded |
+| MAR | **88.9%** | mismatch 语料上 abstain / 无话题重叠 |
+| FIR | **0%** | mismatch 上零幻觉 emit |
+| Pass rate | **38/40 (95%)** | fair 仅 ZH_02/ZH_03 token 对齐缺口 |
+
+**机制:** `proactive_idle` → 话题连续自探针（max overlap with prior）→ FOG 代数门控 → nudge
+
+```bash
+python3 tools/valhalla_inference/test_proactive_fate_v2.py
+```
+
+报告: `reports/valhalla_inference/PROACTIVE_FATE_V2_REPORT.md`
+
+Verdict: `PROACTIVE_FATE_V2_STRONG` · `HIGH_UNSOLICITED_PRECISION` · `LOW_MISMATCH_INTERRUPT`
+
+---
+
+## 8. Fate Output Gate v1（2026-06-27，已被 v2 取代）
 
 见 [FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md)。首轮 benchmark `fate-output-gate-v1`：
 
@@ -156,14 +195,12 @@ python3 tools/valhalla_inference/test_context_topic_drift.py
 |------|-------------|----------------------|-------------------------|
 | G1 targeted | 96.8% | 93.3% | coverage 48.4% · abstain 16 |
 | G2 distractor | 0.0% | — | abstain 11/12 |
-| G3 swap | 100% | 100% | emit 4/4 |
-| G4 defer | — | — | cycles=1 defer 12 · cycles=2 defer 0 |
 
-**Verdict:** `FOG_V1_NEEDS_TUNING` — distractor 上 abstain 有效，但 targeted coverage 过低（margin 过严）。
+**Verdict:** `FOG_V1_NEEDS_TUNING`
 
 ---
 
-## 9. 下一步
+## 10. 下一步
 
 1. 补 traditional_lm RAG 对照（`.venv-llm` + 本地 Qwen）
 2. v3：跨 session 持久化（若产品需要）与 feedback lift 专项
