@@ -221,7 +221,26 @@ python3 tools/valhalla_inference/test_proactive_fate_v2.py --fair-limit 0
 
 **解读:** trad_lm 与 Valhalla hybrid **同分 30/31**；结构优势在 **session routing**（+61pp vs polluted）与 **FOG/proactive 门控**，非 raw RAG ceiling。lm_patch 100% 因 patch 头更贴 MCQ 格式。
 
-**Global gaps:** local demo n=8 CI 很宽；无外部 holdout corpus。
+**Global gaps:** local demo n=20 部分 probe 未覆盖（70% cold）；external ZH_GEO 仍待补 corpus。
+
+---
+
+## 12. Crosslang Core Unified（2026-06-27）
+
+**协议:** `crosslang-core-unified-v1` — 同一 production 栈，**language_switch=false**。
+
+| 指标 | 值 |
+|------|-----|
+| CCU | **0.950** |
+| core_unified | **6/6**（EN/ZH/FR 均 `[corpus:0]` 同文本） |
+| External holdout | **12/15 (80%)** |
+
+**Proactive Unicode:** CJK bigram + 中文 probe + overlap 门控 → ZH_02/03/04 全 pass，MAR **88.2%**。
+
+```bash
+python3 tools/valhalla_inference/test_crosslang_core_unified.py
+python3 tools/valhalla_inference/test_external_holdout.py
+```
 
 ---
 
