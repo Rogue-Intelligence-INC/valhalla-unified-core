@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-27T18:14:50.576552+00:00",
+  "timestamp": "2026-06-27T22:30:30.991714+00:00",
   "protocol": "proactive-fate-v2",
   "algebra": {
     "spread_threshold": "τ(0)·δ/(dim+r) = 12/138·5/140",
@@ -11,18 +11,18 @@
     "production_stack": "hybrid + native_follow_up_aware + quad_cycle + fate_qa_feedback"
   },
   "metrics": {
-    "PPI_v2": 0.8847,
+    "PPI_v2": 0.8747,
     "gate_pass_rate": 1.0,
     "UP_on_topic": 1.0,
-    "on_topic_emit_rate": 0.7714,
+    "on_topic_emit_rate": 0.7429,
     "MAR_mismatch_abstain": 0.8824,
     "FIR_false_interrupt": 0.0,
-    "TR_trigger_rate": 0.4493,
+    "TR_trigger_rate": 0.4348,
     "n_gates": 3,
     "n_aligned": 35,
     "n_mismatch": 34,
     "n_eligible": 69,
-    "n_emitted": 31
+    "n_emitted": 30
   },
   "batteries": {
     "gates": [
@@ -156,8 +156,8 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Canberra is located in the Australian Capital Territory.?",
-        "nudge": "Related to our conversation: [corpus:2] Canberra is located in the Australian Capital Territory",
+        "probe_question": "Based on the context, what is stated about: Sydney is the largest city in Australia but?",
+        "nudge": "Related to our conversation: [corpus:3] Sydney is the largest city in Australia but not the capital",
         "warmup_turns": 5
       }
     ],
@@ -284,8 +284,8 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Canberra was selected as Australian capital as compromise?",
-        "nudge": "Related to our conversation: [corpus:1] Canberra was selected as Australian capital as compromise between Sydney and Melbourne",
+        "probe_question": "Based on the context, what is stated about: The capital city of Australia is Canberra not?",
+        "nudge": "Related to our conversation: [corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
         "warmup_turns": 2
       },
       {
@@ -305,15 +305,15 @@
       {
         "id": "fair_OPEN_ECON_01_aligned",
         "expect": "emit_grounded",
-        "pass": true,
-        "triggered": true,
-        "emitted": true,
-        "grounded": true,
+        "pass": false,
+        "triggered": false,
+        "emitted": false,
+        "grounded": null,
         "hallucination": false,
-        "fog_decision": "emit",
-        "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Gross Domestic Product sums consumption investment government and?",
-        "nudge": "Related to our conversation: [corpus:0] Gross Domestic Product sums consumption investment government and net exports",
+        "fog_decision": "defer",
+        "trigger_reason": "no_topic_overlap",
+        "probe_question": "",
+        "nudge": null,
         "warmup_turns": 2
       },
       {
@@ -340,8 +340,8 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Inflation means a sustained increase in the general?",
-        "nudge": "Related to our conversation: [corpus:0] Inflation means a sustained increase in the general price level of goods",
+        "probe_question": "Based on the context, what is stated about: Supply and demand curves intersect at market equilibrium?",
+        "nudge": "Related to our conversation: [corpus:2] Supply and demand curves intersect at market equilibrium price",
         "warmup_turns": 2
       },
       {
@@ -389,15 +389,15 @@
       {
         "id": "fair_ZH_02_aligned",
         "expect": "emit_grounded",
-        "pass": false,
-        "triggered": false,
-        "emitted": false,
-        "grounded": null,
+        "pass": true,
+        "triggered": true,
+        "emitted": true,
+        "grounded": true,
         "hallucination": false,
-        "fog_decision": "defer",
-        "trigger_reason": "no_topic_overlap",
-        "probe_question": "",
-        "nudge": null,
+        "fog_decision": "emit",
+        "trigger_reason": "idle_ready",
+        "probe_question": "根据上下文，关于「秦朝是中国第一个统一的中」说了什么？",
+        "nudge": "Related to our conversation: [corpus:0] 秦朝是中国第一个统一的中央集权封建王朝",
         "warmup_turns": 2
       },
       {
@@ -417,15 +417,15 @@
       {
         "id": "fair_ZH_03_aligned",
         "expect": "emit_grounded",
-        "pass": false,
-        "triggered": false,
-        "emitted": false,
-        "grounded": null,
+        "pass": true,
+        "triggered": true,
+        "emitted": true,
+        "grounded": true,
         "hallucination": false,
-        "fog_decision": "defer",
-        "trigger_reason": "no_topic_overlap",
-        "probe_question": "",
-        "nudge": null,
+        "fog_decision": "emit",
+        "trigger_reason": "idle_ready",
+        "probe_question": "根据上下文，关于「二十四节气反映中国古代农」说了什么？",
+        "nudge": "Related to our conversation: [corpus:0] 二十四节气反映中国古代农历对太阳周年的划分",
         "warmup_turns": 2
       },
       {
@@ -452,7 +452,7 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹。?",
+        "probe_question": "根据上下文，关于「红楼梦是中国古典小说巅峰」说了什么？",
         "nudge": "Related to our conversation: [corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹",
         "warmup_turns": 2
       },
@@ -564,8 +564,8 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Mercury orbits closest to the Sun with year?",
-        "nudge": "Related to our conversation: [corpus:1] Mercury orbits closest to the Sun with year of about eighty eight Earth days",
+        "probe_question": "Based on the context, what is stated about: Mercury is the smallest planet and closest to?",
+        "nudge": "Related to our conversation: [corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system",
         "warmup_turns": 2
       },
       {
@@ -669,15 +669,15 @@
       {
         "id": "fair_OPEN_F05_aligned",
         "expect": "emit_grounded",
-        "pass": true,
-        "triggered": true,
-        "emitted": true,
-        "grounded": true,
+        "pass": false,
+        "triggered": false,
+        "emitted": false,
+        "grounded": null,
         "hallucination": false,
-        "fog_decision": "emit",
-        "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: Mitochondria produce ATP through cellular respiration in eukaryotes.?",
-        "nudge": "Related to our conversation: [corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+        "fog_decision": "defer",
+        "trigger_reason": "no_topic_overlap",
+        "probe_question": "",
+        "nudge": null,
         "warmup_turns": 2
       },
       {
@@ -809,15 +809,15 @@
       {
         "id": "fair_OPEN_F25_aligned",
         "expect": "emit_grounded",
-        "pass": true,
-        "triggered": true,
-        "emitted": true,
-        "grounded": true,
+        "pass": false,
+        "triggered": false,
+        "emitted": false,
+        "grounded": null,
         "hallucination": false,
-        "fog_decision": "emit",
-        "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: World War Two ended in 1945 with Germany's?",
-        "nudge": "Related to our conversation: [corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+        "fog_decision": "defer",
+        "trigger_reason": "no_topic_overlap",
+        "probe_question": "",
+        "nudge": null,
         "warmup_turns": 2
       },
       {
@@ -956,7 +956,7 @@
         "hallucination": false,
         "fog_decision": "emit",
         "trigger_reason": "idle_ready",
-        "probe_question": "Based on the context, what is stated about: 二十四节气反映中国古代农历对太阳周年的划分。?",
+        "probe_question": "根据上下文，关于「二十四节气反映中国古代农」说了什么？",
         "nudge": "Related to our conversation: [corpus:2] 二十四节气反映中国古代农历对太阳周年的划分",
         "warmup_turns": 2
       },
@@ -1033,9 +1033,9 @@
     ]
   },
   "summary": {
-    "passed": 64,
+    "passed": 63,
     "total": 72,
-    "pass_rate": 0.8888888888888888
+    "pass_rate": 0.875
   },
   "verdict": [
     "PROACTIVE_FATE_V2_STRONG",
@@ -1048,26 +1048,26 @@
     {
       "name": "UP_on_topic_given_emit",
       "proportion": {
-        "k": 27,
-        "n": 27,
+        "k": 26,
+        "n": 26,
         "point": 1.0,
-        "ci95_lo": 0.875445,
+        "ci95_lo": 0.871271,
         "ci95_hi": 1.0,
         "method": "wilson"
       },
-      "display": "100.0% [87.5%, 100.0%]"
+      "display": "100.0% [87.1%, 100.0%]"
     },
     {
       "name": "on_topic_emit_rate",
       "proportion": {
-        "k": 27,
+        "k": 26,
         "n": 35,
-        "point": 0.771429,
-        "ci95_lo": 0.609827,
-        "ci95_hi": 0.879341,
+        "point": 0.742857,
+        "ci95_lo": 0.579307,
+        "ci95_hi": 0.85837,
         "method": "wilson"
       },
-      "display": "77.1% [61.0%, 87.9%]"
+      "display": "74.3% [57.9%, 85.8%]"
     },
     {
       "name": "MAR_mismatch_abstain",
@@ -1096,13 +1096,13 @@
     {
       "name": "PPI_v2",
       "index": {
-        "point": 0.8847,
-        "ci95_lo": 0.8227,
-        "ci95_hi": 0.9424,
+        "point": 0.8747,
+        "ci95_lo": 0.8114,
+        "ci95_hi": 0.9324,
         "n_boot": 5000,
         "method": "bootstrap_percentile"
       },
-      "display": "0.885 [0.823, 0.942]"
+      "display": "0.875 [0.811, 0.932]"
     }
   ]
 }

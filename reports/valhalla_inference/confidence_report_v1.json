@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-27T18:19:05.913064+00:00",
+  "timestamp": "2026-06-27T22:30:34.585359+00:00",
   "protocol": "confidence-report-v1",
   "methods": {
     "proportion": "Wilson score 95% CI",
@@ -286,26 +286,26 @@
         {
           "name": "UP_on_topic_given_emit",
           "proportion": {
-            "k": 27,
-            "n": 27,
+            "k": 26,
+            "n": 26,
             "point": 1.0,
-            "ci95_lo": 0.875445,
+            "ci95_lo": 0.871271,
             "ci95_hi": 1.0,
             "method": "wilson"
           },
-          "display": "100.0% [87.5%, 100.0%]"
+          "display": "100.0% [87.1%, 100.0%]"
         },
         {
           "name": "on_topic_emit_rate",
           "proportion": {
-            "k": 27,
+            "k": 26,
             "n": 35,
-            "point": 0.771429,
-            "ci95_lo": 0.609827,
-            "ci95_hi": 0.879341,
+            "point": 0.742857,
+            "ci95_lo": 0.579307,
+            "ci95_hi": 0.85837,
             "method": "wilson"
           },
-          "display": "77.1% [61.0%, 87.9%]"
+          "display": "74.3% [57.9%, 85.8%]"
         },
         {
           "name": "MAR_mismatch_abstain",
@@ -334,13 +334,13 @@
         {
           "name": "PPI_v2",
           "index": {
-            "point": 0.8847,
-            "ci95_lo": 0.8227,
-            "ci95_hi": 0.9424,
+            "point": 0.8747,
+            "ci95_lo": 0.8114,
+            "ci95_hi": 0.9324,
             "n_boot": 5000,
             "method": "bootstrap_percentile"
           },
-          "display": "0.885 [0.823, 0.942]"
+          "display": "0.875 [0.811, 0.932]"
         }
       ],
       "title": "Proactive-v2",
@@ -418,52 +418,125 @@
           "name": "before_no_corpus",
           "proportion": {
             "k": 0,
-            "n": 8,
+            "n": 20,
             "point": 0.0,
             "ci95_lo": 0.0,
-            "ci95_hi": 0.324408,
+            "ci95_hi": 0.161125,
             "method": "wilson"
           },
-          "display": "0.0% [0.0%, 32.4%]"
+          "display": "0.0% [0.0%, 16.1%]"
         },
         {
           "name": "cold_targeted",
           "proportion": {
-            "k": 8,
-            "n": 8,
-            "point": 1.0,
-            "ci95_lo": 0.675592,
-            "ci95_hi": 1.0,
+            "k": 14,
+            "n": 20,
+            "point": 0.7,
+            "ci95_lo": 0.481027,
+            "ci95_hi": 0.854523,
             "method": "wilson"
           },
-          "display": "100.0% [67.6%, 100.0%]"
+          "display": "70.0% [48.1%, 85.5%]"
         },
         {
           "name": "after_transfer",
           "proportion": {
-            "k": 8,
-            "n": 8,
-            "point": 1.0,
-            "ci95_lo": 0.675592,
-            "ci95_hi": 1.0,
+            "k": 14,
+            "n": 20,
+            "point": 0.7,
+            "ci95_lo": 0.481027,
+            "ci95_hi": 0.854523,
             "method": "wilson"
           },
-          "display": "100.0% [67.6%, 100.0%]"
+          "display": "70.0% [48.1%, 85.5%]"
         },
         {
           "name": "ingest_vs_none_lift",
           "lift_pp": {
-            "mean_pp": 100.0,
-            "ci95_lo": 100.0,
-            "ci95_hi": 100.0,
-            "n": 8,
+            "mean_pp": 70.0,
+            "ci95_lo": 50.0,
+            "ci95_hi": 90.0,
+            "n": 20,
             "method": "bootstrap_paired"
           },
-          "display": "+100.0pp [+100.0, +100.0]"
+          "display": "+70.0pp [+50.0, +90.0]"
         }
       ],
       "title": "Local-corpus",
       "source": "local_corpus_demo_test.json"
+    },
+    {
+      "protocol": "crosslang-core-unified-v1",
+      "metrics": [
+        {
+          "name": "crosslang_accuracy",
+          "proportion": {
+            "k": 18,
+            "n": 18,
+            "point": 1.0,
+            "ci95_lo": 0.824121,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [82.4%, 100.0%]"
+        },
+        {
+          "name": "core_unified_fact_rate",
+          "proportion": {
+            "k": 6,
+            "n": 6,
+            "point": 1.0,
+            "ci95_lo": 0.609666,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [61.0%, 100.0%]"
+        },
+        {
+          "name": "line_agreement_rate",
+          "proportion": {
+            "k": 6,
+            "n": 6,
+            "point": 1.0,
+            "ci95_lo": 0.609666,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [61.0%, 100.0%]"
+        },
+        {
+          "name": "CCU",
+          "index": {
+            "point": 0.95,
+            "ci95_lo": 0.95,
+            "ci95_hi": 0.95,
+            "method": "point_from_report",
+            "note": "6-fact suite"
+          },
+          "display": "0.950 [0.950, 0.950]"
+        }
+      ],
+      "title": "Crosslang-core",
+      "source": "crosslang_core_unified_test.json"
+    },
+    {
+      "protocol": "external-holdout-v1",
+      "metrics": [
+        {
+          "name": "external_holdout_accuracy",
+          "proportion": {
+            "k": 12,
+            "n": 15,
+            "point": 0.8,
+            "ci95_lo": 0.548146,
+            "ci95_hi": 0.929525,
+            "method": "wilson"
+          },
+          "display": "80.0% [54.8%, 93.0%]"
+        }
+      ],
+      "title": "External-holdout",
+      "source": "external_holdout_test.json"
     }
   ],
   "missing_report_files": [],

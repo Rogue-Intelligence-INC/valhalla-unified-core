@@ -10,7 +10,9 @@
 | Session routing | transfer_vs_polluted_lift | +61.3pp [+45.2, +77.4] |
 | vs Transformer | traditional_lm_rag | 96.8% [83.8%, 99.4%] |
 | FOG quality | fog_emitted_precision | 96.6% [82.8%, 99.4%] |
-| Proactive | UP_on_topic_given_emit | 100.0% [87.5%, 100.0%] |
+| Proactive | UP_on_topic_given_emit | 100.0% [87.1%, 100.0%] |
+| Crosslang | crosslang_accuracy | 100.0% [82.4%, 100.0%] |
+| External | external_holdout_accuracy | 80.0% [54.8%, 93.0%] |
 | Dialogue | extended_30turn_on_topic | 96.7% [83.3%, 99.4%] |
 
 ## Methods
@@ -73,11 +75,11 @@ Source: `proactive_fate_v2_test.json` · Protocol: `proactive-fate-v2`
 
 | Metric | Estimate [95% CI] | n |
 |--------|-------------------|---|
-| UP_on_topic_given_emit | 100.0% [87.5%, 100.0%] | 27/27 |
-| on_topic_emit_rate | 77.1% [61.0%, 87.9%] | 27/35 |
+| UP_on_topic_given_emit | 100.0% [87.1%, 100.0%] | 26/26 |
+| on_topic_emit_rate | 74.3% [57.9%, 85.8%] | 26/35 |
 | MAR_mismatch_abstain | 88.2% [73.4%, 95.3%] | 30/34 |
 | FIR_on_mismatch_emits | 0.0% [0.0%, 49.0%] | 0/4 |
-| PPI_v2 | 0.885 [0.823, 0.942] | bootstrap |
+| PPI_v2 | 0.875 [0.811, 0.932] | bootstrap |
 
 ## Context-drift
 
@@ -103,10 +105,29 @@ Source: `local_corpus_demo_test.json` · Protocol: `local-corpus-demo-v1`
 
 | Metric | Estimate [95% CI] | n |
 |--------|-------------------|---|
-| before_no_corpus | 0.0% [0.0%, 32.4%] | 0/8 |
-| cold_targeted | 100.0% [67.6%, 100.0%] | 8/8 |
-| after_transfer | 100.0% [67.6%, 100.0%] | 8/8 |
-| ingest_vs_none_lift | +100.0pp [+100.0, +100.0] | paired n=8 |
+| before_no_corpus | 0.0% [0.0%, 16.1%] | 0/20 |
+| cold_targeted | 70.0% [48.1%, 85.5%] | 14/20 |
+| after_transfer | 70.0% [48.1%, 85.5%] | 14/20 |
+| ingest_vs_none_lift | +70.0pp [+50.0, +90.0] | paired n=20 |
+
+## Crosslang-core
+
+Source: `crosslang_core_unified_test.json` · Protocol: `crosslang-core-unified-v1`
+
+| Metric | Estimate [95% CI] | n |
+|--------|-------------------|---|
+| crosslang_accuracy | 100.0% [82.4%, 100.0%] | 18/18 |
+| core_unified_fact_rate | 100.0% [61.0%, 100.0%] | 6/6 |
+| line_agreement_rate | 100.0% [61.0%, 100.0%] | 6/6 |
+| CCU | 0.950 [0.950, 0.950] | bootstrap |
+
+## External-holdout
+
+Source: `external_holdout_test.json` · Protocol: `external-holdout-v1`
+
+| Metric | Estimate [95% CI] | n |
+|--------|-------------------|---|
+| external_holdout_accuracy | 80.0% [54.8%, 93.0%] | 12/15 |
 
 ## Global gaps
 
