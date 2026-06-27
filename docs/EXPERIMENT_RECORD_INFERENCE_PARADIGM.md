@@ -188,12 +188,17 @@ Verdict: `PROACTIVE_FATE_V2_STRONG` · `HIGH_UNSOLICITED_PRECISION` · `LOW_MISM
 
 ---
 
-## 11. Confidence Report v1（2026-06-27）
+## 11. Confidence Report v1（2026-06-27，v1.1 补 trad_lm + 全量 proactive）
 
 **协议:** `confidence-report-v1` — 汇总全部 inference 实验，统一 **Wilson 95%** + **Bootstrap 95%** 区间。
 
 ```bash
 python3 tools/valhalla_inference/run_confidence_report.py
+# 补 trad_lm 对照（需 .venv-llm）:
+.venv-llm/bin/python3 tools/valhalla_inference/test_valhalla_base_training_potential.py --only-rag
+.venv-llm/bin/python3 tools/valhalla_inference/test_new_paradigm_potential.py --only-n5
+# 全量 proactive fair holdout:
+python3 tools/valhalla_inference/test_proactive_fate_v2.py --fair-limit 0
 ```
 
 报告: `reports/valhalla_inference/CONFIDENCE_REPORT_v1.md`
@@ -204,15 +209,19 @@ python3 tools/valhalla_inference/run_confidence_report.py
 |------|--------|--------|
 | Fair holdout cold RAG | 96.8% | **[83.8%, 99.4%]** |
 | Transfer vs polluted | +61.3pp | **[+45.2, +77.4]** |
+| **Traditional LM RAG (Qwen2.5-0.5B)** | **96.8%** | **[83.8%, 99.4%]** |
+| Valhalla vs trad_lm lift | +0.0pp | **[-9.7, +9.7]**（统计打平） |
 | FOG emit precision | 96.6% | **[82.8%, 99.4%]** |
-| Proactive UP \| emit | 100% | **[81.6%, 100%]** |
-| Proactive MAR (mismatch) | 88.9% | **[67.2%, 96.9%]** |
+| Proactive UP \| emit | 100% | **[87.5%, 100%]**（n=27 emits，72 trials） |
+| Proactive MAR (mismatch) | 88.2% | **[73.4%, 95.3%]** |
 | 30-turn on-topic | 96.7% | **[83.3%, 99.4%]** |
-| TPI-v2 | 0.790 | bootstrap index |
-| NPPI | 0.884 | bootstrap index |
-| PPI-v2 | 0.930 | bootstrap index |
+| TPI-v2 | 0.790 | **[0.740, 0.823]** |
+| NPPI | 0.884 | **[0.848, 0.984]** |
+| PPI-v2 | 0.885 | **[0.823, 0.942]** |
 
-**Global gaps:** `traditional_lm` 对照未跑（需 torch）；local demo n=8 CI 很宽。
+**解读:** trad_lm 与 Valhalla hybrid **同分 30/31**；结构优势在 **session routing**（+61pp vs polluted）与 **FOG/proactive 门控**，非 raw RAG ceiling。lm_patch 100% 因 patch 头更贴 MCQ 格式。
+
+**Global gaps:** local demo n=8 CI 很宽；无外部 holdout corpus。
 
 ---
 

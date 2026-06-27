@@ -6,12 +6,12 @@
 
 | Metric | Value |
 |--------|-------|
-| **PPI-v2** (composite) | **0.930** |
+| **PPI-v2** (composite) | **0.885** |
 | On-topic unsolicited precision | 100.0% |
-| On-topic emit rate | 89.5% |
-| Mismatch abstain rate | 88.9% |
+| On-topic emit rate | 77.1% |
+| Mismatch abstain rate | 88.2% |
 | False interrupt rate | 0.0% |
-| Trigger rate (eligible) | 51.3% |
+| Trigger rate (eligible) | 44.9% |
 
 ## Verdict
 
@@ -25,7 +25,7 @@
 
 - Gates: 3/3
 - Handcraft: 7/7
-- Fair holdout: 28/30
+- Fair holdout: 54/62
 
 ## Known gaps
 

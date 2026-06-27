@@ -8,8 +8,9 @@
 |--------|------------|--------|
 | Grounding | fair_holdout_cold_rag | 96.8% [83.8%, 99.4%] |
 | Session routing | transfer_vs_polluted_lift | +61.3pp [+45.2, +77.4] |
+| vs Transformer | traditional_lm_rag | 96.8% [83.8%, 99.4%] |
 | FOG quality | fog_emitted_precision | 96.6% [82.8%, 99.4%] |
-| Proactive | UP_on_topic_given_emit | 100.0% [81.6%, 100.0%] |
+| Proactive | UP_on_topic_given_emit | 100.0% [87.5%, 100.0%] |
 | Dialogue | extended_30turn_on_topic | 96.7% [83.3%, 99.4%] |
 
 ## Methods
@@ -26,9 +27,6 @@ Display format: **point% [lo%, hi%]** or **index [lo, hi]**
 
 Source: `valhalla_base_training_potential_test_v2.json` · Protocol: `valhalla-base-training-potential-v2`
 
-**Missing arms:**
-- traditional_lm_rag (torch/model not available at run time)
-
 | Metric | Estimate [95% CI] | n |
 |--------|-------------------|---|
 | isolated_baseline_accuracy | 96.8% [83.8%, 99.4%] | 30/31 |
@@ -36,14 +34,13 @@ Source: `valhalla_base_training_potential_test_v2.json` · Protocol: `valhalla-b
 | transfer_fresh_accuracy | 96.8% [83.8%, 99.4%] | 30/31 |
 | transfer_vs_polluted_lift | +61.3pp [+45.2, +77.4] | paired n=31 |
 | hybrid_vs_lm_patch_lift | -3.2pp [-9.7, +0.0] | paired n=31 |
+| traditional_lm_rag | 96.8% [83.8%, 99.4%] | 30/31 |
+| valhalla_over_traditional_lm | +0.0pp [-9.7, +9.7] | paired n=31 |
 | TPI_v2 | 0.790 [0.740, 0.823] | bootstrap |
 
 ## NPPI
 
 Source: `new_paradigm_potential_test.json` · Protocol: `valhalla-new-paradigm-potential-v1`
-
-**Missing arms:**
-- traditional_lm_rag
 
 **Falsification flags:** `SESSION_SNAPSHOT_NO_HOLDOUT_LIFT_BEYOND_RAG`, `FAIR_HOLDOUT_RAG_EQUIVALENT`
 
@@ -55,6 +52,8 @@ Source: `new_paradigm_potential_test.json` · Protocol: `valhalla-new-paradigm-p
 | negative_control_targeted | 91.7% [64.6%, 98.5%] | 11/12 |
 | negative_control_distractor | 0.0% [0.0%, 24.2%] | 0/12 |
 | swap_fidelity | 100.0% [51.0%, 100.0%] | 4/4 |
+| n5_traditional_lm_rag | 96.8% [83.8%, 99.4%] | 30/31 |
+| n5_hybrid_over_traditional_lm | +0.0pp [-9.7, +9.7] | paired n=31 |
 | NPPI | 0.884 [0.848, 0.984] | bootstrap |
 
 ## FOG-v2
@@ -74,11 +73,11 @@ Source: `proactive_fate_v2_test.json` · Protocol: `proactive-fate-v2`
 
 | Metric | Estimate [95% CI] | n |
 |--------|-------------------|---|
-| UP_on_topic_given_emit | 100.0% [81.6%, 100.0%] | 17/17 |
-| on_topic_emit_rate | 89.5% [68.6%, 97.1%] | 17/19 |
-| MAR_mismatch_abstain | 88.9% [67.2%, 96.9%] | 16/18 |
-| FIR_on_mismatch_emits | 0.0% [0.0%, 65.8%] | 0/2 |
-| PPI_v2 | 0.930 [0.859, 0.986] | bootstrap |
+| UP_on_topic_given_emit | 100.0% [87.5%, 100.0%] | 27/27 |
+| on_topic_emit_rate | 77.1% [61.0%, 87.9%] | 27/35 |
+| MAR_mismatch_abstain | 88.2% [73.4%, 95.3%] | 30/34 |
+| FIR_on_mismatch_emits | 0.0% [0.0%, 49.0%] | 0/4 |
+| PPI_v2 | 0.885 [0.823, 0.942] | bootstrap |
 
 ## Context-drift
 
@@ -111,8 +110,8 @@ Source: `local_corpus_demo_test.json` · Protocol: `local-corpus-demo-v1`
 
 ## Global gaps
 
-- traditional_lm RAG arm skipped in NPPI/TPI when torch/model unavailable
-- Composite indices (TPI/NPPI/PPI) bootstrap uses row resampling — component point estimates may differ slightly from stored index
+- local demo n=8 → ingest lift CI degenerates at +100pp
+- Composite indices bootstrap uses row resampling — point may differ slightly from stored index
 
 ## Reproduce
 
