@@ -9,6 +9,7 @@
 | **[EN_ENGINEERING_DUE_DILIGENCE.md](./EN_ENGINEERING_DUE_DILIGENCE.md)** | Due diligence — claims matrix & risks |
 | [INTRODUCTION.md](./INTRODUCTION.md) | Product introduction |
 | **[EXPERIMENT_RECORD_INFERENCE_PARADIGM.md](./EXPERIMENT_RECORD_INFERENCE_PARADIGM.md)** | **推理范式实验记录（TPI-v2 / NPPI / 复现）** |
+| **[FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md)** | Fate 何时输出（FOG 三道门 + v1 benchmark） |
 | [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility goal |
 | [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | Fate Hub ingress |
 | [../PROTOCOL.md](../PROTOCOL.md) | Universal core bake protocol |

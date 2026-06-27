@@ -1,0 +1,610 @@
+{
+  "timestamp": "2026-06-27T17:17:03.145641+00:00",
+  "protocol": "fate-output-gate-v1",
+  "phase": "test",
+  "eval_count": 31,
+  "fog_params": {
+    "min_structure_cycles": 2,
+    "min_score": 0.12,
+    "min_margin": 0.03
+  },
+  "g1_targeted": {
+    "slice": "targeted_open_retrieval",
+    "n": 31,
+    "always_emit_accuracy": 0.967741935483871,
+    "always_emit_correct": 30,
+    "fog_emit_count": 15,
+    "fog_abstain_count": 16,
+    "fog_defer_count": 0,
+    "fog_emitted_precision": 0.9333333333333333,
+    "fog_emitted_correct": 14,
+    "fog_coverage": 0.4838709677419355,
+    "rows": [
+      {
+        "id": "OPEN_PHYS_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.7199999999999999,
+        "margin": 0.47999999999999987,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a"
+      },
+      {
+        "id": "OPEN_CHEM_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.6,
+        "margin": 0.6,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+      },
+      {
+        "id": "OPEN_BIO_01",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes"
+      },
+      {
+        "id": "OPEN_HIST_01",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.32,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender"
+      },
+      {
+        "id": "OPEN_GEO_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.32,
+        "margin": 0.12,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne"
+      },
+      {
+        "id": "OPEN_ECON_01",
+        "always_emit_correct": false,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.12,
+        "margin": 0.12,
+        "gated_correct": false,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:1] GDP measures the total value of goods and services produced in a country"
+      },
+      {
+        "id": "OPEN_ECON_02",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.2,
+        "margin": 0.2,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Inflation means a sustained increase in the general price level of goods"
+      },
+      {
+        "id": "OPEN_CS_02",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:2] The SI unit of force is the Newton defined as kg times m per s squared"
+      },
+      {
+        "id": "ZH_02",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] 秦朝是中国第一个统一的中央集权封建王朝"
+      },
+      {
+        "id": "ZH_03",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] 二十四节气反映中国古代农历对太阳周年的划分"
+      },
+      {
+        "id": "ZH_04",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+      },
+      {
+        "id": "LIT_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.52,
+        "margin": 0.52,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+      },
+      {
+        "id": "LIT_02",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.2,
+        "margin": 0.2,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949"
+      },
+      {
+        "id": "MED_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.6,
+        "margin": 0.6,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+      },
+      {
+        "id": "ASTRO_01",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.52,
+        "margin": 0.2,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system"
+      },
+      {
+        "id": "LOGIC_02",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.24,
+        "margin": 0.03999999999999998,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne"
+      },
+      {
+        "id": "OPEN_F03",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.12,
+        "margin": 0.12,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Thomas Jefferson was primary author of the US Declaration of Independence"
+      },
+      {
+        "id": "OPEN_F04",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloropla"
+      },
+      {
+        "id": "OPEN_F05",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes"
+      },
+      {
+        "id": "OPEN_F06",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.32,
+        "margin": 0.32,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloropla"
+      },
+      {
+        "id": "OPEN_F14",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Binary search requires a sorted array and halves the search interval each step"
+      },
+      {
+        "id": "OPEN_F16",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.2,
+        "margin": 0.2,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+      },
+      {
+        "id": "OPEN_F17",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.2,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Scurvy is caused by deficiency of vitamin C also called ascorbic acid"
+      },
+      {
+        "id": "OPEN_F25",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.2,
+        "margin": 0.2,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender"
+      },
+      {
+        "id": "OPEN_F26",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.12,
+        "margin": 0.12,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] The French Revolution began in 1789 with the storming of the Bastille"
+      },
+      {
+        "id": "OPEN_F29",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Aristotle was student of Plato and tutor of Alexander the Great"
+      },
+      {
+        "id": "OPEN_F33",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] GDP measures the total value of goods and services produced in a country"
+      },
+      {
+        "id": "OPEN_F39",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+      },
+      {
+        "id": "OPEN_F42",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:3] The Yangtze River originates from glaciers on the Tibetan Plateau in China"
+      },
+      {
+        "id": "OPEN_F43",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.12,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloropla"
+      },
+      {
+        "id": "OPEN_F50",
+        "always_emit_correct": true,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Inflation means a sustained increase in the general price level of goods"
+      }
+    ]
+  },
+  "g2_distractor": {
+    "slice": "distractor_context",
+    "n": 12,
+    "always_emit_accuracy": 0.0,
+    "always_emit_correct": 0,
+    "fog_emit_count": 1,
+    "fog_abstain_count": 11,
+    "fog_defer_count": 0,
+    "fog_emitted_precision": 0.0,
+    "fog_emitted_correct": 0,
+    "fog_coverage": 0.08333333333333333,
+    "rows": [
+      {
+        "id": "OPEN_PHYS_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.24,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloropla"
+      },
+      {
+        "id": "OPEN_CHEM_01",
+        "always_emit_correct": false,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.2,
+        "margin": 0.2,
+        "gated_correct": false,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloropla"
+      },
+      {
+        "id": "OPEN_BIO_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.12,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:5] Supply increases when price rises according to basic microeconomic theory"
+      },
+      {
+        "id": "OPEN_HIST_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:3] DNA uses four nucleotide bases adenine thymine guanine and cytosine"
+      },
+      {
+        "id": "OPEN_GEO_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.12,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:4] Supply increases when price rises according to basic microeconomic theory"
+      },
+      {
+        "id": "OPEN_ECON_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a"
+      },
+      {
+        "id": "OPEN_ECON_02",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine"
+      },
+      {
+        "id": "OPEN_CS_02",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a"
+      },
+      {
+        "id": "ZH_02",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender"
+      },
+      {
+        "id": "ZH_03",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine"
+      },
+      {
+        "id": "ZH_04",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_top_score",
+        "top_score": 0.0,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine"
+      },
+      {
+        "id": "LIT_01",
+        "always_emit_correct": false,
+        "fog_decision": "abstain",
+        "fog_reason": "low_margin",
+        "top_score": 0.12,
+        "margin": 0.0,
+        "gated_correct": null,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:4] DNA uses four nucleotide bases adenine thymine guanine and cytosine"
+      }
+    ]
+  },
+  "g3_swap": {
+    "slice": "context_swap",
+    "n": 4,
+    "always_emit_accuracy": 1.0,
+    "always_emit_correct": 4,
+    "fog_emit_count": 4,
+    "fog_abstain_count": 0,
+    "fog_defer_count": 0,
+    "fog_emitted_precision": 1.0,
+    "fog_emitted_correct": 4,
+    "fog_coverage": 1.0,
+    "rows": [
+      {
+        "id": "SWAP_01_ok",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.32,
+        "margin": 0.32,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] The capital of Australia is Canberra",
+        "swap_side": "ok"
+      },
+      {
+        "id": "SWAP_01_bad",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.32,
+        "margin": 0.32,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] The capital of France is Paris",
+        "swap_side": "bad"
+      },
+      {
+        "id": "SWAP_02_ok",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.6,
+        "margin": 0.6,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+        "swap_side": "ok"
+      },
+      {
+        "id": "SWAP_02_bad",
+        "always_emit_correct": true,
+        "fog_decision": "emit",
+        "fog_reason": "ready",
+        "top_score": 0.4,
+        "margin": 0.4,
+        "gated_correct": true,
+        "decode_path": "valhalla_base/native/pipeline_open",
+        "answer_snip": "[corpus:0] Water freezes at 0 degrees Celsius at standard pressure",
+        "swap_side": "bad"
+      }
+    ]
+  },
+  "g4_defer": {
+    "slice": "structure_defer",
+    "cycles_1": {
+      "n": 12,
+      "always_emit_accuracy": 0.9166666666666666,
+      "always_emit_correct": 11,
+      "fog_emit_count": 0,
+      "fog_abstain_count": 0,
+      "fog_defer_count": 12,
+      "fog_emitted_precision": 0.0,
+      "fog_emitted_correct": 0,
+      "fog_coverage": 0.0
+    },
+    "cycles_2": {
+      "n": 12,
+      "always_emit_accuracy": 0.9166666666666666,
+      "always_emit_correct": 11,
+      "fog_emit_count": 6,
+      "fog_abstain_count": 6,
+      "fog_defer_count": 0,
+      "fog_emitted_precision": 0.8333333333333334,
+      "fog_emitted_correct": 5,
+      "fog_coverage": 0.5
+    },
+    "defer_lift_cycles1": 12
+  },
+  "evaluation": {
+    "checks": {
+      "emitted_precision_ge_always_on_targeted": false,
+      "distractor_abstain_rate_ge_15pct": true,
+      "targeted_emit_coverage_ge_70pct": false,
+      "cycles1_defer_ge_cycles2": true
+    },
+    "pass_rate": 0.5,
+    "verdict": "FOG_V1_NEEDS_TUNING"
+  }
+}

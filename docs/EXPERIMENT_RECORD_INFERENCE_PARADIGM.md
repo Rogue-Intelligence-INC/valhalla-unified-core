@@ -31,6 +31,7 @@
 | `valhalla-new-paradigm-potential-v1` | `tools/valhalla_inference/test_new_paradigm_potential.py` | `new_paradigm_potential_test.json` |
 | `context-topic-drift-v1/v2` | `tools/valhalla_inference/test_context_topic_drift.py` | `context_topic_drift_*.json` |
 | `local-corpus-demo-v1` | `tools/valhalla_inference/run_local_corpus_demo.py` | `local_corpus_demo_test.json` |
+| `fate-output-gate-v1` | `tools/valhalla_inference/test_fate_output_gate.py` | `fate_output_gate_test.json` |
 
 生产栈（所有实验默认）：
 
@@ -147,7 +148,22 @@ python3 tools/valhalla_inference/test_context_topic_drift.py
 
 ---
 
-## 8. 下一步
+## 8. Fate Output Gate v1（2026-06-27）
+
+见 [FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md)。首轮 benchmark `fate-output-gate-v1`：
+
+| 电池 | always emit | FOG emitted precision | FOG coverage / abstain |
+|------|-------------|----------------------|-------------------------|
+| G1 targeted | 96.8% | 93.3% | coverage 48.4% · abstain 16 |
+| G2 distractor | 0.0% | — | abstain 11/12 |
+| G3 swap | 100% | 100% | emit 4/4 |
+| G4 defer | — | — | cycles=1 defer 12 · cycles=2 defer 0 |
+
+**Verdict:** `FOG_V1_NEEDS_TUNING` — distractor 上 abstain 有效，但 targeted coverage 过低（margin 过严）。
+
+---
+
+## 9. 下一步
 
 1. 补 traditional_lm RAG 对照（`.venv-llm` + 本地 Qwen）
 2. v3：跨 session 持久化（若产品需要）与 feedback lift 专项
