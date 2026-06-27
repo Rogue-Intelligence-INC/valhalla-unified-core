@@ -1,0 +1,2546 @@
+{
+  "timestamp": "2026-06-26T21:36:57.283138+00:00",
+  "protocol": "valhalla-base-training-potential-v2",
+  "fair_benchmark_version": "fair-1.2",
+  "phase": "test",
+  "eval_slice": "open_retrieval",
+  "eval_count": 31,
+  "corpus_lines": 49,
+  "training_curriculum_rounds": 30,
+  "fairness": {
+    "no_lm_weight_updates": true,
+    "eval_holdout": "fair open_retrieval (not in curriculum templates)",
+    "production_stack": {
+      "decode": "hybrid",
+      "follow_up_decode": "native_follow_up_aware",
+      "fate_ingress_routing": "quad_cycle"
+    }
+  },
+  "corpus_scale": {
+    "tiers": {
+      "0.1": {
+        "fraction": 0.1,
+        "accuracy": 1.0,
+        "detail": [
+          {
+            "id": "OPEN_PHYS_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_CHEM_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_BIO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_HIST_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_GEO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_CS_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "MED_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ASTRO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LOGIC_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F05",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F06",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F14",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F16",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F17",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F25",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F26",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F29",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F33",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F39",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F42",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F43",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F50",
+            "correct": true,
+            "context_lines": 1
+          }
+        ]
+      },
+      "0.25": {
+        "fraction": 0.25,
+        "accuracy": 1.0,
+        "detail": [
+          {
+            "id": "OPEN_PHYS_01",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_CHEM_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_BIO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_HIST_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_GEO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_CS_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "MED_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ASTRO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LOGIC_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F05",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F06",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F14",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F16",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F17",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F25",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F26",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F29",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F33",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F39",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F42",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F43",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_F50",
+            "correct": true,
+            "context_lines": 1
+          }
+        ]
+      },
+      "0.5": {
+        "fraction": 0.5,
+        "accuracy": 1.0,
+        "detail": [
+          {
+            "id": "OPEN_PHYS_01",
+            "correct": true,
+            "context_lines": 4
+          },
+          {
+            "id": "OPEN_CHEM_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_BIO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_HIST_01",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_GEO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_ECON_02",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_CS_02",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "ZH_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "MED_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ASTRO_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LOGIC_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F05",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F06",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F14",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F16",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F17",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F25",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F26",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F29",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F33",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F39",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F42",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_F43",
+            "correct": true,
+            "context_lines": 4
+          },
+          {
+            "id": "OPEN_F50",
+            "correct": true,
+            "context_lines": 1
+          }
+        ]
+      },
+      "1.0": {
+        "fraction": 1.0,
+        "accuracy": 0.967741935483871,
+        "detail": [
+          {
+            "id": "OPEN_PHYS_01",
+            "correct": true,
+            "context_lines": 8
+          },
+          {
+            "id": "OPEN_CHEM_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_BIO_01",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_HIST_01",
+            "correct": true,
+            "context_lines": 3
+          },
+          {
+            "id": "OPEN_GEO_01",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_ECON_01",
+            "correct": false,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_ECON_02",
+            "correct": true,
+            "context_lines": 3
+          },
+          {
+            "id": "OPEN_CS_02",
+            "correct": true,
+            "context_lines": 3
+          },
+          {
+            "id": "ZH_02",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ZH_04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "LIT_02",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "MED_01",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "ASTRO_01",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "LOGIC_02",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_F03",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F04",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F05",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F06",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F14",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F16",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F17",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_F25",
+            "correct": true,
+            "context_lines": 2
+          },
+          {
+            "id": "OPEN_F26",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F29",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F33",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F39",
+            "correct": true,
+            "context_lines": 1
+          },
+          {
+            "id": "OPEN_F42",
+            "correct": true,
+            "context_lines": 4
+          },
+          {
+            "id": "OPEN_F43",
+            "correct": true,
+            "context_lines": 8
+          },
+          {
+            "id": "OPEN_F50",
+            "correct": true,
+            "context_lines": 1
+          }
+        ]
+      }
+    },
+    "points": [
+      {
+        "fraction": 0.1,
+        "accuracy": 1.0
+      },
+      {
+        "fraction": 0.25,
+        "accuracy": 1.0
+      },
+      {
+        "fraction": 0.5,
+        "accuracy": 1.0
+      },
+      {
+        "fraction": 1.0,
+        "accuracy": 0.967741935483871
+      }
+    ],
+    "scale_lift_pp": -3.2258064516129004
+  },
+  "learning_paradigms": {
+    "isolated_baseline": {
+      "arm": "isolated_baseline",
+      "description": "Fresh session + targeted context per eval question",
+      "n": 31,
+      "correct": 30,
+      "accuracy": 0.967741935483871
+    },
+    "persistent_static": {
+      "n": 31,
+      "correct": 16,
+      "accuracy": 0.5161290322580645,
+      "hub_prefs_spread": 0.0,
+      "context_lines": 49,
+      "context_fingerprint": "ebf63e9d4b20aa53",
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": true,
+          "answer": "[corpus:3] Newton's second law states force equals mass times acceleration F equals m a"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:10] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": false,
+          "answer": "[corpus:15] Euler's formula e to the i pi plus one equals zero links five constants"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": true,
+          "answer": "[corpus:45] Canberra was selected as Australian capital as compromise between Sydney and Melbourne"
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:26] Chloroplasts contain chlorophyll for capturing light energy"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": false,
+          "answer": "[corpus:41] CPU memory and storage are core hardware components of computers"
+        },
+        {
+          "id": "ZH_02",
+          "correct": false,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "ZH_03",
+          "correct": true,
+          "answer": "[corpus:48] 二十四节气反映中国古代农历对太阳周年的划分"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "LIT_02",
+          "correct": true,
+          "answer": "[corpus:32] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949"
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:29] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:17] Mercury is the smallest planet and closest to the Sun in our solar system"
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": false,
+          "answer": "[corpus:15] Euler's formula e to the i pi plus one equals zero links five constants"
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": false,
+          "answer": "[corpus:48] 二十四节气反映中国古代农历对太阳周年的划分"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:43] Vitamin C deficiency causes scurvy with bleeding gums and weakness"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": true,
+          "answer": "[corpus:25] Electrons carry negative charge and orbit the atomic nucleus"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": false,
+          "answer": "[corpus:46] Mercury orbits closest to the Sun with year of about eighty eight Earth days"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": false,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": false,
+          "answer": "[corpus:48] 二十四节气反映中国古代农历对太阳周年的划分"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": false,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": true,
+          "answer": "[corpus:48] 二十四节气反映中国古代农历对太阳周年的划分"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": false,
+          "answer": "[corpus:48] 二十四节气反映中国古代农历对太阳周年的划分"
+        }
+      ],
+      "arm": "persistent_static",
+      "description": "Single full-corpus ingest, batch eval (no curriculum)"
+    },
+    "curriculum_no_feedback": {
+      "n": 31,
+      "correct": 11,
+      "accuracy": 0.3548387096774194,
+      "hub_prefs_spread": 0.0,
+      "context_lines": 80,
+      "context_fingerprint": "e7ff0b9462dc3127",
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": false,
+          "answer": "[corpus:70] One Newton equals one kilogram meter per second squared"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:10] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": false,
+          "answer": "[corpus:50] Sydney is the largest city in Australia but not the capital"
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": false,
+          "answer": "[corpus:75] Kinetic energy is one half m v squared"
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "ZH_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_03",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "LIT_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:29] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:17] Mercury is the smallest planet and closest to the Sun in our solar system"
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": false,
+          "answer": "[corpus:62] The chemical formula for water is H2O"
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:43] Vitamin C deficiency causes scurvy with bleeding gums and weakness"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": false,
+          "answer": "[corpus:59] Canberra was selected as capital as a compromise between Sydney and Melbourne"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "[corpus:69] pH 7 is neutral for pure water at 25C"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        }
+      ],
+      "arm": "curriculum_no_feedback",
+      "description": "30-round QA curriculum, fate_qa_feedback=false, then eval",
+      "curriculum": {
+        "rounds": 30,
+        "train_accuracy": 0.9,
+        "final_spread": 0.0,
+        "round_details": [
+          {
+            "thread": "australia",
+            "round": 0,
+            "train_correct": false,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 1,
+            "train_correct": false,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "australia",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "chemistry",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 7,
+            "train_correct": false,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          },
+          {
+            "thread": "physics",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0
+          }
+        ]
+      }
+    },
+    "curriculum_with_feedback": {
+      "n": 31,
+      "correct": 11,
+      "accuracy": 0.3548387096774194,
+      "hub_prefs_spread": 0.014575122613609659,
+      "context_lines": 80,
+      "context_fingerprint": "e7ff0b9462dc3127",
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": false,
+          "answer": "[corpus:70] One Newton equals one kilogram meter per second squared"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:10] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": false,
+          "answer": "[corpus:50] Sydney is the largest city in Australia but not the capital"
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": false,
+          "answer": "[corpus:75] Kinetic energy is one half m v squared"
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "ZH_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_03",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "LIT_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:29] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:17] Mercury is the smallest planet and closest to the Sun in our solar system"
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": false,
+          "answer": "[corpus:62] The chemical formula for water is H2O"
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:43] Vitamin C deficiency causes scurvy with bleeding gums and weakness"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": false,
+          "answer": "[corpus:59] Canberra was selected as capital as a compromise between Sydney and Melbourne"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "[corpus:69] pH 7 is neutral for pure water at 25C"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        }
+      ],
+      "arm": "curriculum_with_feedback",
+      "description": "30-round QA curriculum, fate_qa_feedback=true, then eval",
+      "curriculum": {
+        "rounds": 30,
+        "train_accuracy": 0.9,
+        "final_spread": 0.011220278832031194,
+        "round_details": [
+          {
+            "thread": "australia",
+            "round": 0,
+            "train_correct": false,
+            "hub_prefs_spread": 7.653989681172257e-05
+          },
+          {
+            "thread": "australia",
+            "round": 1,
+            "train_correct": false,
+            "hub_prefs_spread": 0.00015011505945258796
+          },
+          {
+            "thread": "australia",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0020057603900873744
+          },
+          {
+            "thread": "australia",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0020008819377067277
+          },
+          {
+            "thread": "australia",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0037847905764582246
+          },
+          {
+            "thread": "australia",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.005532734158711361
+          },
+          {
+            "thread": "australia",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.007246054589773038
+          },
+          {
+            "thread": "australia",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.008926021484026908
+          },
+          {
+            "thread": "australia",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.010573837216060339
+          },
+          {
+            "thread": "australia",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012190641540726355
+          },
+          {
+            "thread": "chemistry",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01216438637661113
+          },
+          {
+            "thread": "chemistry",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012138609421561114
+          },
+          {
+            "thread": "chemistry",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012113294528698304
+          },
+          {
+            "thread": "chemistry",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01208842633962498
+          },
+          {
+            "thread": "chemistry",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012063990234405547
+          },
+          {
+            "thread": "chemistry",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012039972285430633
+          },
+          {
+            "thread": "chemistry",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01201635921480712
+          },
+          {
+            "thread": "chemistry",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011993138354957994
+          },
+          {
+            "thread": "chemistry",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0119944469278708
+          },
+          {
+            "thread": "chemistry",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.013378045865599597
+          },
+          {
+            "thread": "physics",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01196693530472559
+          },
+          {
+            "thread": "physics",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01194509235020827
+          },
+          {
+            "thread": "physics",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.013214287889775939
+          },
+          {
+            "thread": "physics",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011860573751352743
+          },
+          {
+            "thread": "physics",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011866178630204782
+          },
+          {
+            "thread": "physics",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01127885850201904
+          },
+          {
+            "thread": "physics",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011259606015171425
+          },
+          {
+            "thread": "physics",
+            "round": 7,
+            "train_correct": false,
+            "hub_prefs_spread": 0.011257474942691331
+          },
+          {
+            "thread": "physics",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011238744627833641
+          },
+          {
+            "thread": "physics",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011220278832031194
+          }
+        ]
+      }
+    },
+    "lifts_pp": {
+      "persistent_gain_pp": -45.16129032258065,
+      "feedback_lift_pp": 0.0,
+      "curriculum_gain_pp": -16.129032258064512
+    }
+  },
+  "transfer_eval": {
+    "curriculum_train_accuracy": 0.9,
+    "final_hub_prefs_spread": 0.011220278832031194,
+    "curriculum_in_session_polluted": {
+      "n": 31,
+      "correct": 11,
+      "accuracy": 0.3548387096774194,
+      "hub_prefs_spread": 0.014575122613609659,
+      "context_lines": 80,
+      "context_fingerprint": "e7ff0b9462dc3127",
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": false,
+          "answer": "[corpus:70] One Newton equals one kilogram meter per second squared"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:10] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:1] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": false,
+          "answer": "[corpus:50] Sydney is the largest city in Australia but not the capital"
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": false,
+          "answer": "[corpus:75] Kinetic energy is one half m v squared"
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "ZH_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_03",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:47] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "LIT_02",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:29] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:17] Mercury is the smallest planet and closest to the Sun in our solar system"
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": false,
+          "answer": "[corpus:62] The chemical formula for water is H2O"
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": false,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": false,
+          "answer": "[corpus:24] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:9] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:43] Vitamin C deficiency causes scurvy with bleeding gums and weakness"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": false,
+          "answer": "[corpus:59] Canberra was selected as capital as a compromise between Sydney and Melbourne"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "[corpus:69] pH 7 is neutral for pure water at 25C"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:79] Work is force times distance in the direction of force"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": false,
+          "answer": "[corpus:78] Momentum equals mass times velocity"
+        }
+      ],
+      "arm": "curriculum_in_session_polluted",
+      "description": "v1-style eval on polluted session (80+ lines)"
+    },
+    "transfer_fresh_retrieval": {
+      "arm": "transfer_fresh_retrieval_no_feedback",
+      "description": "Trained snapshot + per-q targeted append; corpus cleared",
+      "n": 31,
+      "correct": 30,
+      "accuracy": 0.967741935483871,
+      "curriculum": {
+        "rounds": 30,
+        "train_accuracy": 0.9,
+        "final_spread": 0.011220278832031194,
+        "round_details": [
+          {
+            "thread": "australia",
+            "round": 0,
+            "train_correct": false,
+            "hub_prefs_spread": 7.653989681172257e-05
+          },
+          {
+            "thread": "australia",
+            "round": 1,
+            "train_correct": false,
+            "hub_prefs_spread": 0.00015011505945258796
+          },
+          {
+            "thread": "australia",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0020057603900873744
+          },
+          {
+            "thread": "australia",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0020008819377067277
+          },
+          {
+            "thread": "australia",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0037847905764582246
+          },
+          {
+            "thread": "australia",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.005532734158711361
+          },
+          {
+            "thread": "australia",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.007246054589773038
+          },
+          {
+            "thread": "australia",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.008926021484026908
+          },
+          {
+            "thread": "australia",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.010573837216060339
+          },
+          {
+            "thread": "australia",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012190641540726355
+          },
+          {
+            "thread": "chemistry",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01216438637661113
+          },
+          {
+            "thread": "chemistry",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012138609421561114
+          },
+          {
+            "thread": "chemistry",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012113294528698304
+          },
+          {
+            "thread": "chemistry",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01208842633962498
+          },
+          {
+            "thread": "chemistry",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012063990234405547
+          },
+          {
+            "thread": "chemistry",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.012039972285430633
+          },
+          {
+            "thread": "chemistry",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01201635921480712
+          },
+          {
+            "thread": "chemistry",
+            "round": 7,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011993138354957994
+          },
+          {
+            "thread": "chemistry",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.0119944469278708
+          },
+          {
+            "thread": "chemistry",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.013378045865599597
+          },
+          {
+            "thread": "physics",
+            "round": 0,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01196693530472559
+          },
+          {
+            "thread": "physics",
+            "round": 1,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01194509235020827
+          },
+          {
+            "thread": "physics",
+            "round": 2,
+            "train_correct": true,
+            "hub_prefs_spread": 0.013214287889775939
+          },
+          {
+            "thread": "physics",
+            "round": 3,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011860573751352743
+          },
+          {
+            "thread": "physics",
+            "round": 4,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011866178630204782
+          },
+          {
+            "thread": "physics",
+            "round": 5,
+            "train_correct": true,
+            "hub_prefs_spread": 0.01127885850201904
+          },
+          {
+            "thread": "physics",
+            "round": 6,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011259606015171425
+          },
+          {
+            "thread": "physics",
+            "round": 7,
+            "train_correct": false,
+            "hub_prefs_spread": 0.011257474942691331
+          },
+          {
+            "thread": "physics",
+            "round": 8,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011238744627833641
+          },
+          {
+            "thread": "physics",
+            "round": 9,
+            "train_correct": true,
+            "hub_prefs_spread": 0.011220278832031194
+          }
+        ]
+      },
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": true,
+          "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a",
+          "context_lines": 8,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": true,
+          "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+          "context_lines": 3,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": true,
+          "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": true,
+          "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+          "context_lines": 3,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": true,
+          "answer": "[corpus:2] The SI unit of force is the Newton defined as kg times m per s squared",
+          "context_lines": 3,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "ZH_02",
+          "correct": true,
+          "answer": "[corpus:0] 秦朝是中国第一个统一的中央集权封建王朝",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "ZH_03",
+          "correct": true,
+          "answer": "[corpus:0] 二十四节气反映中国古代农历对太阳周年的划分",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "LIT_02",
+          "correct": true,
+          "answer": "[corpus:0] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:0] Type 2 diabetes involves insulin resistance and relative insulin deficiency",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": true,
+          "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": true,
+          "answer": "[corpus:0] Thomas Jefferson was primary author of the US Declaration of Independence",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": true,
+          "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": true,
+          "answer": "[corpus:0] Binary search requires a sorted array and halves the search interval each step",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:0] Scurvy is caused by deficiency of vitamin C also called ascorbic acid",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": true,
+          "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender",
+          "context_lines": 2,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "[corpus:0] The French Revolution began in 1789 with the storming of the Bastille",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": true,
+          "answer": "[corpus:0] Aristotle was student of Plato and tutor of Alexander the Great",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": true,
+          "answer": "[corpus:0] GDP measures the total value of goods and services produced in a country",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": true,
+          "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": true,
+          "answer": "[corpus:3] The Yangtze River originates from glaciers on the Tibetan Plateau in China",
+          "context_lines": 4,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts",
+          "context_lines": 8,
+          "hub_prefs_spread": 0.011220278832031222
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": true,
+          "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods",
+          "context_lines": 1,
+          "hub_prefs_spread": 0.011220278832031222
+        }
+      ]
+    },
+    "isolated_baseline_accuracy": 0.967741935483871,
+    "lifts_pp": {
+      "transfer_vs_polluted_session_pp": 61.29032258064516,
+      "transfer_vs_isolated_pp": 0.0
+    }
+  },
+  "rag_baseline_gap": {
+    "valhalla_isolated_hybrid": {
+      "arm": "valhalla_isolated_hybrid",
+      "n": 31,
+      "correct": 30,
+      "accuracy": 0.967741935483871,
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": true,
+          "answer": "[corpus:0] Newton's second law states force equals mass times acceleration F equals m a"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": true,
+          "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": true,
+          "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne"
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": false,
+          "answer": "[corpus:1] GDP measures the total value of goods and services produced in a country"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": true,
+          "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods"
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": true,
+          "answer": "[corpus:2] The SI unit of force is the Newton defined as kg times m per s squared"
+        },
+        {
+          "id": "ZH_02",
+          "correct": true,
+          "answer": "[corpus:0] 秦朝是中国第一个统一的中央集权封建王朝"
+        },
+        {
+          "id": "ZH_03",
+          "correct": true,
+          "answer": "[corpus:0] 二十四节气反映中国古代农历对太阳周年的划分"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "[corpus:0] 红楼梦是中国古典小说巅峰之作作者一般认为是曹雪芹"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "LIT_02",
+          "correct": true,
+          "answer": "[corpus:0] George Orwell wrote the dystopian novel Nineteen Eighty-Four published in 1949"
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "[corpus:0] Type 2 diabetes involves insulin resistance and relative insulin deficiency"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "[corpus:0] Mercury is the smallest planet and closest to the Sun in our solar system"
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": true,
+          "answer": "[corpus:0] The capital city of Australia is Canberra not Sydney or Melbourne"
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": true,
+          "answer": "[corpus:0] Thomas Jefferson was primary author of the US Declaration of Independence"
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": true,
+          "answer": "[corpus:0] Mitochondria produce ATP through cellular respiration in eukaryotes"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": true,
+          "answer": "[corpus:0] Binary search requires a sorted array and halves the search interval each step"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "[corpus:0] William Shakespeare wrote Romeo and Juliet and Hamlet in Elizabethan England"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "[corpus:0] Scurvy is caused by deficiency of vitamin C also called ascorbic acid"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": true,
+          "answer": "[corpus:0] World War Two ended in 1945 with Germany's unconditional surrender"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "[corpus:0] The French Revolution began in 1789 with the storming of the Bastille"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": true,
+          "answer": "[corpus:0] Aristotle was student of Plato and tutor of Alexander the Great"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": true,
+          "answer": "[corpus:0] GDP measures the total value of goods and services produced in a country"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": true,
+          "answer": "[corpus:0] Water boils at 100 degrees Celsius at standard atmospheric pressure"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": true,
+          "answer": "[corpus:3] The Yangtze River originates from glaciers on the Tibetan Plateau in China"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "[corpus:0] Photosynthesis converts carbon dioxide and water into glucose using sunlight in chloroplasts"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": true,
+          "answer": "[corpus:0] Inflation means a sustained increase in the general price level of goods"
+        }
+      ]
+    },
+    "valhalla_lm_patch_rag": {
+      "arm": "valhalla_lm_patch_rag",
+      "n": 31,
+      "correct": 31,
+      "accuracy": 1.0,
+      "rows": [
+        {
+          "id": "OPEN_PHYS_01",
+          "correct": true,
+          "answer": "Newton's second law states that the acceleration of an object is directly proportional to the net force acting on it and inversely proportional to its mass. Mat"
+        },
+        {
+          "id": "OPEN_CHEM_01",
+          "correct": true,
+          "answer": "Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at standard pressure. This temperature is the boiling point of water at sea level and standard atmos"
+        },
+        {
+          "id": "OPEN_BIO_01",
+          "correct": true,
+          "answer": "The main function of mitochondria is to provide the cell with the energy it needs to carry out its functions. They are responsible for the production of ATP, th"
+        },
+        {
+          "id": "OPEN_HIST_01",
+          "correct": true,
+          "answer": "World War II, also known as the Second World War, ended on September 2, 1945, with the surrender of Nazi Germany. This event marked the end of the war and the b"
+        },
+        {
+          "id": "OPEN_GEO_01",
+          "correct": true,
+          "answer": "The capital of Australia is Canberra."
+        },
+        {
+          "id": "OPEN_ECON_01",
+          "correct": true,
+          "answer": "GDP, or Gross Domestic Product, is a measure of the total value of all goods and services produced within a country's borders in a specific time period, usually"
+        },
+        {
+          "id": "OPEN_ECON_02",
+          "correct": true,
+          "answer": "Inflation refers to the sustained increase in the general price level of goods and services over time, which can erode the purchasing power of money and affect "
+        },
+        {
+          "id": "OPEN_CS_02",
+          "correct": true,
+          "answer": "CPU stands for \"Central Processing Unit\". It is the core component of a computer that performs the calculations and logical operations required for processing d"
+        },
+        {
+          "id": "ZH_02",
+          "correct": true,
+          "answer": "中国历史上第一个统一的中央集权封建王朝是秦朝。秦朝的建立者是秦始皇，他统一六国，建立了中国历史上第一个统一的中央集权封建王朝。"
+        },
+        {
+          "id": "ZH_03",
+          "correct": true,
+          "answer": "一年有12个节气。节气是农历中划分出的二十四个季节，每个季节都有其特定的节气，如春分、夏至、秋分、冬至等。这些节气反映了季节的变化和自然规律，对于农业生产、民俗活动等方面具有重要意义。"
+        },
+        {
+          "id": "ZH_04",
+          "correct": true,
+          "answer": "《红楼梦》的作者是清代作家曹雪芹。"
+        },
+        {
+          "id": "LIT_01",
+          "correct": true,
+          "answer": "Romeo and Juliet was written by William Shakespeare."
+        },
+        {
+          "id": "LIT_02",
+          "correct": true,
+          "answer": "\"1984\" was written by George Orwell."
+        },
+        {
+          "id": "MED_01",
+          "correct": true,
+          "answer": "Diabetes primarily characterized by insulin resistance is type 2 diabetes. Type 2 diabetes is a metabolic disorder that affects the body's ability to use insuli"
+        },
+        {
+          "id": "ASTRO_01",
+          "correct": true,
+          "answer": "The planet closest to the Sun is Mercury. It is the smallest and closest planet to the Sun in the solar system."
+        },
+        {
+          "id": "LOGIC_02",
+          "correct": true,
+          "answer": "The contrapositive of the statement \"If it rains, the ground is wet\" is \"If the ground is not wet, it does not rain.\""
+        },
+        {
+          "id": "OPEN_F03",
+          "correct": true,
+          "answer": "The chemical symbol for iron is Fe."
+        },
+        {
+          "id": "OPEN_F04",
+          "correct": true,
+          "answer": "Plants absorb carbon dioxide (CO2) for photosynthesis. This process is crucial for the production of glucose and other organic compounds from carbon dioxide and"
+        },
+        {
+          "id": "OPEN_F05",
+          "correct": true,
+          "answer": "The basic unit of life is the cell. Cells are the basic structural and functional units of living organisms. They are the smallest unit of life that can carry o"
+        },
+        {
+          "id": "OPEN_F06",
+          "correct": true,
+          "answer": "Plants use a process called photosynthesis to make food using sunlight. This process involves the following steps:\n\n1. **Light Absorption**: Plants absorb sunli"
+        },
+        {
+          "id": "OPEN_F14",
+          "correct": true,
+          "answer": "An algorithm is a step-by-step procedure or set of instructions used to solve a specific problem or perform a particular task. It is a fundamental concept in co"
+        },
+        {
+          "id": "OPEN_F16",
+          "correct": true,
+          "answer": "\"Hamlet\" was written by William Shakespeare. He was an English playwright and poet who lived from 1564 to 1616. Shakespeare's works are considered some of the g"
+        },
+        {
+          "id": "OPEN_F17",
+          "correct": true,
+          "answer": "Scurvy is a disease caused by a deficiency of vitamin C in the body. The main symptoms of scurvy include bleeding gums, bleeding lips, and bleeding gums. Vitami"
+        },
+        {
+          "id": "OPEN_F25",
+          "correct": true,
+          "answer": "The first shell of an atom holds the most electrons. The first shell has 2 electrons, and the second shell has 8 electrons, and so on. The first shell is the mo"
+        },
+        {
+          "id": "OPEN_F26",
+          "correct": true,
+          "answer": "The pH of pure water at 25°C is 7.0. This is a standard pH value that applies to all water, regardless of its concentration or the temperature at which it is me"
+        },
+        {
+          "id": "OPEN_F29",
+          "correct": true,
+          "answer": "Penicillin was discovered by Alexander Fleming, a British scientist, in 1928. He was working at the Royal College of Surgeons in London when he noticed that a m"
+        },
+        {
+          "id": "OPEN_F33",
+          "correct": true,
+          "answer": "A recession is a period of economic decline characterized by a decrease in economic activity, often leading to a reduction in consumer spending, business invest"
+        },
+        {
+          "id": "OPEN_F39",
+          "correct": true,
+          "answer": "Hypertension, also known as high blood pressure, is a condition where the blood pressure in the arteries is consistently higher than it should be. This can lead"
+        },
+        {
+          "id": "OPEN_F42",
+          "correct": true,
+          "answer": "造纸术的发明与哪个国家无关。造纸术的发明与中国的造纸术有关，中国的造纸术是东汉时期蔡伦改进的。"
+        },
+        {
+          "id": "OPEN_F43",
+          "correct": true,
+          "answer": "The unit of power is typically measured in watts (W). One watt is defined as the power that results from the work done in one second, which is equivalent to 1 j"
+        },
+        {
+          "id": "OPEN_F50",
+          "correct": true,
+          "answer": "Deductive reasoning is a type of logical thinking where the conclusion is necessarily true if the premises are true. In other words, it involves drawing a concl"
+        }
+      ]
+    },
+    "traditional_lm_rag": {
+      "arm": "traditional_lm_rag",
+      "skipped": true,
+      "error": "Invalid or empty weights: /home/jouly/AI/Valhalla/Qwen/Qwen2.5-0.5B-Instruct/model.safetensors"
+    },
+    "lifts_pp": {
+      "structure_over_lm_patch_pp": -3.2258064516129004,
+      "valhalla_over_traditional_lm_pp": null
+    }
+  },
+  "incubation_cycles": {
+    "1": {
+      "incubation_cycles": 1,
+      "accuracy": 0.967741935483871
+    },
+    "2": {
+      "incubation_cycles": 2,
+      "accuracy": 0.967741935483871
+    },
+    "4": {
+      "incubation_cycles": 4,
+      "accuracy": 0.967741935483871
+    },
+    "8": {
+      "incubation_cycles": 8,
+      "accuracy": 0.967741935483871
+    },
+    "delta_c1_to_max": {
+      "from": 1,
+      "to": 8,
+      "lift_pp": 0.0
+    }
+  },
+  "tpi": {
+    "tpi": 0.7903,
+    "components": {
+      "isolated_ceiling": 0.9677,
+      "data_efficiency_10pct": 1.0,
+      "transfer_vs_polluted": 1.0,
+      "transfer_vs_isolated_norm": 0.5,
+      "structure_over_lm_patch": 0.0
+    },
+    "weights": {
+      "isolated_ceiling": 0.3,
+      "data_efficiency_10pct": 0.25,
+      "transfer_vs_polluted": 0.2,
+      "transfer_vs_isolated_norm": 0.1,
+      "structure_over_lm_patch": 0.15
+    }
+  },
+  "verdict": [
+    "STRONG_INFERENCE_TIME_LEARNING",
+    "RAG_CEILING_HIGH",
+    "FATE_TRANSFER_RESCUES_SESSION"
+  ]
+}

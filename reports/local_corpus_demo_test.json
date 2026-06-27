@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-06-26T23:02:03.507521+00:00",
+  "protocol": "local-corpus-demo-v1",
+  "corpus_meta": {
+    "files": {
+      "valhalla-unified-core/docs/VALHALLA_BASE_PLATFORM.md": 60
+    },
+    "line_count": 60
+  },
+  "corpus_sample": [
+    "Valhalla Base Platform — 完整技术文档",
+    "> **Version:** 2.0 · **Date:** 2026-06-19",
+    "> **Status:** Production documentation · Proprietary — NOT open source",
+    "> **Primary protocol:** valhalla-base-v1",
+    "> **Product line:** Valhalla Unified Core (VUC)",
+    "Valhalla Unified Core 将 AI 推理栈拆成两层：",
+    "1. **结构基座（ValhallaBase）** — 上下文语料经 Triad（Hub / Tile / StemCell / Fate）孵化成可持久化的结构快照；context 可增量追加、可 multimodal ingress，**不依赖 prompt 窗口**。",
+    "2. **Decode 头（可选 LM）** — Qwen2.5 等 small LM 作为 runtime patch / logprob 头；开放题默认走 **native 结构检索**，MCQ 走 **LM logprob**。"
+  ],
+  "eval": [
+    {
+      "id": "L01",
+      "text": "What is the primary ValhallaBase protocol name?",
+      "reference_answer": "valhalla-base-v1",
+      "keywords": [
+        "valhalla-base-v1",
+        "valhalla base v1"
+      ]
+    },
+    {
+      "id": "L02",
+      "text": "What fate ingress routing mode is the production default?",
+      "reference_answer": "quad_cycle",
+      "keywords": [
+        "quad_cycle",
+        "quad cycle"
+      ]
+    },
+    {
+      "id": "L03",
+      "text": "Which four meta-systems does Hub route corpus signals to?",
+      "reference_answer": "BlackHole MeshBrain MultiNova BaseForce",
+      "keywords": [
+        "blackhole",
+        "meshbrain",
+        "multinova",
+        "baseforce"
+      ]
+    },
+    {
+      "id": "L04",
+      "text": "For open questions in hybrid decode, which path is used by default?",
+      "reference_answer": "native",
+      "keywords": [
+        "native",
+        "structure retrieval"
+      ]
+    },
+    {
+      "id": "L05",
+      "text": "What follow-up decode mode is recommended for production?",
+      "reference_answer": "native_follow_up_aware",
+      "keywords": [
+        "native_follow_up_aware",
+        "follow-up-aware"
+      ]
+    },
+    {
+      "id": "L06",
+      "text": "What product line name is abbreviated VUC?",
+      "reference_answer": "Valhalla Unified Core",
+      "keywords": [
+        "valhalla unified core",
+        "vuc"
+      ]
+    },
+    {
+      "id": "L07",
+      "text": "What JSON interface does valhalla_base binary use?",
+      "reference_answer": "stdin stdout",
+      "keywords": [
+        "stdin",
+        "stdout",
+        "json"
+      ]
+    },
+    {
+      "id": "L08",
+      "text": "What is the default LM model family mentioned for the decode head?",
+      "reference_answer": "Qwen2.5",
+      "keywords": [
+        "qwen",
+        "qwen2.5"
+      ]
+    }
+  ],
+  "before_no_local_corpus": {
+    "mode": "no_local_corpus",
+    "n": 8,
+    "correct": 0,
+    "accuracy": 0.0,
+    "rows": [
+      {
+        "id": "L01",
+        "correct": false,
+        "answer": "[corpus:0] The capital of France is Paris"
+      },
+      {
+        "id": "L02",
+        "correct": false,
+        "answer": "[corpus:0] The capital of France is Paris"
+      },
+      {
+        "id": "L03",
+        "correct": false,
+        "answer": "[corpus:1] Water boils at 100 degrees Celsius"
+      },
+      {
+        "id": "L04",
+        "correct": false,
+        "answer": "[corpus:1] Water boils at 100 degrees Celsius"
+      },
+      {
+        "id": "L05",
+        "correct": false,
+        "answer": "[corpus:1] Water boils at 100 degrees Celsius"
+      },
+      {
+        "id": "L06",
+        "correct": false,
+        "answer": "[corpus:1] Water boils at 100 degrees Celsius"
+      },
+      {
+        "id": "L07",
+        "correct": false,
+        "answer": "[corpus:1] Water boils at 100 degrees Celsius"
+      },
+      {
+        "id": "L08",
+        "correct": false,
+        "answer": "[corpus:0] The capital of France is Paris"
+      }
+    ]
+  },
+  "cold_targeted_ingest": {
+    "mode": "cold_targeted",
+    "n": 8,
+    "correct": 8,
+    "accuracy": 1.0,
+    "rows": [
+      {
+        "id": "L01",
+        "correct": true,
+        "answer": "[corpus:0] > **Primary protocol:** valhalla-base-v1"
+      },
+      {
+        "id": "L02",
+        "correct": true,
+        "answer": "[corpus:2] \"features\": [\"context_flex\", \"hybrid_routing\", \"fate_ingress_quad_cycle\", \"fate_qa_feedback\"],"
+      },
+      {
+        "id": "L03",
+        "correct": true,
+        "answer": "[corpus:0] │  · Hub quads: BlackHole / MeshBrain / MultiNova / BaseForce      │"
+      },
+      {
+        "id": "L04",
+        "correct": true,
+        "answer": "[corpus:5] \"decode_path\": \"valhalla_base/native/"
+      },
+      {
+        "id": "L05",
+        "correct": true,
+        "answer": "[corpus:1] \"follow_up_decode\": \"native_follow_up_aware\","
+      },
+      {
+        "id": "L06",
+        "correct": true,
+        "answer": "[corpus:0] > **Product line:** Valhalla Unified Core (VUC)"
+      },
+      {
+        "id": "L07",
+        "correct": true,
+        "answer": "[corpus:0] │              JSON stdin/stdout · valhalla_base binary            │"
+      },
+      {
+        "id": "L08",
+        "correct": true,
+        "answer": "[corpus:2] │  (Tier B)     │   │  (Qwen decode)│   │  (structure)  │"
+      }
+    ]
+  },
+  "teach_session": {
+    "rounds": 12,
+    "train_accuracy": 0.6666666666666666
+  },
+  "after_transfer_eval": {
+    "mode": "transfer_after_teach",
+    "n": 8,
+    "correct": 8,
+    "accuracy": 1.0,
+    "rows": [
+      {
+        "id": "L01",
+        "correct": true,
+        "answer": "[corpus:0] > **Primary protocol:** valhalla-base-v1"
+      },
+      {
+        "id": "L02",
+        "correct": true,
+        "answer": "[corpus:2] \"features\": [\"context_flex\", \"hybrid_routing\", \"fate_ingress_quad_cycle\", \"fate_qa_feedback\"],"
+      },
+      {
+        "id": "L03",
+        "correct": true,
+        "answer": "[corpus:0] │  · Hub quads: BlackHole / MeshBrain / MultiNova / BaseForce      │"
+      },
+      {
+        "id": "L04",
+        "correct": true,
+        "answer": "[corpus:5] \"decode_path\": \"valhalla_base/native/"
+      },
+      {
+        "id": "L05",
+        "correct": true,
+        "answer": "[corpus:0] follow_up_decode=\"native_follow_up_aware\","
+      },
+      {
+        "id": "L06",
+        "correct": true,
+        "answer": "[corpus:0] > **Product line:** Valhalla Unified Core (VUC)"
+      },
+      {
+        "id": "L07",
+        "correct": true,
+        "answer": "[corpus:0] │              JSON stdin/stdout · valhalla_base binary            │"
+      },
+      {
+        "id": "L08",
+        "correct": true,
+        "answer": "[corpus:2] │  (Tier B)     │   │  (Qwen decode)│   │  (structure)  │"
+      }
+    ]
+  },
+  "lifts_pp": {
+    "ingest_vs_none_pp": 100.0,
+    "transfer_vs_cold_pp": 0.0
+  },
+  "zero_weight_updates": true
+}

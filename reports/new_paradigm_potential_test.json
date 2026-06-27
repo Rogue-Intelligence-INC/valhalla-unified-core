@@ -1,0 +1,336 @@
+{
+  "timestamp": "2026-06-26T22:07:57.934245+00:00",
+  "protocol": "valhalla-new-paradigm-potential-v1",
+  "fair_benchmark_version": "fair-1.0",
+  "phase": "test",
+  "paradigm_definition": {
+    "learning_mechanism": "Fate incubation + session snapshot + targeted ingest",
+    "explicitly_excluded": [
+      "gradient_weight_updates",
+      "lora_fine_tune",
+      "pre_training_changes",
+      "polluted_full_corpus_batch_eval"
+    ]
+  },
+  "falsification_criteria": {
+    "session_no_lift_if_transfer_equals_cold": true,
+    "invalid_if_no_context_equals_targeted": true,
+    "broken_if_novel_cold_below_50pct": true
+  },
+  "audits": {
+    "novel_absent_from_fair": {
+      "clean": true,
+      "leaks": []
+    },
+    "no_lm_weight_updates": true
+  },
+  "n1_novel_knowledge": {
+    "curriculum": {
+      "rounds": 8,
+      "train_accuracy": 0.875,
+      "final_spread": 0.021398187155182907,
+      "round_details": [
+        {
+          "round": 0,
+          "train_correct": true,
+          "spread": 0.010799052917284252
+        },
+        {
+          "round": 1,
+          "train_correct": true,
+          "spread": 0.01067132668647186
+        },
+        {
+          "round": 2,
+          "train_correct": true,
+          "spread": 0.01055551495742238
+        },
+        {
+          "round": 3,
+          "train_correct": false,
+          "spread": 0.010249402354987974
+        },
+        {
+          "round": 4,
+          "train_correct": true,
+          "spread": 0.015357966842802329
+        },
+        {
+          "round": 5,
+          "train_correct": true,
+          "spread": 0.021741354252933803
+        },
+        {
+          "round": 6,
+          "train_correct": true,
+          "spread": 0.021563910017789872
+        },
+        {
+          "round": 7,
+          "train_correct": true,
+          "spread": 0.021398187155182907
+        }
+      ]
+    },
+    "novel_in_session_polluted": {
+      "arm": "novel_in_session_polluted",
+      "n": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334,
+      "rows": [
+        {
+          "id": "NOVEL_H01",
+          "correct": true,
+          "answer": "[corpus:9] Project Helios assigns codename Alpha-7 to its primary research satellite"
+        },
+        {
+          "id": "NOVEL_H02",
+          "correct": true,
+          "answer": "[corpus:10] Protocol NP-2026 mandates dual independent verification for structure deployments"
+        },
+        {
+          "id": "NOVEL_H03",
+          "correct": true,
+          "answer": "[corpus:11] Cipher Ridge summit elevation is exactly 2847 meters above mean sea level"
+        },
+        {
+          "id": "NOVEL_H04",
+          "correct": false,
+          "answer": "[corpus:12] Dr Lena Okonkwo discovered the Okonkwo coefficient for tidal resonance at 0"
+        },
+        {
+          "id": "NOVEL_H05",
+          "correct": true,
+          "answer": "[corpus:13] The Lumina Array stores exactly 4096 parallel fate channels in its hub lattice"
+        },
+        {
+          "id": "NOVEL_H06",
+          "correct": true,
+          "answer": "[corpus:14] Arcturus Station occupies Earth-Moon Lagrange point L4 in the Helios constellation"
+        }
+      ]
+    },
+    "novel_transfer_fresh": {
+      "arm": "novel_transfer_fresh",
+      "description": "Post-session snapshot + targeted novel ingest per question",
+      "n": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334,
+      "rows": [
+        {
+          "id": "NOVEL_H01",
+          "correct": true,
+          "answer": "[corpus:0] Project Helios assigns codename Alpha-7 to its primary research satellite"
+        },
+        {
+          "id": "NOVEL_H02",
+          "correct": true,
+          "answer": "[corpus:0] Protocol NP-2026 mandates dual independent verification for structure deployments"
+        },
+        {
+          "id": "NOVEL_H03",
+          "correct": true,
+          "answer": "[corpus:0] Cipher Ridge summit elevation is exactly 2847 meters above mean sea level"
+        },
+        {
+          "id": "NOVEL_H04",
+          "correct": false,
+          "answer": "[corpus:0] Dr Lena Okonkwo discovered the Okonkwo coefficient for tidal resonance at 0"
+        },
+        {
+          "id": "NOVEL_H05",
+          "correct": true,
+          "answer": "[corpus:0] The Lumina Array stores exactly 4096 parallel fate channels in its hub lattice"
+        },
+        {
+          "id": "NOVEL_H06",
+          "correct": true,
+          "answer": "[corpus:0] Arcturus Station occupies Earth-Moon Lagrange point L4 in the Helios constellation"
+        }
+      ]
+    },
+    "novel_cold_rag": {
+      "arm": "novel_cold_rag",
+      "description": "Fresh session, targeted ingest only (RAG upper bound, no prior session)",
+      "n": 6,
+      "correct": 5,
+      "accuracy": 0.8333333333333334,
+      "rows": [
+        {
+          "id": "NOVEL_H01",
+          "correct": true,
+          "answer": "[corpus:0] Project Helios assigns codename Alpha-7 to its primary research satellite",
+          "ctx_lines": 1
+        },
+        {
+          "id": "NOVEL_H02",
+          "correct": true,
+          "answer": "[corpus:0] Protocol NP-2026 mandates dual independent verification for structure deployments",
+          "ctx_lines": 1
+        },
+        {
+          "id": "NOVEL_H03",
+          "correct": true,
+          "answer": "[corpus:0] Cipher Ridge summit elevation is exactly 2847 meters above mean sea level",
+          "ctx_lines": 1
+        },
+        {
+          "id": "NOVEL_H04",
+          "correct": false,
+          "answer": "[corpus:0] Dr Lena Okonkwo discovered the Okonkwo coefficient for tidal resonance at 0",
+          "ctx_lines": 1
+        },
+        {
+          "id": "NOVEL_H05",
+          "correct": true,
+          "answer": "[corpus:0] The Lumina Array stores exactly 4096 parallel fate channels in its hub lattice",
+          "ctx_lines": 1
+        },
+        {
+          "id": "NOVEL_H06",
+          "correct": true,
+          "answer": "[corpus:0] Arcturus Station occupies Earth-Moon Lagrange point L4 in the Helios constellation",
+          "ctx_lines": 1
+        }
+      ]
+    },
+    "novel_cross_session_cold": {
+      "arm": "novel_cross_session_cold",
+      "description": "Discard session after train; cold RAG only (proves no weight memory)",
+      "accuracy": 0.8333333333333334
+    },
+    "lifts_pp": {
+      "transfer_vs_polluted_pp": 0.0,
+      "transfer_vs_cold_pp": 0.0,
+      "session_lift_over_cold_pp": 0.0
+    }
+  },
+  "n2_fair_holdout": {
+    "cold_rag_isolated": {
+      "accuracy": 0.967741935483871,
+      "correct": 30,
+      "n": 31
+    },
+    "transfer_fresh": {
+      "accuracy": 0.967741935483871,
+      "correct": 30,
+      "n": 31
+    },
+    "in_session_polluted": {
+      "accuracy": 0.3548387096774194,
+      "correct": 11,
+      "n": 31
+    },
+    "lifts_pp": {
+      "transfer_vs_polluted_pp": 61.29032258064516,
+      "transfer_vs_cold_pp": 0.0
+    },
+    "falsified_session_adds_no_lift": true
+  },
+  "n3_compositional": {
+    "n": 6,
+    "cold_accuracy": 0.8333333333333334,
+    "transfer_accuracy": 0.8333333333333334,
+    "lift_pp": 0.0,
+    "rows": [
+      {
+        "id": "COMP_01",
+        "cold": true,
+        "transfer": true
+      },
+      {
+        "id": "COMP_02",
+        "cold": true,
+        "transfer": true
+      },
+      {
+        "id": "COMP_03",
+        "cold": true,
+        "transfer": true
+      },
+      {
+        "id": "COMP_04",
+        "cold": true,
+        "transfer": true
+      },
+      {
+        "id": "COMP_05",
+        "cold": false,
+        "transfer": false
+      },
+      {
+        "id": "COMP_06",
+        "cold": true,
+        "transfer": true
+      }
+    ]
+  },
+  "n4_negative_controls": {
+    "subset_n": 12,
+    "targeted_accuracy": 0.9166666666666666,
+    "distractor_accuracy": 0.0,
+    "swap_fidelity": 4,
+    "swap_trials": 4,
+    "checks": {
+      "targeted_beats_distractor": true,
+      "swap_fidelity_ok": true,
+      "distractor_not_ceiling": true,
+      "targeted_above_half": true
+    },
+    "control_integrity": 1.0
+  },
+  "n5_paradigm_separation": {
+    "structure_hybrid": {
+      "accuracy": 0.9333333333333333,
+      "n": 15
+    },
+    "lm_patch_rag": {
+      "accuracy": 1.0,
+      "n": 15
+    },
+    "traditional_lm_rag": {
+      "skipped": true,
+      "error": "No module named 'torch'"
+    },
+    "delta_hybrid_vs_patch_pp": -6.666666666666665
+  },
+  "nppi": {
+    "nppi": 0.8836,
+    "gate_factor": 1.0,
+    "gates": {
+      "novel_contamination_clean": true,
+      "negative_controls_pass": true,
+      "transfer_rescues_polluted": true,
+      "cold_rag_works": true
+    },
+    "components": {
+      "novel_holdout_transfer": 0.8333,
+      "fair_holdout_cold": 0.9677,
+      "compositional_transfer": 0.8333,
+      "session_routing_value": 1.0,
+      "structure_session_lift": 0.5,
+      "control_integrity": 1.0
+    },
+    "weights": {
+      "novel_holdout_transfer": 0.2,
+      "fair_holdout_cold": 0.25,
+      "compositional_transfer": 0.15,
+      "session_routing_value": 0.2,
+      "structure_session_lift": 0.1,
+      "control_integrity": 0.1
+    },
+    "falsification_flags": [
+      "SESSION_SNAPSHOT_NO_HOLDOUT_LIFT_BEYOND_RAG",
+      "FAIR_HOLDOUT_RAG_EQUIVALENT"
+    ]
+  },
+  "verdict": [
+    "NEW_PARADIGM_VIABLE",
+    "INFERENCE_TIME_GROUNDING_STRONG",
+    "SESSION_ROUTING_ESSENTIAL",
+    "HONEST_RAG_EQUIVALENT_ON_HOLDOUT",
+    "NOT_WEIGHT_FINE_TUNE_REPLACEMENT",
+    "ZERO_WEIGHT_NOVEL_INGEST_OK",
+    "METHODOLOGY_VALID"
+  ]
+}

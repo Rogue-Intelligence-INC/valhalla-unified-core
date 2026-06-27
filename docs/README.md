@@ -8,6 +8,7 @@
 | **[EN_ENGINEERING_BUSINESS_PLAN.md](./EN_ENGINEERING_BUSINESS_PLAN.md)** | Engineering business plan — GTM & KPIs |
 | **[EN_ENGINEERING_DUE_DILIGENCE.md](./EN_ENGINEERING_DUE_DILIGENCE.md)** | Due diligence — claims matrix & risks |
 | [INTRODUCTION.md](./INTRODUCTION.md) | Product introduction |
+| **[EXPERIMENT_RECORD_INFERENCE_PARADIGM.md](./EXPERIMENT_RECORD_INFERENCE_PARADIGM.md)** | **推理范式实验记录（TPI-v2 / NPPI / 复现）** |
 | [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility goal |
 | [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | Fate Hub ingress |
 | [../PROTOCOL.md](../PROTOCOL.md) | Universal core bake protocol |
@@ -20,6 +21,9 @@
 |--------|-------|
 | `context_topic_drift_test.json` | Swap, distractor, interleave, recency |
 | `context_topic_drift_extended_test.json` | 30-turn follow-up drift |
+| `valhalla_base_training_potential_test_v2.json` | Training potential v2 (TPI) |
+| `new_paradigm_potential_test.json` | New paradigm potential (NPPI) |
+| `local_corpus_demo_test.json` | Local markdown corpus ingest demo |
 | `scale_benchmark_test.json` | 107 core + 46 MCQ + open |
 | `context_core_fusion.json` | Multimodal core fusion QA |
 
