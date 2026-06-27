@@ -1,0 +1,432 @@
+{
+  "timestamp": "2026-06-27T18:02:08.097705+00:00",
+  "protocol": "confidence-report-v1",
+  "methods": {
+    "proportion": "Wilson score 95% CI",
+    "paired_lift_pp": "Bootstrap percentile 95% CI (5000 resamples, seed=42)",
+    "composite_index": "Bootstrap percentile 95% CI on row resampling"
+  },
+  "sections": [
+    {
+      "protocol": "valhalla-base-training-potential-v2",
+      "metrics": [
+        {
+          "name": "isolated_baseline_accuracy",
+          "proportion": {
+            "k": 30,
+            "n": 31,
+            "point": 0.967742,
+            "ci95_lo": 0.838059,
+            "ci95_hi": 0.994283,
+            "method": "wilson"
+          },
+          "display": "96.8% [83.8%, 99.4%]"
+        },
+        {
+          "name": "polluted_session_accuracy",
+          "proportion": {
+            "k": 11,
+            "n": 31,
+            "point": 0.354839,
+            "ci95_lo": 0.211167,
+            "ci95_hi": 0.53052,
+            "method": "wilson"
+          },
+          "display": "35.5% [21.1%, 53.1%]"
+        },
+        {
+          "name": "transfer_fresh_accuracy",
+          "proportion": {
+            "k": 30,
+            "n": 31,
+            "point": 0.967742,
+            "ci95_lo": 0.838059,
+            "ci95_hi": 0.994283,
+            "method": "wilson"
+          },
+          "display": "96.8% [83.8%, 99.4%]"
+        },
+        {
+          "name": "transfer_vs_polluted_lift",
+          "lift_pp": {
+            "mean_pp": 61.29,
+            "ci95_lo": 45.161,
+            "ci95_hi": 77.419,
+            "n": 31,
+            "method": "bootstrap_paired"
+          },
+          "display": "+61.3pp [+45.2, +77.4]"
+        },
+        {
+          "name": "hybrid_vs_lm_patch_lift",
+          "lift_pp": {
+            "mean_pp": -3.226,
+            "ci95_lo": -9.677,
+            "ci95_hi": 0.0,
+            "n": 31,
+            "method": "bootstrap_paired"
+          },
+          "display": "-3.2pp [-9.7, +0.0]"
+        },
+        {
+          "name": "TPI_v2",
+          "index": {
+            "point": 0.7903,
+            "ci95_lo": 0.7403,
+            "ci95_hi": 0.8226,
+            "n_boot": 5000,
+            "method": "bootstrap_percentile"
+          },
+          "display": "0.790 [0.740, 0.823]"
+        }
+      ],
+      "missing": [
+        "traditional_lm_rag (torch/model not available at run time)"
+      ],
+      "title": "TPI-v2",
+      "source": "valhalla_base_training_potential_test_v2.json"
+    },
+    {
+      "protocol": "valhalla-new-paradigm-potential-v1",
+      "metrics": [
+        {
+          "name": "fair_holdout_cold_rag",
+          "proportion": {
+            "k": 30,
+            "n": 31,
+            "point": 0.967742,
+            "ci95_lo": 0.838059,
+            "ci95_hi": 0.994283,
+            "method": "wilson"
+          },
+          "display": "96.8% [83.8%, 99.4%]"
+        },
+        {
+          "name": "fair_holdout_transfer",
+          "proportion": {
+            "k": 30,
+            "n": 31,
+            "point": 0.967742,
+            "ci95_lo": 0.838059,
+            "ci95_hi": 0.994283,
+            "method": "wilson"
+          },
+          "display": "96.8% [83.8%, 99.4%]"
+        },
+        {
+          "name": "fair_transfer_vs_polluted",
+          "lift_pp": {
+            "mean_pp": 61.29,
+            "ci95_lo": 45.161,
+            "ci95_hi": 77.419,
+            "n": 31,
+            "method": "bootstrap_paired",
+            "note": "paired rows from TPI-v2 transfer_eval (NPPI n2 lacks per-row)"
+          },
+          "display": "+61.3pp [+45.2, +77.4]"
+        },
+        {
+          "name": "negative_control_targeted",
+          "proportion": {
+            "k": 11,
+            "n": 12,
+            "point": 0.916667,
+            "ci95_lo": 0.64612,
+            "ci95_hi": 0.985135,
+            "method": "wilson"
+          },
+          "display": "91.7% [64.6%, 98.5%]"
+        },
+        {
+          "name": "negative_control_distractor",
+          "proportion": {
+            "k": 0,
+            "n": 12,
+            "point": 0.0,
+            "ci95_lo": 0.0,
+            "ci95_hi": 0.242494,
+            "method": "wilson"
+          },
+          "display": "0.0% [0.0%, 24.2%]"
+        },
+        {
+          "name": "swap_fidelity",
+          "proportion": {
+            "k": 4,
+            "n": 4,
+            "point": 1.0,
+            "ci95_lo": 0.510109,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [51.0%, 100.0%]"
+        },
+        {
+          "name": "NPPI",
+          "index": {
+            "point": 0.8836,
+            "ci95_lo": 0.8484,
+            "ci95_hi": 0.9839,
+            "n_boot": 5000,
+            "method": "bootstrap_percentile"
+          },
+          "display": "0.884 [0.848, 0.984]"
+        }
+      ],
+      "missing": [
+        "traditional_lm_rag"
+      ],
+      "falsification_flags": [
+        "SESSION_SNAPSHOT_NO_HOLDOUT_LIFT_BEYOND_RAG",
+        "FAIR_HOLDOUT_RAG_EQUIVALENT"
+      ],
+      "title": "NPPI",
+      "source": "new_paradigm_potential_test.json"
+    },
+    {
+      "protocol": "fate-output-gate-v2",
+      "metrics": [
+        {
+          "name": "always_emit_accuracy",
+          "proportion": {
+            "k": 30,
+            "n": 31,
+            "point": 0.967742,
+            "ci95_lo": 0.838059,
+            "ci95_hi": 0.994283,
+            "method": "wilson"
+          },
+          "display": "96.8% [83.8%, 99.4%]"
+        },
+        {
+          "name": "fog_emitted_precision",
+          "proportion": {
+            "k": 28,
+            "n": 29,
+            "point": 0.965517,
+            "ci95_lo": 0.828245,
+            "ci95_hi": 0.993887,
+            "method": "wilson"
+          },
+          "display": "96.6% [82.8%, 99.4%]"
+        },
+        {
+          "name": "fog_coverage",
+          "proportion": {
+            "k": 29,
+            "n": 31,
+            "point": 0.935484,
+            "ci95_lo": 0.792814,
+            "ci95_hi": 0.982125,
+            "method": "wilson"
+          },
+          "display": "93.5% [79.3%, 98.2%]"
+        },
+        {
+          "name": "distractor_abstain_rate",
+          "proportion": {
+            "k": 7,
+            "n": 12,
+            "point": 0.583333,
+            "ci95_lo": 0.319511,
+            "ci95_hi": 0.80674,
+            "method": "wilson"
+          },
+          "display": "58.3% [32.0%, 80.7%]"
+        }
+      ],
+      "title": "FOG-v2",
+      "source": "fate_output_gate_v2_test.json"
+    },
+    {
+      "protocol": "proactive-fate-v2",
+      "metrics": [
+        {
+          "name": "UP_on_topic_given_emit",
+          "proportion": {
+            "k": 17,
+            "n": 17,
+            "point": 1.0,
+            "ci95_lo": 0.815682,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [81.6%, 100.0%]"
+        },
+        {
+          "name": "on_topic_emit_rate",
+          "proportion": {
+            "k": 17,
+            "n": 19,
+            "point": 0.894737,
+            "ci95_lo": 0.686059,
+            "ci95_hi": 0.970641,
+            "method": "wilson"
+          },
+          "display": "89.5% [68.6%, 97.1%]"
+        },
+        {
+          "name": "MAR_mismatch_abstain",
+          "proportion": {
+            "k": 16,
+            "n": 18,
+            "point": 0.888889,
+            "ci95_lo": 0.672002,
+            "ci95_hi": 0.96898,
+            "method": "wilson"
+          },
+          "display": "88.9% [67.2%, 96.9%]"
+        },
+        {
+          "name": "FIR_on_mismatch_emits",
+          "proportion": {
+            "k": 0,
+            "n": 2,
+            "point": 0.0,
+            "ci95_lo": 0.0,
+            "ci95_hi": 0.65762,
+            "method": "wilson"
+          },
+          "display": "0.0% [0.0%, 65.8%]"
+        },
+        {
+          "name": "PPI_v2",
+          "index": {
+            "point": 0.9298,
+            "ci95_lo": 0.8591,
+            "ci95_hi": 0.9857,
+            "n_boot": 5000,
+            "method": "bootstrap_percentile"
+          },
+          "display": "0.930 [0.859, 0.986]"
+        }
+      ],
+      "title": "Proactive-v2",
+      "source": "proactive_fate_v2_test.json"
+    },
+    {
+      "protocol": "context-topic-drift-v1",
+      "metrics": [
+        {
+          "name": "swap_fidelity",
+          "proportion": {
+            "k": 12,
+            "n": 12,
+            "point": 1.0,
+            "ci95_lo": 0.757506,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [75.8%, 100.0%]"
+        },
+        {
+          "name": "swap_hallucination_rate",
+          "proportion": {
+            "k": 0,
+            "n": 12,
+            "point": 0.0,
+            "ci95_lo": 0.0,
+            "ci95_hi": 0.242494,
+            "method": "wilson"
+          },
+          "display": "0.0% [0.0%, 24.2%]"
+        },
+        {
+          "name": "distractor_false_confidence_rate",
+          "proportion": {
+            "k": 0,
+            "n": 12,
+            "point": 0.0,
+            "ci95_lo": 0.0,
+            "ci95_hi": 0.242494,
+            "method": "wilson"
+          },
+          "display": "0.0% [0.0%, 24.2%]",
+          "note": "summary aggregate n≈12"
+        }
+      ],
+      "extended": false,
+      "title": "Context-drift",
+      "source": "context_topic_drift_test.json"
+    },
+    {
+      "protocol": "context-topic-drift-v2",
+      "metrics": [
+        {
+          "name": "extended_30turn_on_topic",
+          "proportion": {
+            "k": 29,
+            "n": 30,
+            "point": 0.966667,
+            "ci95_lo": 0.833296,
+            "ci95_hi": 0.994091,
+            "method": "wilson"
+          },
+          "display": "96.7% [83.3%, 99.4%]"
+        }
+      ],
+      "extended": true,
+      "title": "Context-drift-extended",
+      "source": "context_topic_drift_extended_test.json"
+    },
+    {
+      "protocol": "local-corpus-demo-v1",
+      "metrics": [
+        {
+          "name": "before_no_corpus",
+          "proportion": {
+            "k": 0,
+            "n": 8,
+            "point": 0.0,
+            "ci95_lo": 0.0,
+            "ci95_hi": 0.324408,
+            "method": "wilson"
+          },
+          "display": "0.0% [0.0%, 32.4%]"
+        },
+        {
+          "name": "cold_targeted",
+          "proportion": {
+            "k": 8,
+            "n": 8,
+            "point": 1.0,
+            "ci95_lo": 0.675592,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [67.6%, 100.0%]"
+        },
+        {
+          "name": "after_transfer",
+          "proportion": {
+            "k": 8,
+            "n": 8,
+            "point": 1.0,
+            "ci95_lo": 0.675592,
+            "ci95_hi": 1.0,
+            "method": "wilson"
+          },
+          "display": "100.0% [67.6%, 100.0%]"
+        },
+        {
+          "name": "ingest_vs_none_lift",
+          "lift_pp": {
+            "mean_pp": 100.0,
+            "ci95_lo": 100.0,
+            "ci95_hi": 100.0,
+            "n": 8,
+            "method": "bootstrap_paired"
+          },
+          "display": "+100.0pp [+100.0, +100.0]"
+        }
+      ],
+      "title": "Local-corpus",
+      "source": "local_corpus_demo_test.json"
+    }
+  ],
+  "missing_report_files": [],
+  "global_gaps": [
+    "traditional_lm RAG arm skipped in NPPI/TPI when torch/model unavailable",
+    "Composite indices (TPI/NPPI/PPI) bootstrap uses row resampling — component point estimates may differ slightly from stored index"
+  ]
+}

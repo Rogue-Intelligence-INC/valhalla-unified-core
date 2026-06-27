@@ -33,6 +33,7 @@
 | `local-corpus-demo-v1` | `tools/valhalla_inference/run_local_corpus_demo.py` | `local_corpus_demo_test.json` |
 | `fate-output-gate-v1/v2` | `tools/valhalla_inference/test_fate_output_gate.py` | `fate_output_gate_test.json` |
 | `proactive-fate-v1/v2` | `tools/valhalla_inference/test_proactive_fate_v2.py` | `proactive_fate_v2_test.json` |
+| `confidence-report-v1` | `tools/valhalla_inference/run_confidence_report.py` | `confidence_report_v1.json` |
 
 生产栈（所有实验默认）：
 
@@ -184,6 +185,34 @@ python3 tools/valhalla_inference/test_proactive_fate_v2.py
 报告: `reports/valhalla_inference/PROACTIVE_FATE_V2_REPORT.md`
 
 Verdict: `PROACTIVE_FATE_V2_STRONG` · `HIGH_UNSOLICITED_PRECISION` · `LOW_MISMATCH_INTERRUPT`
+
+---
+
+## 11. Confidence Report v1（2026-06-27）
+
+**协议:** `confidence-report-v1` — 汇总全部 inference 实验，统一 **Wilson 95%** + **Bootstrap 95%** 区间。
+
+```bash
+python3 tools/valhalla_inference/run_confidence_report.py
+```
+
+报告: `reports/valhalla_inference/CONFIDENCE_REPORT_v1.md`
+
+### Headline（带区间，诚实对外）
+
+| 指标 | 点估计 | 95% CI |
+|------|--------|--------|
+| Fair holdout cold RAG | 96.8% | **[83.8%, 99.4%]** |
+| Transfer vs polluted | +61.3pp | **[+45.2, +77.4]** |
+| FOG emit precision | 96.6% | **[82.8%, 99.4%]** |
+| Proactive UP \| emit | 100% | **[81.6%, 100%]** |
+| Proactive MAR (mismatch) | 88.9% | **[67.2%, 96.9%]** |
+| 30-turn on-topic | 96.7% | **[83.3%, 99.4%]** |
+| TPI-v2 | 0.790 | bootstrap index |
+| NPPI | 0.884 | bootstrap index |
+| PPI-v2 | 0.930 | bootstrap index |
+
+**Global gaps:** `traditional_lm` 对照未跑（需 torch）；local demo n=8 CI 很宽。
 
 ---
 
