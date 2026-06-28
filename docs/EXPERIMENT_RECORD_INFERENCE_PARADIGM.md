@@ -34,6 +34,8 @@
 | `fate-output-gate-v1/v2` | `tools/valhalla_inference/test_fate_output_gate.py` | `fate_output_gate_test.json` |
 | `proactive-fate-v1/v2` | `tools/valhalla_inference/test_proactive_fate_v2.py` | `proactive_fate_v2_test.json` |
 | `confidence-report-v1` | `tools/valhalla_inference/run_confidence_report.py` | `confidence_report_v1.json` |
+| `token-efficiency-v1` | `tools/valhalla_inference/test_token_efficiency.py` | `token_efficiency_test.json` |
+| `mcq-coverage-v1` | `tools/valhalla_inference/test_mcq_coverage_v1.py` | `mcq_coverage_test.json` |
 
 生产栈（所有实验默认）：
 
@@ -221,7 +223,67 @@ python3 tools/valhalla_inference/test_proactive_fate_v2.py --fair-limit 0
 
 **解读:** trad_lm 与 Valhalla hybrid **同分 30/31**；结构优势在 **session routing**（+61pp vs polluted）与 **FOG/proactive 门控**，非 raw RAG ceiling。lm_patch 100% 因 patch 头更贴 MCQ 格式。
 
-**Global gaps:** local demo n=20 部分 probe 未覆盖（70% cold）；external ZH_GEO 仍待补 corpus。
+**Global gaps:** ~~local demo~~ **local 20/20**；~~external ZH_GEO~~ **external 15/15**；MCQ deploy routing（`max_pick`）待全量 battery 刷新。
+
+---
+
+## 13. MCQ Coverage v1 + max_pick 路由（2026-06-28）
+
+**协议:** `mcq-coverage-v1` — fair-1.2 test MCQ slice（n=46），生产栈 + Wilson CI。
+
+```bash
+python3 tools/valhalla_inference/test_mcq_coverage_v1.py --fast
+.venv-llm/bin/python3 tools/valhalla_inference/test_mcq_coverage_v1.py --only-trad-lm
+python3 tools/valhalla_inference/run_confidence_report.py
+```
+
+### 13.1 结果（lm_patch 生产默认，2026-06-28）
+
+| 臂 | 结果 | Wilson 95% CI |
+|----|------|---------------|
+| **production hybrid lm_patch** | **30/46 (65.2%)** | [50.8%, 77.3%] |
+| hybrid structure_fate | 14/46 (30.4%) | [19.1%, 44.8%] |
+| native mcq_option | 14/46 (30.4%) | [19.1%, 44.8%] |
+| oracle max(native, patch) | 32/46 (69.6%) | — |
+| traditional LM + RAG | 13/46 (28.3%) | — |
+
+**Verdict:** `MCQ_COVERAGE_STRONG` · Valhalla vs trad_lm **+37.0pp** [+21.7, +52.2]
+
+**Disagreement（native vs patch）：** patch-only 18 · native-only 2 · both 12 · both wrong 14
+
+### 13.2 P0：`mcq_decode=max_pick`（Rust deploy）
+
+`ValhallaMcqDecode::MaxPick` — 每题并行跑 native `mcq_option` + lm_patch logprob，deploy 规则：
+
+- 字母一致 → lm_patch
+- patch 无字母 → native
+- 不一致 → 默认 patch；native 胜当 `mcq_aggregate≥0.48` 且 `patch_conf≤0.45` 且 `margin≥0.08`
+
+```python
+ValhallaBase(decode="hybrid", mcq_decode="max_pick", ...)
+```
+
+报告: `reports/valhalla_inference/mcq_coverage_test.json` · `MCQ-coverage` in confidence report
+
+---
+
+## 14. Token Efficiency v1（2026-06-28）
+
+**协议:** `token-efficiency-v1` — 30 轮对话 wire + prefill token 对照。
+
+| 架构 | Wire 累计 | Prefill tokens | Holdout |
+|------|-----------|----------------|---------|
+| Valhalla append | 2,319 | 1,126 | 96.8% |
+| RAG full resend | 14,268 | 3,868 | 96.8% |
+| RAG + history | — | 11,845 | 96.8% |
+
+**比率:** wire **0.16×** · prefill **0.29×**（question-only vs 全 corpus 重发）
+
+```bash
+python3 tools/valhalla_inference/test_token_efficiency.py
+```
+
+---
 
 ---
 
@@ -233,7 +295,7 @@ python3 tools/valhalla_inference/test_proactive_fate_v2.py --fair-limit 0
 |------|-----|
 | CCU | **0.950** |
 | core_unified | **6/6**（EN/ZH/FR 均 `[corpus:0]` 同文本） |
-| External holdout | **12/15 (80%)** |
+| External holdout | **15/15 (100%)** |
 
 **Proactive Unicode:** CJK bigram + 中文 probe + overlap 门控 → ZH_02/03/04 全 pass，MAR **88.2%**。
 
@@ -244,9 +306,16 @@ python3 tools/valhalla_inference/test_external_holdout.py
 
 ---
 
-## 8. Fate Output Gate v1（2026-06-27，已被 v2 取代）
+## 15. 下一步
 
-见 [FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md)。首轮 benchmark `fate-output-gate-v1`：
+1. ~~补 traditional_lm RAG 对照~~ ✅（open + MCQ trad_lm）
+2. MCQ `max_pick` 全量 battery 刷新 vs oracle 69.6%
+3. stem-relative MCQ comparator（突破 70% 天花板）
+4. 将 NPPI / TPI / MCQ / token-efficiency 同步 EN DD claims matrix
+
+---
+
+## 8. Fate Output Gate v1（2026-06-27，已被 v2 取代）
 
 | 电池 | always emit | FOG emitted precision | FOG coverage / abstain |
 |------|-------------|----------------------|-------------------------|
@@ -254,11 +323,3 @@ python3 tools/valhalla_inference/test_external_holdout.py
 | G2 distractor | 0.0% | — | abstain 11/12 |
 
 **Verdict:** `FOG_V1_NEEDS_TUNING`
-
----
-
-## 10. 下一步
-
-1. 补 traditional_lm RAG 对照（`.venv-llm` + 本地 Qwen）
-2. v3：跨 session 持久化（若产品需要）与 feedback lift 专项
-3. 将 NPPI / TPI 写入 EN_ENGINEERING_DUE_DILIGENCE claims matrix

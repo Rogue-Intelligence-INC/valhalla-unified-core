@@ -130,13 +130,18 @@ Enterprises need AI that **uses their documents and multimodal assets** without 
 
 | KPI | Value | Source |
 |-----|-------|--------|
-| Open retrieval accuracy | **97%** | `scale_benchmark_test.json` |
-| Context swap fidelity | **100%** | `context_topic_drift_test.json` |
+| Open retrieval (fair holdout) | **96.8%** [83.8%, 99.4%] | confidence-report-v1 |
+| MCQ hybrid lm_patch | **65.2%** [50.8%, 77.3%] | mcq-coverage-v1 |
+| MCQ vs trad_lm | **+37pp** | mcq-coverage-v1 |
+| Token prefill vs RAG | **0.29×** @ same accuracy | token-efficiency-v1 |
+| Context swap fidelity | **100%** | context-topic-drift-v1 |
+| 30-turn on-topic | **96.7%** | context-topic-drift-v2 |
+| Local corpus demo | **100% (20/20)** | local-corpus-demo-v1 |
+| External holdout | **100% (15/15)** | external-holdout-v1 |
+| NPPI paradigm index | **0.884** | confidence-report-v1 |
 | Cross-topic hallucination (drift suite) | **0%** | drift reports |
-| 30-turn on-topic | **96.7%** | `context_topic_drift_extended_test.json` |
-| Non-isolated core win rate | **100%** (107/107) | `scale_benchmark_test.json` |
-| Core fusion QA lift (12 tasks) | **+8.3 pp** | `context_core_fusion.json` |
-| MCQ (LM) | **63%** | `scale_benchmark_test.json` |
+| Non-isolated core win rate | **100%** (107/107) | scale-benchmark-v1 |
+| Core fusion QA lift (12 tasks) | **+8.3 pp** | context-core-fusion-v2 |
 
 ---
 

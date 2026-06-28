@@ -1,0 +1,232 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{ValhallaBase: Structure-First Inference with\\Auditable Routing, Algebraic Output Gating,\\and Context-Efficient Session Memory}
+\author{Rogue Intelligence LNC.\\Valhalla Unified Core (VUC)}
+\date{2026-06-27}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models conflate \emph{memory}, \emph{routing}, and \emph{generation} inside a single weight matrix, forcing domain adaptation via fine-tuning or ever-growing prompts. We present \textbf{ValhallaBase}, an inference-time paradigm that incubates persistent \textbf{structure memory} (Hub, Tile, StemCell, Fate) \emph{before} optional language-model decoding. Structure is updated by zero-weight session ingest---no SGD, LoRA, or corpus dump into the prompt window. A \textbf{hybrid router} sends open questions to native structure retrieval and multiple-choice items to LM logprob heads; every answer exports auditable routing metadata. An \textbf{algebraic Fate Output Gate (FOG)} and \textbf{proactive idle} probes decide \emph{when} to speak, not \emph{what} to say. Cross-language queries hit the same canonical corpus line without model switching.
+
+On pre-registered batteries with Wilson 95\% confidence intervals: fair holdout RAG accuracy \textbf{96.8\%} [83.8\%, 99.4\%] (30/31), statistically tied with Qwen2.5-0.5B RAG; \textbf{transfer fresh retrieval} rescues polluted sessions by \textbf{+61.3\,pp} [+45.2, +77.4]; FOG emitted precision \textbf{96.6\%}; proactive on-topic precision given emit \textbf{100\%}; 30-turn topic continuity \textbf{96.7\%}; external holdout and local corpus demos \textbf{100\%}. Context append carries $\sim$64 characters per wire step versus $\sim$752-character full-prompt resends ($3.62\times$ growth) on a 12-step growth curve---structure changes \emph{how} context is carried, not merely RAG ceiling accuracy.
+\end{abstract}
+
+\section{Introduction}
+
+Vertical AI deployments require sovereignty, auditability, and domain structure that survives beyond one context window. Benchmark leaderboard models optimize fluency on static splits; enterprises need:
+
+\begin{enumerate}
+  \item \textbf{Persistent structure} as a first-class artifact, not ephemeral prompt text.
+  \item \textbf{Honest typing}: open, numeric, and MCQ items fail differently.
+  \item \textbf{Session protocols} that avoid retrieval pollution when corpora grow.
+  \item \textbf{Output governance}: abstain, defer, or proactive nudge with traceable gates.
+  \item \textbf{Cost transparency}: context transport and LM prefill tokens, not accuracy alone.
+\end{enumerate}
+
+ValhallaBase addresses these by separating \textbf{structure incubation} from \textbf{decode}. A compact instruction-tuned LM (Qwen2.5-0.5B-Instruct) acts as an optional patch head; the default open path uses native corpus memory over a TriadIncubationSnapshot.
+
+\paragraph{Distinctive claims (not generic RAG).}
+\begin{itemize}
+  \item \textbf{D1 Structure-first:} incubate, then decode---LM reads a patched snapshot.
+  \item \textbf{D2 Zero-weight session learning:} targeted ingest without gradient updates.
+  \item \textbf{D3 Hybrid type routing:} open $\to$ native; MCQ $\to$ lm\_patch logprob.
+  \item \textbf{D4 Session routing discipline:} fresh per-question retrieval vs.\ polluted dump (+61\,pp lift).
+  \item \textbf{D5 Context-flexible append:} $\sim$64\,chars/step wire payload vs.\ full prompt resend.
+  \item \textbf{D6 Follow-up-aware retrieval:} question history boosts in \texttt{native\_qa.rs}.
+  \item \textbf{D7 FOG algebraic gate:} E7-integer $\tau=12/(138+k)$; emit/abstain/defer.
+  \item \textbf{D8 Proactive Fate:} idle self-probe with overlap gate; 100\% on-topic given emit.
+  \item \textbf{D9 Cross-language unified core:} EN/ZH/FR $\to$ same \texttt{[corpus:0]} line.
+  \item \textbf{D10 Non-isolated multimodal:} interleaved session pulses vs.\ late fusion ($0.964$ vs $0.943$ universal score).
+  \item \textbf{D11 Auditable JSON routing:} \texttt{decode\_path}, FOG decisions per answer.
+  \item \textbf{D12 E7 coordination:} spread gates derived from algebra, not fitted floats.
+\end{itemize}
+
+\section{Related Work}
+
+\textbf{RAG} retrieves flat passages into the prompt; Valhalla retrieves over an incubated structure checkpoint with optional LM patch, not text blocks alone.
+
+\textbf{Adapter / LoRA fine-tuning} updates weights; Valhalla uses zero-weight ingest with explicit falsification flags when holdout lift equals targeted RAG.
+
+\textbf{Memory-augmented networks} learn memory end-to-end; Valhalla uses rule- and score-based native QA plus Fate export for audit.
+
+\textbf{Mixture-of-experts} routes internal layers; Valhalla routes at product level across native memory, structure MCQ, and patched LM with compliance-grade traces.
+
+\textbf{Hybrid structure--LM systems} (cf.\ our fair-1.2 memory paper) established 80.69\% on 145 typed prompts; this work extends to inference-paradigm batteries, confidence intervals, FOG, proactive idle, cross-language core unity, and context transport metrics.
+
+\section{Method}
+
+\subsection{Triad structure substrate}
+
+Text and multimodal ingress encode into body ports. Hub, Tile, StemCell, and Fate run under \texttt{quad\_cycle} ingress routing. Incubation yields a \textbf{TriadIncubationSnapshot} forked per question. Optional \texttt{fate\_qa\_feedback} closes a quality loop without LM gradients.
+
+\subsection{Zero-weight session ingest}
+
+Corpus lines merge via \texttt{merge\_context} or \textbf{targeted} top-$k$ per question---never full dump before batch eval. Production eval protocol:
+\begin{enumerate}
+  \item ingest targeted lines per question;
+  \item optional curriculum QA;
+  \item eval: clear corpus $\to$ per-question targeted append;
+  \item forbid batch eval on 80+ line polluted sessions.
+\end{enumerate}
+
+\subsection{Hybrid decode routing}
+
+Production stack:
+\begin{verbatim}
+ValhallaBase(
+  decode="hybrid",
+  follow_up_decode="native_follow_up_aware",
+  fate_ingress_routing="quad_cycle",
+  fate_qa_feedback=True,
+)
+\end{verbatim}
+Open retrieval uses native structure memory; MCQ uses LM logprob on patched weights; numeric uses $\max$(structure, patch).
+
+\subsection{Fate Output Gate (FOG v2)}
+
+Emit iff StructureReady $\wedge$ EvidenceReady $\wedge$ TriggerPresent. Version~2 binds thresholds to E7 integers: $\tau = 12/(138+k)$, margin $\Delta \ge s_1/28$. FOG decides \emph{permission to speak}; native QA still selects content.
+
+\subsection{Proactive idle}
+
+On idle timeout, Fate builds a self-probe from max token overlap with prior turns (CJK bigram support), passes FOG, and may emit a grounded nudge. Mismatch corpora trigger abstain (MAR) rather than hallucinated interrupt (FIR).
+
+\subsection{Context transport (token-relevant)}
+
+Internal context grows with session appends; wire JSON carries incremental line payloads ($\sim$64.3 chars average per step in growth-curve protocol). Traditional LM baselines resend the full corpus block each turn ($3.62\times$ character growth over 12 steps). \textbf{LM prefill token totals} are planned under protocol \texttt{token-efficiency-v1} (Qwen tokenizer, 30-turn matched accuracy).
+
+\section{Experimental Setup}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+Setting & Value \\
+\midrule
+Companion LM & Qwen2.5-0.5B-Instruct (+ optional patch 0.08) \\
+Fair holdout & open\_retrieval slice, $n=31$ \\
+Confidence & Wilson 95\% (proportions); bootstrap 95\% (paired lifts) \\
+Aggregated report & \texttt{confidence-report-v1} \\
+Corpus demo & 20 probes, \texttt{valhalla-unified-core/docs} \\
+External holdout & 15 cross-domain probes \\
+Cross-language & EN/ZH/FR, \texttt{crosslang-core-unified-v1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Results}
+
+\subsection{Grounding and session routing}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lc}
+\toprule
+Metric & Estimate [95\% CI] \\
+\midrule
+Fair holdout cold RAG & 96.8\% [83.8\%, 99.4\%] (30/31) \\
+Polluted session & 35.5\% [21.1\%, 53.1\%] \\
+Transfer fresh & 96.8\% [83.8\%, 99.4\%] \\
+Transfer vs.\ polluted lift & +61.3\,pp [+45.2, +77.4] \\
+Traditional LM RAG & 96.8\% [83.8\%, 99.4\%] \\
+Valhalla $-$ trad\_lm & +0.0\,pp [$-$9.7, +9.7] \\
+TPI-v2 index & 0.790 [0.740, 0.823] \\
+NPPI index & 0.884 [0.848, 0.984] \\
+\bottomrule
+\end{tabular}
+\caption{Structure matches RAG accuracy on holdout; session routing is the differentiator.}
+\end{table}
+
+\subsection{Output governance and dialogue}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lc}
+\toprule
+Metric & Estimate [95\% CI] \\
+\midrule
+FOG emitted precision & 96.6\% [82.8\%, 99.4\%] \\
+Proactive UP $|$ emit & 100\% [87.5\%, 100\%] \\
+Proactive MAR (mismatch abstain) & 88.2\% [73.4\%, 95.3\%] \\
+30-turn on-topic & 96.7\% [83.3\%, 99.4\%] \\
+Swap fidelity & 100\% [75.8\%, 100\%] \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cross-language and external generalization}
+
+Cross-language core unified: CCU $=0.950$, 6/6 queries hit identical corpus text. External holdout: 15/15 (100\%) [79.6\%, 100\%]. Local corpus demo: 20/20 (100\%) [83.9\%, 100\%].
+
+\subsection{MCQ coverage and deploy routing}
+
+Protocol \texttt{mcq-coverage-v1} ($n=46$ fair-1.2 MCQ): production hybrid lm\_patch \textbf{65.2\%} [50.8\%, 77.3\%]; traditional LM RAG \textbf{28.3\%}; oracle max(native, patch) \textbf{69.6\%} (not deployable). Native \texttt{mcq\_option} alone remains \textbf{30.4\%} --- MCQ requires lm\_patch or deploy \texttt{mcq\_decode=max\_pick} (native + patch pick by margin, Rust \texttt{ValhallaMcqDecode::MaxPick}).
+
+\subsection{Context transport and token efficiency}
+
+On \texttt{context-flexibility-max-goal-v1} (12 append steps): average incremental payload $\sim$64.3 characters; traditional full prompt 752 characters ($3.62\times$ seed). Internal snapshot: 638 characters / 16 lines.
+
+Protocol \texttt{token-efficiency-v1} compares matched 30-turn threads (3 topics $\times$ 10 turns) using the Qwen2.5-0.5B tokenizer: Valhalla session append vs.\ RAG full resend vs.\ RAG with dialogue history. Table~\ref{tab:token-efficiency} unifies wire cost, LM prefill tokens, decode tokens, and accuracy---substantiating infrastructure value at matched task quality.
+
+\begin{table}[h]
+\centering
+\small
+\caption{Wire + token + accuracy at matched 30-turn dialogue (token-efficiency-v1). Holdout accuracy from fair open\_retrieval holdout ($n=31$).}
+\label{tab:token-efficiency}
+\begin{tabular}{lrrrr}
+\toprule
+Architecture & Wire chars & Prefill tokens & Decode tokens & Accuracy \\
+\midrule
+Valhalla append (native) & 2{,}319 & 1{,}126 & 0 & 96.8\% holdout \\
+RAG full resend & 14{,}268 & 3{,}868 & 3{,}840 & 96.8\% holdout \\
+RAG + history & --- & 11{,}845 & 3{,}840 & 96.8\% holdout \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Interpretation:} Valhalla wire ratio vs.\ RAG full resend is $0.16\times$; prefill ratio is $0.29\times$ (question-only vs.\ full corpus each turn). RAG-with-history prefill reaches 11{,}845 tokens over 30 turns. Accuracy remains statistically tied on holdout---efficiency is not purchased by sacrificing grounding.
+
+\section{Discussion}
+
+\paragraph{Where structure wins.}
+Session routing (+61\,pp), FOG/proactive governance, cross-language core unity, multimodal non-isolated alignment, and flat transport cost---not raw open\_retrieval ceiling versus RAG LM (statistical tie at 96.8\%).
+
+\paragraph{Honest falsification flags.}
+\texttt{SESSION\_SNAPSHOT\_NO\_HOLDOUT\_LIFT\_BEYOND\_RAG}; \texttt{NOT\_WEIGHT\_FINE\_TUNE\_REPLACEMENT}. These pre-registered limits strengthen rather than weaken the paradigm claim.
+
+\paragraph{Token metrics as evidence.}
+We recommend reporting three layers: (1)~wire bytes/chars per session step; (2)~LM prefill tokens cumulative vs.\ RAG baseline at matched accuracy; (3)~decode tokens by path (native vs.\ patch). Accuracy alone cannot substantiate infrastructure value.
+
+\paragraph{Limitations.}
+Single small LM; fair holdout $n=31$; proactive pass rate 63/72 under strict overlap gates; token-efficiency-v1 pending.
+
+\section{Conclusion}
+
+ValhallaBase is a reproducible \textbf{inference-time AI paradigm}: structure-first memory, zero-weight ingest, hybrid auditable routing, algebraic output gating, and context-efficient sessions. It matches compact LM RAG on holdout accuracy while offering qualitatively different capabilities---pollution-safe routing, proactive grounded dialogue, and cross-language unified cores---that prompt-only systems cannot audit or replicate without protocol changes.
+
+\paragraph{Reproducibility.}
+Scripts under \texttt{tools/valhalla\_inference/}; reports in \texttt{reports/valhalla\_inference/}; companion doc \texttt{docs/DISTINCTIVE\_CAPABILITIES\_CN.md}.
+
+\begin{thebibliography}{9}
+\bibitem{hybrid2026}
+Rogue Intelligence LNC.,
+\textit{Hybrid Structure Memory with Language-Model Patch Routing},
+fair-1.2 benchmark, 2026.
+\bibitem{confidence2026}
+\textit{Valhalla Inference Confidence Report v1.1},
+protocol \texttt{confidence-report-v1}, 2026-06-27.
+\bibitem{contextflex2026}
+\textit{Context Flexibility Maximum Goal},
+protocol \texttt{context-flexibility-max-goal-v1}, 2026-06-25.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,2450 @@
+{
+  "timestamp": "2026-06-28T00:15:39.835401+00:00",
+  "protocol": "mcq-coverage-v1",
+  "phase": "test",
+  "n": 46,
+  "corpus_lines": 49,
+  "production_stack": {
+    "decode": "hybrid",
+    "mcq_decode": "lm_patch",
+    "follow_up_decode": "native_follow_up_aware",
+    "fate_ingress_routing": "quad_cycle"
+  },
+  "arms": {
+    "production_hybrid_lm_patch": {
+      "decode": "hybrid",
+      "mcq_decode": "lm_patch",
+      "n": 46,
+      "correct": 30,
+      "accuracy": 0.6521739130434783,
+      "decode_path_counts": {
+        "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob": 46
+      },
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "extracted": "D",
+          "reference": "D",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "extracted": "C",
+          "reference": "D",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "extracted": "B",
+          "reference": "D",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": true,
+          "extracted": "A",
+          "reference": "A",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "extracted": "C",
+          "reference": "A",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "extracted": "C",
+          "reference": "A",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        }
+      ]
+    },
+    "hybrid_structure_fate": {
+      "decode": "hybrid",
+      "mcq_decode": "structure_fate",
+      "n": 46,
+      "correct": 14,
+      "accuracy": 0.30434782608695654,
+      "decode_path_counts": {
+        "valhalla_base/native/mcq_option": 46
+      },
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": false,
+          "extracted": "D",
+          "reference": "C",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "extracted": "D",
+          "reference": "D",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": false,
+          "extracted": "D",
+          "reference": "C",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "extracted": "B",
+          "reference": "D",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "extracted": "C",
+          "reference": "D",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "extracted": "D",
+          "reference": "A",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": true,
+          "extracted": "A",
+          "reference": "A",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        }
+      ]
+    },
+    "native_mcq_option": {
+      "decode": "native",
+      "mcq_decode": "lm_patch",
+      "n": 46,
+      "correct": 14,
+      "accuracy": 0.30434782608695654,
+      "decode_path_counts": {
+        "valhalla_base/native/mcq_option": 46
+      },
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": false,
+          "extracted": "D",
+          "reference": "C",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "extracted": "D",
+          "reference": "D",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": false,
+          "extracted": "D",
+          "reference": "C",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "extracted": "B",
+          "reference": "D",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "extracted": "C",
+          "reference": "D",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "extracted": "D",
+          "reference": "A",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": true,
+          "extracted": "A",
+          "reference": "A",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/native/mcq_option",
+          "context_lines": 8
+        }
+      ]
+    },
+    "lm_patch_all": {
+      "decode": "hybrid",
+      "mcq_decode": "lm_patch",
+      "n": 46,
+      "correct": 30,
+      "accuracy": 0.6521739130434783,
+      "decode_path_counts": {
+        "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob": 46
+      },
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "extracted": "D",
+          "reference": "D",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "extracted": "C",
+          "reference": "D",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "extracted": "B",
+          "reference": "D",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": true,
+          "extracted": "A",
+          "reference": "A",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "ANSWER: D",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "ANSWER: A",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "extracted": "C",
+          "reference": "A",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "extracted": "C",
+          "reference": "A",
+          "answer": "ANSWER: C",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "ANSWER: B",
+          "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_mcq/fused_mcq_logprob",
+          "context_lines": 8
+        }
+      ],
+      "note": "alias of production_hybrid_lm_patch under --fast"
+    },
+    "max_native_lm_patch": {
+      "arm": "max_native_lm_patch",
+      "n": 46,
+      "correct": 32,
+      "accuracy": 0.6956521739130435,
+      "note": "oracle routing ceiling — not deployable",
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": true,
+          "picked": "lm_patch",
+          "native_correct": false,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "picked": "none",
+          "native_correct": false,
+          "lm_patch_correct": false
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": true,
+          "picked": "native",
+          "native_correct": true,
+          "lm_patch_correct": true
+        }
+      ]
+    },
+    "disagreement": {
+      "disagree_count": 34,
+      "both_correct": 12,
+      "native_only_wins": 2,
+      "lm_patch_only_wins": 18,
+      "both_wrong": 14
+    },
+    "traditional_lm_mcq": {
+      "arm": "traditional_lm_mcq",
+      "n": 46,
+      "correct": 13,
+      "accuracy": 0.2826086956521739,
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": false,
+          "extracted": null,
+          "reference": "C",
+          "answer": "The organelle that is the site of photosynthesis is the **Chloroplast**. Photosynthesis occurs primarily in the chloroplasts of plant cells, where chlorophyll captures sunlight and converts it into ch",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": false,
+          "extracted": null,
+          "reference": "C",
+          "answer": "The capital of France is Paris.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "extracted": null,
+          "reference": "B",
+          "answer": "When price increases, quantity supplied typically **decreases**.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": false,
+          "extracted": null,
+          "reference": "B",
+          "answer": "Based on the information provided:\n\n- The French Revolution began in 1789 with the storming of the Bastille.\n- Binary search requires a sorted array and halves the search interval each step.\n- Binary ",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "extracted": null,
+          "reference": "C",
+          "answer": "Scurvy is caused by deficiency of Vitamin C.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": false,
+          "extracted": null,
+          "reference": "C",
+          "answer": "World War II ended in 1945.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": false,
+          "extracted": null,
+          "reference": "D",
+          "answer": "The largest ocean on Earth is the Pacific Ocean.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": false,
+          "extracted": "D",
+          "reference": "C",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F07",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "Human cells have 23 pairs of chromosomes, making a total of 46 chromosomes in somatic cells. Therefore, the answer is B.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F08",
+          "correct": false,
+          "extracted": "C",
+          "reference": "D",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F09",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F10",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F11",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F12",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F13",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F14",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F18",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F19",
+          "correct": true,
+          "extracted": "C",
+          "reference": "C",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F20",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F21",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F22",
+          "correct": false,
+          "extracted": null,
+          "reference": "B",
+          "answer": "The normal human body temperature is approximately **36°C**.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F23",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F24",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F25",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F26",
+          "correct": false,
+          "extracted": "B",
+          "reference": "D",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F27",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F28",
+          "correct": true,
+          "extracted": "A",
+          "reference": "A",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F29",
+          "correct": false,
+          "extracted": "A",
+          "reference": "C",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F30",
+          "correct": false,
+          "extracted": null,
+          "reference": "B",
+          "answer": "Scurvy is caused by deficiency of vitamin C also called ascorbic acid.",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F31",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F32",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F34",
+          "correct": false,
+          "extracted": "B",
+          "reference": "C",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F35",
+          "correct": false,
+          "extracted": "A",
+          "reference": "B",
+          "answer": "A",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F38",
+          "correct": false,
+          "extracted": "C",
+          "reference": "B",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F41",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F42",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F43",
+          "correct": false,
+          "extracted": "C",
+          "reference": "A",
+          "answer": "C",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F44",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F45",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F46",
+          "correct": false,
+          "extracted": "D",
+          "reference": "A",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F47",
+          "correct": false,
+          "extracted": null,
+          "reference": "B",
+          "answer": "DNA",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F48",
+          "correct": true,
+          "extracted": "B",
+          "reference": "B",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F49",
+          "correct": false,
+          "extracted": "B",
+          "reference": "A",
+          "answer": "B",
+          "decode_path": "traditional_lm"
+        },
+        {
+          "id": "MCQ_F50",
+          "correct": false,
+          "extracted": "D",
+          "reference": "B",
+          "answer": "D",
+          "decode_path": "traditional_lm"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "production_hybrid_lm_patch": "30/46 (65.2%)",
+    "hybrid_structure_fate": "14/46 (30.4%)",
+    "native_mcq_option": "14/46 (30.4%)",
+    "lm_patch_all": "30/46 (65.2%)",
+    "max_native_lm_patch": "32/46 (69.6%)",
+    "routing_ceiling_gap_pp": 4.3,
+    "traditional_lm_mcq": "13/46 (28.3%)",
+    "production_vs_trad_lm_pp": 37.0
+  },
+  "verdict": "MCQ_COVERAGE_STRONG",
+  "known_gaps": [
+    "MCQ slice not in confidence-report until this battery",
+    "max_native_lm_patch is oracle — deploy hybrid may lag",
+    "structure_fate vs lm_patch tradeoff varies by item"
+  ]
+}

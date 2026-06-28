@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-06-27T22:47:00.647239+00:00",
+  "protocol": "token-efficiency-v1",
+  "model_tokenizer": "Qwen/Qwen2.5-0.5B-Instruct",
+  "turns": 30,
+  "architectures": {
+    "valhalla_append": {
+      "wire_chars_cumulative": 2319,
+      "wire_chars_per_turn_avg": 77.3,
+      "prefill_tokens_cumulative": 1126,
+      "prefill_tokens_per_turn_avg": 37.5,
+      "decode_tokens_total": 0,
+      "note": "Native open path: corpus in snapshot, not in LM prompt"
+    },
+    "rag_full_resend": {
+      "wire_chars_cumulative": 14268,
+      "prefill_tokens_cumulative": 3868,
+      "prefill_tokens_per_turn_avg": 128.9,
+      "decode_tokens_total": 3840
+    },
+    "rag_with_history": {
+      "prefill_tokens_cumulative": 11845,
+      "prefill_tokens_per_turn_avg": 394.8,
+      "decode_tokens_total": 3840
+    }
+  },
+  "ratios_vs_rag_full": {
+    "wire_chars": 0.163,
+    "prefill_tokens": 0.291,
+    "prefill_tokens_vs_history": 0.095
+  },
+  "thread_accuracy": {
+    "on_topic_hits": 29,
+    "n": 30,
+    "on_topic_rate": 0.9666666666666667,
+    "source": "context_flexibility_max_goal.json (follow_up_aware)"
+  },
+  "holdout_accuracy": {
+    "valhalla_hybrid_cold_rag": {
+      "correct": 30,
+      "n": 31,
+      "accuracy": 0.967741935483871
+    },
+    "traditional_lm_rag": {
+      "correct": 30,
+      "n": 31,
+      "accuracy": 0.967741935483871
+    },
+    "source": "valhalla_base_training_potential_test_v2.json"
+  },
+  "summary_table": [
+    {
+      "architecture": "valhalla_append",
+      "wire_chars_cumulative": 2319,
+      "prefill_tokens_cumulative": 1126,
+      "decode_tokens_total": 0,
+      "thread_on_topic_rate": 0.9666666666666667,
+      "holdout_accuracy": 0.967741935483871
+    },
+    {
+      "architecture": "rag_full_resend",
+      "wire_chars_cumulative": 14268,
+      "prefill_tokens_cumulative": 3868,
+      "decode_tokens_total": 3840,
+      "thread_on_topic_rate": null,
+      "holdout_accuracy": 0.967741935483871
+    },
+    {
+      "architecture": "rag_with_history",
+      "wire_chars_cumulative": null,
+      "prefill_tokens_cumulative": 11845,
+      "decode_tokens_total": 3840,
+      "thread_on_topic_rate": null,
+      "holdout_accuracy": 0.967741935483871
+    }
+  ],
+  "interpretation": "Valhalla wire cost scales with incremental append (~64 chars/step avg on growth curve); LM prefill stays question-only on native path. RAG resends full corpus each turn — prefill tokens grow super-linearly with history variant."
+}

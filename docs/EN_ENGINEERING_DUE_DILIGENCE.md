@@ -32,7 +32,14 @@ This pack supports review of:
 | Long-session stability | 96.7% on-topic @ 30 turns | context-topic-drift-v2 | `reports/context_topic_drift_extended_test.json` |
 | Multimodal fusion superiority | 107/107 non-iso wins | valhalla-universal-core-v1 | `reports/scale_benchmark_test.json` |
 | Core fusion helps QA | 75% vs 66.7% (12 tasks) | context-core-fusion-v2 | `reports/context_core_fusion.json` |
-| MCQ product path | 63% LM logprob | scale-benchmark-v1 | `reports/scale_benchmark_test.json` |
+| MCQ hybrid lm_patch | 65.2% (30/46) | mcq-coverage-v1 | `reports/valhalla_inference/mcq_coverage_test.json` |
+| MCQ vs trad_lm RAG | +37.0pp | mcq-coverage-v1 | paired n=46 in confidence report |
+| MCQ oracle ceiling | 69.6% (32/46) | mcq-coverage-v1 | max(native, patch) — not deployable |
+| Token wire efficiency | 0.16× vs RAG | token-efficiency-v1 | `reports/valhalla_inference/token_efficiency_test.json` |
+| Token prefill efficiency | 0.29× vs RAG | token-efficiency-v1 | 30-turn matched holdout 96.8% |
+| Confidence composite | TPI 0.790 / NPPI 0.884 | confidence-report-v1 | `reports/valhalla_inference/confidence_report_v1.json` |
+| Local corpus demo | 100% (20/20) | local-corpus-demo-v1 | `reports/valhalla_inference/local_corpus_demo_test.json` |
+| External holdout | 100% (15/15) | external-holdout-v1 | `reports/valhalla_inference/external_holdout_test.json` |
 | Fate ingress default | quad_cycle 93.3% P1 | fate ingress ladder | `reports/fate_weight_ladder_compare_30.json` |
 | QA→Fate learning | Topic prefs differentiate | fate-qa-feedback | `reports/fate_qa_feedback_40.json` |
 
