@@ -265,6 +265,8 @@ ValhallaBase(decode="hybrid", mcq_decode="max_pick", ...)
 
 报告: `reports/valhalla_inference/mcq_coverage_test.json` · `MCQ-coverage` in confidence report
 
+**全量 battery（2026-06-28）：** `production_hybrid_max_pick` **30/46 (65.2%)** — 与 lm_patch **同分**（+0pp）；46/46 走 patch 路径，deploy 阈值未触发 native 翻转；oracle 仍 **32/46 (69.6%)**。
+
 ---
 
 ## 14. Token Efficiency v1（2026-06-28）

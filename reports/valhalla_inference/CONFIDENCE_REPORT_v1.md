@@ -15,7 +15,7 @@
 | External | external_holdout_accuracy | 100.0% [79.6%, 100.0%] |
 | Dialogue | extended_30turn_on_topic | 96.7% [83.3%, 99.4%] |
 | Efficiency | prefill_tokens_ratio_valhalla_vs_rag | 0.291× |
-| MCQ | mcq_production_hybrid | 65.2% [50.8%, 77.3%] |
+| MCQ | mcq_production_max_pick | 65.2% [50.8%, 77.3%] |
 
 ## Methods
 
@@ -150,12 +150,12 @@ Source: `mcq_coverage_test.json` · Protocol: `mcq-coverage-v1`
 | Metric | Estimate [95% CI] | n |
 |--------|-------------------|---|
 | mcq_production_hybrid | 65.2% [50.8%, 77.3%] | 30/46 |
+| mcq_production_max_pick | 65.2% [50.8%, 77.3%] | 30/46 |
 | mcq_structure_fate | 30.4% [19.1%, 44.8%] | 14/46 |
 | mcq_native_structure | 30.4% [19.1%, 44.8%] | 14/46 |
 | mcq_lm_patch_all | 65.2% [50.8%, 77.3%] | 30/46 |
 | mcq_oracle_max_pick | 69.6% [55.2%, 80.9%] | 32/46 |
 | mcq_oracle_vs_production_gap | -4.3pp [-10.9, +0.0] | paired n=46 |
-| mcq_production_vs_trad_lm | +37.0pp [+21.7, +52.2] | paired n=46 |
 
 ## Global gaps
 

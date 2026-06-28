@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-28T00:16:31.444615+00:00",
+  "timestamp": "2026-06-28T01:49:59.513011+00:00",
   "protocol": "confidence-report-v1",
   "methods": {
     "proportion": "Wilson score 95% CI",
@@ -604,6 +604,18 @@
           "display": "65.2% [50.8%, 77.3%]"
         },
         {
+          "name": "mcq_production_max_pick",
+          "proportion": {
+            "k": 30,
+            "n": 46,
+            "point": 0.652174,
+            "ci95_lo": 0.507701,
+            "ci95_hi": 0.77319,
+            "method": "wilson"
+          },
+          "display": "65.2% [50.8%, 77.3%]"
+        },
+        {
           "name": "mcq_structure_fate",
           "proportion": {
             "k": 14,
@@ -661,17 +673,6 @@
             "method": "bootstrap_paired"
           },
           "display": "-4.3pp [-10.9, +0.0]"
-        },
-        {
-          "name": "mcq_production_vs_trad_lm",
-          "lift_pp": {
-            "mean_pp": 36.957,
-            "ci95_lo": 21.739,
-            "ci95_hi": 52.174,
-            "n": 46,
-            "method": "bootstrap_paired"
-          },
-          "display": "+37.0pp [+21.7, +52.2]"
         }
       ],
       "title": "MCQ-coverage",
