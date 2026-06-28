@@ -27,6 +27,7 @@
 | `local_corpus_demo_test.json` | Local markdown corpus ingest demo |
 | `scale_benchmark_test.json` | 107 core + 46 MCQ + open |
 | `context_core_fusion.json` | Multimodal core fusion QA |
+| `valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` | Stem organ / Tile merge — mechanism & measured effect |
 
 ## Monorepo (licensed checkout)
 

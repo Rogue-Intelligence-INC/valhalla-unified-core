@@ -65,6 +65,7 @@ Internal context grows linearly with session appends; wire payload averages **~6
 
 - Not a weight fine-tune replacement on holdout (`SESSION_SNAPSHOT_NO_HOLDOUT_LIFT_BEYOND_RAG`)
 - Raw open_retrieval ceiling ties traditional LM RAG; value is routing, governance, transport, multimodal core
+- Stem organ / Tile merge **run at runtime** but fair corpus → ~1 mega-cluster / ~11 tiles; MCQ production path is **lm_patch (65.2%)**, not structure-only (30.4%)
 - Companion model deliberately small (Qwen2.5-0.5B) to prove structure layer value
 
 ---

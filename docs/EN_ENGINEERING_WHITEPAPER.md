@@ -204,7 +204,8 @@ Artifacts sync to this repo under `reports/` for external diligence.
 
 | Limit | Detail |
 |-------|--------|
-| MCQ ceiling | 63% @ 46 on text-only LM; LM prior dominates ECON/MED-class errors |
+| MCQ ceiling | 65.2% deploy lm_patch @ 46; structure-only 30.4%; oracle 69.6% |
+| Stem/Tile structure | Organ clusters & tile merge **run at runtime**; fair corpus → ~1 mega-cluster / ~11 tiles — **persistent session** drives lift, not functional organ differentiation |
 | Core fusion @ 46 MCQ | Multimodal+fusion **56.5%** vs text-only **63%** on hash proxy modalities — fusion is not a universal MCQ booster |
 | open_generation | 0% without corpus (by design; not generative LM on Tier B path) |
 | Baked-loader path | ValhallaLLM serve does not replicate session append; separate eval needed |

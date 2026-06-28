@@ -226,10 +226,12 @@ ValhallaBase(decode="hybrid", follow_up_decode="native_follow_up_aware")
 | External | external_holdout | 100% | [79.6%, 100%] |
 | Local corpus | cold_targeted | 100% | [83.9%, 100%] |
 | Dialogue | 30turn_on_topic | 96.7% | [83.3%, 99.4%] |
+| MCQ lm_patch | mcq_hybrid_deploy | 65.2% | [50.8%, 77.3%] |
+| Structure-only MCQ | native/structure_fate | 30.4% | [19.1%, 44.8%] |
 
 ---
 
-## 5. §8 待建协议：token-efficiency-v1
+## 5. Token Efficiency（token-efficiency-v1）
 
 ```bash
 python3 tools/valhalla_inference/test_token_efficiency.py
@@ -243,15 +245,38 @@ python3 tools/valhalla_inference/run_confidence_report.py
 - `holdout_accuracy`（TPI-v2 交叉引用）
 - `summary_table`（wire + prefill + decode + accuracy 四列）
 
-报告：`reports/valhalla_inference/token_efficiency_test.json`
+报告：`reports/valhalla_inference/token_efficiency_test.json` · wire **0.16×** · prefill **0.29×** @ 96.8% holdout
 
 ---
 
-## 6. 文档与论文索引
+## 6. Stem / Tile 结构诚实评估（2026-06-28）
+
+**问题：** Stem 是否形成「组织」？Tile 是否形成「聚合」？这些结构在生产栈里是否 **实际起效**？
+
+**结论摘要：**
+
+| 子系统 | 形成？ | 生产起效？ |
+|--------|--------|-----------|
+| Stem `stem_organ_clusters` | ✅ BFS 连通簇 + 簇签名 | ⚠️ native 检索 secondary boost；MCQ 非主路径 |
+| Tile `completed_tiles` | ✅ merge/split 聚合 | ⚠️ tile_fate 轨 MCQ **52%**；persistent **+19.6pp** |
+| 生物学「4 器官」隐喻 | ❌ fair 语料多为 **1 mega-cluster** | 勿过度声称 |
+| Parallel tile+stem 融合 | 机制存在 | ❌ **28.3%**，无增益 |
+
+**证据：**
+- Persistent 整题 MCQ：tile **47.8%** vs stem **41.3%** vs isolated **28.3%**（`TILE_STEM_WHOLE_QUESTION`）
+- 生产 MCQ：**lm_patch 65.2%** >> structure_fate **30.4%**
+- Open **96.8%**：结构经 **Triad patch + session routing + FOG**，非 structure-only（open native ~26%）
+
+**完整分析：** `reports/valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` · 实验记录 §16
+
+---
+
+## 7. 文档与论文索引
 
 | 资产 | 路径 |
 |------|------|
 | 独特点本文 | `docs/DISTINCTIVE_CAPABILITIES_CN.md` |
+| Stem/Tile 结构分析 | `reports/valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` |
 | 推理范式 TeX | `papers/ValhallaBase_Distinctive_Inference_Paradigm.tex` |
 | 实验记录 | `docs/EXPERIMENT_RECORD_INFERENCE_PARADIGM.md` |
 | Confidence | `reports/valhalla_inference/CONFIDENCE_REPORT_v1.md` |

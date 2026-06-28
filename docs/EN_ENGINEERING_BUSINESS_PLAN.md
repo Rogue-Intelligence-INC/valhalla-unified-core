@@ -142,6 +142,8 @@ Enterprises need AI that **uses their documents and multimodal assets** without 
 | Cross-topic hallucination (drift suite) | **0%** | drift reports |
 | Non-isolated core win rate | **100%** (107/107) | scale-benchmark-v1 |
 | Core fusion QA lift (12 tasks) | **+8.3 pp** | context-core-fusion-v2 |
+| Native MCQ persistent (tile body) | **47.8%** (+19.6pp vs isolated) | TILE_STEM whole_question |
+| Structure-only MCQ (honest ceiling) | **30.4%** | mcq-coverage-v1 structure_fate arm |
 
 ---
 
@@ -150,7 +152,7 @@ Enterprises need AI that **uses their documents and multimodal assets** without 
 | Quarter | Milestone |
 |---------|-----------|
 | Q3 2026 | vLLM bake validation; enterprise pilot template |
-| Q4 2026 | Real-modality bake @ 107 scale; MCQ logprob compose v2 |
+| Q4 2026 | Real-modality bake @ 107 scale; MCQ logprob compose v2; stem-relative MCQ |
 | Q1 2027 | Managed session API; tenant Fate feedback |
 | Q2 2027 | 3B decode head; retrieval↔Fate coupling |
 

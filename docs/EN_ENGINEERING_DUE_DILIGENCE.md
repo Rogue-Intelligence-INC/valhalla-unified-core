@@ -42,6 +42,10 @@ This pack supports review of:
 | External holdout | 100% (15/15) | external-holdout-v1 | `reports/valhalla_inference/external_holdout_test.json` |
 | Fate ingress default | quad_cycle 93.3% P1 | fate ingress ladder | `reports/fate_weight_ladder_compare_30.json` |
 | QA→Fate learning | Topic prefs differentiate | fate-qa-feedback | `reports/fate_qa_feedback_40.json` |
+| Stem organ clusters form | BFS connected components @ runtime | stem-tile-structure-analysis-v1 | `signal_ingress.rs` + persistent MCQ logs |
+| Tile aggregation (merge) | ~11 completed tiles @ 49-line corpus | stem-tile-structure-analysis-v1 | `tile_complete.rs` + `TILE_STEM_WHOLE_QUESTION` |
+| Native MCQ persistent lift (tile) | 47.8% vs 28.3% isolated (+19.6pp) | TILE_STEM whole_question | `reports/experiments/TILE_STEM_WHOLE_QUESTION_20260622_0249.json` |
+| Structure-only MCQ (not production) | 30.4% — below lm_patch 65.2% | mcq-coverage-v1 | `mcq_coverage_test.json` |
 
 \*Combined: 12 swap + 6 interleave + 30 extended = 48 cross-topic checks; **0 forbidden-entity hallucinations** on production arm.
 
@@ -128,11 +132,13 @@ Expected production arm highlights after rerun: swap 12/12, extended 29/30 on-to
 
 | ID | Risk | Severity | Mitigation | Status |
 |----|------|----------|------------|--------|
-| R1 | MCQ 63% below enterprise bar | Medium | LM logprob compose; corpus-aware MCQ | In roadmap |
+| R1 | MCQ 65% deploy vs enterprise bar | Medium | LM logprob compose; stem-relative MCQ | In roadmap |
 | R2 | Core fusion hurts MCQ @ 46 on hash modalities | Medium | Auto-enable fusion only with real mm; text-only default | Documented |
 | R3 | ValhallaLLM path not drift-tested | Medium | Add Base vs baked-loader parity suite | Planned |
 | R4 | open_generation 0% | Low | By design; use LM path or corpus expansion | Accepted |
-| R5 | mcq_fate 35% | Low | Not production MCQ path | Accepted |
+| R5 | mcq_fate / structure_fate 30.4% | Low | Not production MCQ path; ship lm_patch | Accepted |
+| R8 | Stem organ = 1 mega-cluster @ fair corpus | Medium | min_cells tuning; larger corpus; stem-relative MCQ | Documented |
+| R9 | Tile/stem parallel fusion no lift | Low | Do not ship 0.5+0.5 merge; use tile_fate track | Accepted |
 | R6 | Proprietary license friction | Business | Evaluation NDA + pilot SLA | Process |
 | R7 | Binary/build CUDA linkage | Ops | Document RUSTFLAGS; CPU fallback | Documented |
 

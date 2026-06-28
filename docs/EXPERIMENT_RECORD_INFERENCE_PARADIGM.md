@@ -1,6 +1,6 @@
 # ValhallaBase 推理范式实验记录
 
-> **Status:** Living document · **Updated:** 2026-06-26  
+> **Status:** Living document · **Updated:** 2026-06-28  
 > **Scope:** 脱离传统 weight fine-tune 的 ValhallaBase 潜力验证  
 > **Reports:** `../reports/` · monorepo mirror: `reports/valhalla_inference/`
 
@@ -36,6 +36,7 @@
 | `confidence-report-v1` | `tools/valhalla_inference/run_confidence_report.py` | `confidence_report_v1.json` |
 | `token-efficiency-v1` | `tools/valhalla_inference/test_token_efficiency.py` | `token_efficiency_test.json` |
 | `mcq-coverage-v1` | `tools/valhalla_inference/test_mcq_coverage_v1.py` | `mcq_coverage_test.json` |
+| `stem-tile-structure-analysis-v1` | （分析记录，无独立脚本） | `STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` |
 
 生产栈（所有实验默认）：
 
@@ -311,9 +312,49 @@ python3 tools/valhalla_inference/test_external_holdout.py
 ## 15. 下一步
 
 1. ~~补 traditional_lm RAG 对照~~ ✅（open + MCQ trad_lm）
-2. MCQ `max_pick` 全量 battery 刷新 vs oracle 69.6%
+2. ~~MCQ `max_pick` 全量 battery~~ ✅（65.2%，+0pp vs lm_patch；oracle 69.6%）
 3. stem-relative MCQ comparator（突破 70% 天花板）
-4. 将 NPPI / TPI / MCQ / token-efficiency 同步 EN DD claims matrix
+4. ~~将 NPPI / TPI / MCQ / token-efficiency 同步 EN DD claims matrix~~ ✅
+5. max_pick 阈值调优（捕获 native-only 2 题，~4.3pp headroom）
+6. Stem 多簇分化实验（`VALHALLA_STEM_ORGAN_MIN_CELLS` + 大语料）
+
+---
+
+## 16. Stem 组织 / Tile 聚合有效性（2026-06-28）
+
+**类型:** 机制 + 既有实验综合分析（非新跑分）  
+**报告:** `reports/valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md`
+
+### 16.1 结构是否形成？
+
+| 子系统 | 机制 | fair 语料实测 | 隐喻 vs 实测 |
+|--------|------|---------------|--------------|
+| **Stem organ** | BFS 连通簇 → `stem_cluster_signatures` | stemcell persistent：**159 cells → 1 cluster** | 有簇，**非 4 功能器官** |
+| **Tile 聚合** | merge/split → `completed_tiles` | tile persistent：**~11 tiles** | 有聚合，**粗粒度** |
+
+打分路径：`score_structure_alignment` — tile **0.15** · stem cell **0.08** · organ **0.12**（`native_qa.rs`）。
+
+### 16.2 是否 measurable 起效？
+
+| 路径 | 结果 | 解读 |
+|------|------|------|
+| Native MCQ persistent（tile body） | **47.8%** vs isolated **28.3%** | **+19.6 pp**；persistent 为主杠杆 |
+| Native MCQ persistent（stem body） | **41.3%** | **+13.0 pp**；Tile > Stem |
+| Parallel tile×0.5 + stem×0.5 | **28.3%** | **无增益**（`TILE_STEM_PARALLEL`） |
+| Hybrid tile_fate_persistent MCQ | **52.17%** | 结构轨 MCQ 最强臂 |
+| 生产 lm_patch | **65.2%** | **MCQ 不靠纯 structure** |
+| structure_fate / native mcq_option | **30.4%** | ≈ trad_lm RAG **28.3%** |
+| 生产 Open hybrid | **96.8%** | 结构经 **session/patch/routing** 间接强起效 |
+
+### 16.3 证伪标记
+
+- `STEM_ORGAN_NOT_FUNCTIONALLY_DIFFERENTIATED`
+- `TILE_AGGREGATION_COARSE_AT_SMALL_CORPUS`
+- `MCQ_STRUCTURE_BELOW_LM_PATCH`
+- `PARALLEL_TILE_STEM_FUSION_NO_LIFT`
+- `STRUCTURE_VALUE_IN_SESSION_NOT_RAW_CEILING`
+
+**Verdict:** 结构机制 **真实且参与 native 打分**；当前规模下 **persistent incubation > 器官/聚合隐喻**；生产 MCQ 主效来自 **lm_patch**，非 organ cluster 直接选题。
 
 ---
 

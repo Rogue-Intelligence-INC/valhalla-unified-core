@@ -68,6 +68,9 @@ ValhallaBase addresses these by separating \textbf{structure incubation} from \t
 
 Text and multimodal ingress encode into body ports. Hub, Tile, StemCell, and Fate run under \texttt{quad\_cycle} ingress routing. Incubation yields a \textbf{TriadIncubationSnapshot} forked per question. Optional \texttt{fate\_qa\_feedback} closes a quality loop without LM gradients.
 
+\paragraph{Stem organ clusters and Tile aggregation (measured).}
+Stem cells form \texttt{stem\_organ\_clusters} via connected components on the cell graph; signatures enter \texttt{score\_structure\_alignment} (organ weight $0.12$). Tiles merge/split into \texttt{completed\_tiles} (weight $0.15$). On fair-1.2 corpus ($\sim$49 ingest lines), we observe $\sim$11 completed tiles and typically \textbf{one} stem mega-cluster ($\sim$159 cells)---structural aggregation runs, but functional organ differentiation is not yet evidenced. Persistent incubation lifts native MCQ (tile body 47.8\% vs.\ 28.3\% isolated; +19.6\,pp) while production MCQ remains lm\_patch-dominated (65.2\% vs.\ structure-only 30.4\%). Analysis: \texttt{STEM\_TILE\_ORGAN\_AGGREGATION\_ANALYSIS\_20260628.md}.
+
 \subsection{Zero-weight session ingest}
 
 Corpus lines merge via \texttt{merge\_context} or \textbf{targeted} top-$k$ per question---never full dump before batch eval. Production eval protocol:
@@ -201,7 +204,7 @@ RAG + history & --- & 11{,}845 & 3{,}840 & 96.8\% holdout \\
 Session routing (+61\,pp), FOG/proactive governance, cross-language core unity, multimodal non-isolated alignment, and flat transport cost---not raw open\_retrieval ceiling versus RAG LM (statistical tie at 96.8\%).
 
 \paragraph{Honest falsification flags.}
-\texttt{SESSION\_SNAPSHOT\_NO\_HOLDOUT\_LIFT\_BEYOND\_RAG}; \texttt{NOT\_WEIGHT\_FINE\_TUNE\_REPLACEMENT}. These pre-registered limits strengthen rather than weaken the paradigm claim.
+\texttt{SESSION\_SNAPSHOT\_NO\_HOLDOUT\_LIFT\_BEYOND\_RAG}; \texttt{NOT\_WEIGHT\_FINE\_TUNE\_REPLACEMENT}; \texttt{STEM\_ORGAN\_NOT\_FUNCTIONALLY\_DIFFERENTIATED}; \texttt{MCQ\_STRUCTURE\_BELOW\_LM\_PATCH}. These pre-registered limits strengthen rather than weaken the paradigm claim.
 
 \paragraph{Token metrics as evidence.}
 We recommend reporting three layers: (1)~wire bytes/chars per session step; (2)~LM prefill tokens cumulative vs.\ RAG baseline at matched accuracy; (3)~decode tokens by path (native vs.\ patch). Accuracy alone cannot substantiate infrastructure value.
