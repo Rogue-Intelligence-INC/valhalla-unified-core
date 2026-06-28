@@ -54,6 +54,7 @@ Internal context grows linearly with session appends; wire payload averages **~6
 | FOG emit precision | **96.6%** [82.8%, 99.4%] |
 | Proactive UP \| emit | **100%** [87.5%, 100%] |
 | Crosslang / external / local | **100%** on latest batteries |
+| **Backbone universality** | Structure hybrid **100%** external · **90.3%** open_retrieval (31Q) · trad_lm Gemma/Phi/Qwen load OK |
 | **MCQ hybrid lm_patch** | **65.2%** [50.8%, 77.3%] |
 | MCQ vs trad_lm | **+37pp** [+21.7, +52.2] |
 | Token prefill vs RAG | **0.29×** @ 96.8% holdout |
@@ -66,7 +67,8 @@ Internal context grows linearly with session appends; wire payload averages **~6
 - Not a weight fine-tune replacement on holdout (`SESSION_SNAPSHOT_NO_HOLDOUT_LIFT_BEYOND_RAG`)
 - Raw open_retrieval ceiling ties traditional LM RAG; value is routing, governance, transport, multimodal core
 - Stem organ / Tile merge **run at runtime** but fair corpus → ~1 mega-cluster / ~11 tiles; MCQ production path is **lm_patch (65.2%)**, not structure-only (30.4%)
-- Companion model deliberately small (Qwen2.5-0.5B) to prove structure layer value
+- Backbone test: trad_lm **31/31** on open_retrieval slice in `backbone-universality-v1` protocol (per-Q corpus); Valhalla hybrid **28/31** — not same eval as 96.8% transfer battery
+- `lm_patch` remains **Qwen2-only** (Rust Candle); structure layer is backbone-agnostic
 
 ---
 

@@ -271,12 +271,32 @@ python3 tools/valhalla_inference/run_confidence_report.py
 
 ---
 
-## 7. 文档与论文索引
+## 7. Backbone 普世性（2026-06-28）
+
+**问题：** Valhalla **结构层**是否依赖特定 LM 家族？trad_lm RAG 换 backbone 表现如何？
+
+**结论摘要：**
+
+| 声称 | 证据 |
+|------|------|
+| 结构 hybrid **backbone 无关** | 同一 Valhalla 栈；external **15/15 (100%)** |
+| trad_lm **跨架构可跑** | Qwen + **Gemma-2-2b** (ModelScope) + **Phi-3-mini** (hf-mirror) |
+| open_retrieval holdout 对齐 | Valhalla **28/31 (90.3%)** · trad_lm 三臂 **31/31** |
+| lm_patch 普世性 | **未声称** — Candle Qwen2-only |
+
+**协议差：** 本电池 `corpus_for_prompt` per-Q → 90.3% vs 生产 transfer **96.8%**（−6.5pp）；fair 61 含 open_generation 不可与 holdout 混读。
+
+**完整总结：** `reports/valhalla_inference/BACKBONE_UNIVERSALITY_SUMMARY_20260628.md` · 实验记录 §17
+
+---
+
+## 8. 文档与论文索引
 
 | 资产 | 路径 |
 |------|------|
 | 独特点本文 | `docs/DISTINCTIVE_CAPABILITIES_CN.md` |
 | Stem/Tile 结构分析 | `reports/valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` |
+| Backbone 普世性总结 | `reports/valhalla_inference/BACKBONE_UNIVERSALITY_SUMMARY_20260628.md` |
 | 推理范式 TeX | `papers/ValhallaBase_Distinctive_Inference_Paradigm.tex` |
 | 实验记录 | `docs/EXPERIMENT_RECORD_INFERENCE_PARADIGM.md` |
 | Confidence | `reports/valhalla_inference/CONFIDENCE_REPORT_v1.md` |

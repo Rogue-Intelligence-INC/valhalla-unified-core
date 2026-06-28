@@ -36,7 +36,8 @@
 | `confidence-report-v1` | `tools/valhalla_inference/run_confidence_report.py` | `confidence_report_v1.json` |
 | `token-efficiency-v1` | `tools/valhalla_inference/test_token_efficiency.py` | `token_efficiency_test.json` |
 | `mcq-coverage-v1` | `tools/valhalla_inference/test_mcq_coverage_v1.py` | `mcq_coverage_test.json` |
-| `stem-tile-structure-analysis-v1` | （分析记录，无独立脚本） | `STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` |
+| `stem-tile-structure-analysis-v1` | （分析记录） | `STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` |
+| `backbone-universality-v1` | `tools/valhalla_inference/test_backbone_universality_v1.py` | `backbone_universality_open_retrieval_full.json` |
 
 生产栈（所有实验默认）：
 
@@ -317,6 +318,7 @@ python3 tools/valhalla_inference/test_external_holdout.py
 4. ~~将 NPPI / TPI / MCQ / token-efficiency 同步 EN DD claims matrix~~ ✅
 5. max_pick 阈值调优（捕获 native-only 2 题，~4.3pp headroom）
 6. Stem 多簇分化实验（`VALHALLA_STEM_ORGAN_MIN_CELLS` + 大语料）
+7. ~~**Backbone 普世性**~~ ✅（§17 · open_retrieval + external）
 
 ---
 
@@ -355,6 +357,55 @@ python3 tools/valhalla_inference/test_external_holdout.py
 - `STRUCTURE_VALUE_IN_SESSION_NOT_RAW_CEILING`
 
 **Verdict:** 结构机制 **真实且参与 native 打分**；当前规模下 **persistent incubation > 器官/聚合隐喻**；生产 MCQ 主效来自 **lm_patch**，非 organ cluster 直接选题。
+
+---
+
+## 17. Backbone 普世性（backbone-universality-v1，2026-06-28）
+
+**目标：** Valhalla **结构层**（Tier B hybrid open）是否与 LM 家族无关；trad_lm RAG 随 backbone 变化。
+
+| 角色 | 模型 | 实际下载路径 |
+|------|------|--------------|
+| Baseline | `Qwen/Qwen2.5-0.5B-Instruct` | HF cache（已有） |
+| Cross-arch A | `google/gemma-2-2b-it` | **ModelScope**（mirror gated 失败） |
+| Cross-arch B | `microsoft/Phi-3-mini-4k-instruct` | **hf-mirror.com**（~9.5min，resume） |
+| 不在本协议 | Rust `lm_patch` | Candle **仅 Qwen2** |
+
+**下载：**
+
+```bash
+.venv-llm/bin/python3 tools/valhalla_inference/download_backbone_models.py --mirror
+.venv-llm/bin/python3 tools/valhalla_inference/download_backbone_models.py --endpoint modelscope --only gemma
+```
+
+**跑分：**
+
+```bash
+.venv-llm/bin/python3 tools/valhalla_inference/test_backbone_universality_v1.py --slice open_retrieval   # n=31
+.venv-llm/bin/python3 tools/valhalla_inference/test_backbone_universality_v1.py --suite external           # n=15
+.venv-llm/bin/python3 tools/valhalla_inference/test_backbone_universality_v1.py                             # fair n=61
+```
+
+### 17.1 结果（2026-06-28 全量）
+
+| 电池 | n | Valhalla hybrid | trad_lm Qwen | trad_lm Gemma | trad_lm Phi-3 |
+|------|---|-----------------|--------------|---------------|---------------|
+| **open_retrieval** | 31 | **28/31 (90.3%)** | 31/31 | 31/31 | 31/31 |
+| **external** | 15 | **15/15 (100%)** | 14/15 | 15/15 | 15/15 |
+| fair all open | 61 | 28/61 (45.9%) | 56/61 | 60/61 | 59/61 |
+
+报告 JSON：`backbone_universality_open_retrieval_full.json` · `backbone_universality_external_full.json` · `backbone_universality_fair_open_full.json`
+
+**解读：**
+
+- Valhalla hybrid **只跑一遍** → 结构路径 **backbone 无关** ✅
+- open_retrieval **90.3%** vs 生产 holdout **96.8%**：本协议 `corpus_for_prompt` per-Q，非 transfer battery 全协议
+- fair 61 含 open_generation → Valhalla 45.9% 不可与 holdout 混读
+- trad_lm 三 backbone 在 open_retrieval **均 100%** — 本协议 RAG 强于 hybrid；与 confidence 打平需同 eval 再验
+
+**Verdict:** `BACKBONE_UNIVERSALITY_STRUCTURE_INDEPENDENT` ✅ · `TRAD_LM_CROSS_ARCH_LOAD_OK` ✅
+
+**总结 MD：** `reports/valhalla_inference/BACKBONE_UNIVERSALITY_SUMMARY_20260628.md`
 
 ---
 
