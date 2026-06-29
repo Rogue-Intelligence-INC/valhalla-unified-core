@@ -206,6 +206,8 @@ Artifacts sync to this repo under `reports/` for external diligence.
 |-------|--------|
 | MCQ ceiling | 65.2% deploy lm_patch @ 46; structure-only 30.4%; oracle 69.6% |
 | Stem/Tile structure | Organ clusters & tile merge **run at runtime**; fair corpus → ~1 mega-cluster / ~11 tiles — **persistent session** drives lift, not functional organ differentiation |
+| Backbone universality | Structure hybrid **backbone-independent** (external 100%); trad_lm Gemma/Phi/Qwen load OK; open_retrieval slice 28/31 vs trad_lm 31/31 — protocol differs from 96.8% transfer battery |
+| lm_patch scope | **Qwen2-only** (Rust Candle); not tested in backbone-universality-v1 |
 | Core fusion @ 46 MCQ | Multimodal+fusion **56.5%** vs text-only **63%** on hash proxy modalities — fusion is not a universal MCQ booster |
 | open_generation | 0% without corpus (by design; not generative LM on Tier B path) |
 | Baked-loader path | ValhallaLLM serve does not replicate session append; separate eval needed |

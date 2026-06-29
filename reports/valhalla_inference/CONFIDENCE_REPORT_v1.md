@@ -16,6 +16,8 @@
 | Dialogue | extended_30turn_on_topic | 96.7% [83.3%, 99.4%] |
 | Efficiency | prefill_tokens_ratio_valhalla_vs_rag | 0.291× |
 | MCQ | mcq_production_max_pick | 65.2% [50.8%, 77.3%] |
+| Backbone | structure_hybrid_external | 100.0% [79.6%, 100.0%] (15/15) |
+| Backbone | structure_hybrid_open_retrieval_slice | 90.3% [75.1%, 96.7%] (28/31) |
 
 ## Methods
 
@@ -156,6 +158,21 @@ Source: `mcq_coverage_test.json` · Protocol: `mcq-coverage-v1`
 | mcq_lm_patch_all | 65.2% [50.8%, 77.3%] | 30/46 |
 | mcq_oracle_max_pick | 69.6% [55.2%, 80.9%] | 32/46 |
 | mcq_oracle_vs_production_gap | -4.3pp [-10.9, +0.0] | paired n=46 |
+
+## Backbone-universality
+
+Source: `backbone_universality_open_retrieval_full.json` · `backbone_universality_external_full.json` · Protocol: `backbone-universality-v1`
+
+**Note:** open_retrieval slice uses per-question `corpus_for_prompt` (not full transfer battery) — **90.3%** vs production holdout **96.8%**. trad_lm arms: Gemma-2-2b (ModelScope), Phi-3-mini (hf-mirror), Qwen2.5-0.5B. Valhalla hybrid runs once (backbone-independent structure path). `lm_patch` not tested (Qwen2-only Candle).
+
+| Metric | Estimate [95% CI] | n |
+|--------|-------------------|---|
+| structure_hybrid_open_retrieval | 90.3% [75.1%, 96.7%] | 28/31 |
+| structure_hybrid_external | 100.0% [79.6%, 100.0%] | 15/15 |
+| trad_lm_qwen_open_retrieval | 100.0% [89.0%, 100.0%] | 31/31 |
+| trad_lm_gemma_open_retrieval | 100.0% [89.0%, 100.0%] | 31/31 |
+| trad_lm_phi3_open_retrieval | 100.0% [89.0%, 100.0%] | 31/31 |
+| trad_lm_qwen_external | 93.3% [70.2%, 98.8%] | 14/15 |
 
 ## Global gaps
 

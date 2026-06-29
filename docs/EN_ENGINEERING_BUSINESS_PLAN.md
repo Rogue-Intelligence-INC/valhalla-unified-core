@@ -144,6 +144,9 @@ Enterprises need AI that **uses their documents and multimodal assets** without 
 | Core fusion QA lift (12 tasks) | **+8.3 pp** | context-core-fusion-v2 |
 | Native MCQ persistent (tile body) | **47.8%** (+19.6pp vs isolated) | TILE_STEM whole_question |
 | Structure-only MCQ (honest ceiling) | **30.4%** | mcq-coverage-v1 structure_fate arm |
+| Backbone structure hybrid (external) | **100% (15/15)** | backbone-universality-v1 |
+| Backbone structure hybrid (open_retrieval slice) | **90.3% (28/31)** | backbone-universality-v1 — per-Q corpus protocol |
+| trad_lm cross-arch (Gemma / Phi-3 / Qwen) | **31/31** each on open_retrieval slice | backbone-universality-v1 |
 
 ---
 

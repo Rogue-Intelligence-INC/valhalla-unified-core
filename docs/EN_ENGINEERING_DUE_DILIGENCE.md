@@ -46,6 +46,9 @@ This pack supports review of:
 | Tile aggregation (merge) | ~11 completed tiles @ 49-line corpus | stem-tile-structure-analysis-v1 | `tile_complete.rs` + `TILE_STEM_WHOLE_QUESTION` |
 | Native MCQ persistent lift (tile) | 47.8% vs 28.3% isolated (+19.6pp) | TILE_STEM whole_question | `reports/experiments/TILE_STEM_WHOLE_QUESTION_20260622_0249.json` |
 | Structure-only MCQ (not production) | 30.4% — below lm_patch 65.2% | mcq-coverage-v1 | `mcq_coverage_test.json` |
+| Structure hybrid backbone-independent | external 15/15; open_retrieval 28/31 (single Valhalla run) | backbone-universality-v1 | `backbone_universality_*_full.json` |
+| trad_lm cross-arch load | Qwen + Gemma-2-2b + Phi-3-mini | backbone-universality-v1 | `download_backbone_models.py` |
+| lm_patch backbone scope | Qwen2-only (Rust Candle) — not universal | engineering limit | documented §17 |
 
 \*Combined: 12 swap + 6 interleave + 30 extended = 48 cross-topic checks; **0 forbidden-entity hallucinations** on production arm.
 

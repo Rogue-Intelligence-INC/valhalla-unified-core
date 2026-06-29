@@ -28,6 +28,7 @@
 | `scale_benchmark_test.json` | 107 core + 46 MCQ + open |
 | `context_core_fusion.json` | Multimodal core fusion QA |
 | `valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` | Stem organ / Tile merge — mechanism & measured effect |
+| `valhalla_inference/BACKBONE_UNIVERSALITY_SUMMARY_20260628.md` | Backbone universality — Gemma / Phi-3 / Qwen trad_lm vs structure hybrid |
 
 ## Monorepo (licensed checkout)
 
