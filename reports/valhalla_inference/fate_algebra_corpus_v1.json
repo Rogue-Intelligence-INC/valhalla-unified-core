@@ -1,0 +1,72 @@
+{
+  "protocol": "fate-algebra-corpus-v1",
+  "generated_at": "2026-06-29T18:02:43.412415+00:00",
+  "algebra": {
+    "tau0": 0.08695652173913043,
+    "neg_coupling": 0.03571428571428571,
+    "formula": "τ(k)=12/(138+k), Δ=s₁·5/140, affinity⁺=align·τ(0), affinity⁻=align·δ/(dim+r)"
+  },
+  "affinity_probe": {
+    "turns": 4,
+    "affinity_nonzero_final": 4,
+    "affinity_max_final": 0.08082243664972576,
+    "affinity_grew": true,
+    "fog_algebra_all_match": true,
+    "fog_checks": [
+      {
+        "keyword_count": 5,
+        "tau_python": 0.08391608391608392,
+        "tau_rust": 0.08391608391608392,
+        "tau_match": true,
+        "delta_python": 0.04567097394122793,
+        "delta_rust": 0.04567098381255889,
+        "delta_match": true,
+        "fog_decision": "abstain",
+        "fog_doc_decision": "abstain"
+      },
+      {
+        "keyword_count": 5,
+        "tau_python": 0.08391608391608392,
+        "tau_rust": 0.08391608391608392,
+        "tau_match": true,
+        "delta_python": 0.05772299160392849,
+        "delta_rust": 0.05772299032508657,
+        "delta_match": true,
+        "fog_decision": "emit",
+        "fog_doc_decision": "emit"
+      },
+      {
+        "keyword_count": 6,
+        "tau_python": 0.08333333333333333,
+        "tau_rust": 0.08333333333333333,
+        "tau_match": true,
+        "delta_python": 0.0869919298073303,
+        "delta_rust": 0.08699192985695918,
+        "delta_match": true,
+        "fog_decision": "abstain",
+        "fog_doc_decision": "abstain"
+      },
+      {
+        "keyword_count": 7,
+        "tau_python": 0.08275862068965517,
+        "tau_rust": 0.08275862068965517,
+        "tau_match": true,
+        "delta_python": 0.07543576586346444,
+        "delta_rust": 0.07543576564627483,
+        "delta_match": true,
+        "fog_decision": "emit",
+        "fog_doc_decision": "emit"
+      }
+    ],
+    "algebra_formula": "e7_tau_v1",
+    "expected_pos_delta_scale": 0.08695652173913043,
+    "expected_neg_delta_scale": 0.03571428571428571
+  },
+  "long_memory_smoke": {
+    "battery": "early_anchor",
+    "n": 3,
+    "hits": 3,
+    "rate": 1.0
+  },
+  "pass": true
+}

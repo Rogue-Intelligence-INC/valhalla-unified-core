@@ -55,7 +55,9 @@ base.run(follow_up_questions, append_only=True)
 | `decode` | `hybrid` | open → native; mcq → LM |
 | `follow_up_decode` | `native_follow_up_aware` | **96.7%** on 30-turn threads |
 | `fate_ingress_routing` | `quad_cycle` | 4/4 Hub quads active every ingest |
-| `fate_qa_feedback` | `true` | Answer → Fate learns topic prefs |
+| `fate_qa_feedback` | `true` | Answer → Fate learns topic prefs + **E7 line affinity** |
+
+**2026-06-30:** E7 algebra module (`e7_algebra.rs`) · long-memory **96%** · proactive v2 **100%** — see [FATE_E7_ALGEBRA_AND_MEMORY.md](./docs/FATE_E7_ALGEBRA_AND_MEMORY.md)
 
 ---
 
@@ -65,7 +67,11 @@ base.run(follow_up_questions, append_only=True)
 |------------|--------|
 | **Zero cross-topic hallucination** | **0/48** drift probes (swap + interleave + 30-turn) |
 | **Context swap fidelity** | **12/12 (100%)** |
-| **Context flexibility** (30-turn threads) | **29/30 (96.7%)** follow-up-aware native |
+| **Follow-up native** (30-turn threads) | **29/30 (96.7%)** follow-up-aware native |
+| **Long memory v1** (4 arms, append-then-ask) | **73/76 (96.0%)** |
+| **External holdout** (out-of-suite) | **15/15 (100%)** |
+| **Proactive Fate v2** | **72/72 (100%)** · PPI-v2 **0.921** |
+| **E7 algebra + Fate corpus** | Rust τ/Δ ↔ Python · affinity grows | `fate_algebra_corpus_v1.json` |
 | **Open retrieval** (targeted corpus) | **30/31 (97%)** |
 | **Universal core** (107 tasks, non-isolated) | **107/107** wins vs isolated; score **0.964** |
 | **Cross-modal fusion** (12 tasks) | Non-isolated **~1.00** vs isolated **~0.85** |

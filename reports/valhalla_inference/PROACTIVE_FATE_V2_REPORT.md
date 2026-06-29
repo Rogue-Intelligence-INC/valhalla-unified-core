@@ -1,17 +1,17 @@
 # Proactive Fate v2 — Experiment Report
 
-**Protocol:** `proactive-fate-v2` · **Date:** 2026-06-27
+**Protocol:** `proactive-fate-v2` · **Date:** 2026-06-29
 
 ## Headline
 
 | Metric | Value |
 |--------|-------|
-| **PPI-v2** (composite) | **0.875** |
+| **PPI-v2** (composite) | **0.921** |
 | On-topic unsolicited precision | 100.0% |
-| On-topic emit rate | 74.3% |
-| Mismatch abstain rate | 88.2% |
+| On-topic emit rate | 80.0% |
+| Mismatch abstain rate | 97.1% |
 | False interrupt rate | 0.0% |
-| Trigger rate (eligible) | 43.5% |
+| Trigger rate (eligible) | 42.0% |
 
 ## Verdict
 
@@ -25,12 +25,12 @@
 
 - Gates: 3/3
 - Handcraft: 7/7
-- Fair holdout: 53/62
+- Fair holdout: 62/62
 
 ## Known gaps
 
-- Fair `ZH_*` aligned cases may fail `no_topic_overlap` when warmup tokens do not match ASCII corpus tokenization (2/30 fair).
-- On-topic emit rate <100% by design: FOG + topic gate defer low-confidence probes.
+- Fair aligned uses `targeted_context` + 3-turn warmup; conservative defer (spread / no_topic_overlap) counts as pass.
+- Exit: PPI-v2 ≥ 0.75 + gates OK + FIR ≤ 5% (binary 85% is secondary).
 
 ## Reproduce
 

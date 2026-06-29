@@ -1,6 +1,6 @@
 # Valhalla Base Platform — 完整技术文档
 
-> **Version:** 2.0 · **Date:** 2026-06-19  
+> **Version:** 2.1 · **Date:** 2026-06-30  
 > **Status:** Production documentation · Proprietary — NOT open source  
 > **Primary protocol:** `valhalla-base-v1`  
 > **Product line:** Valhalla Unified Core (VUC)
@@ -461,6 +461,15 @@ python3 tools/valhalla_inference/test_fate_weight_ladder_200.py --compare-all
 # QA → Fate feedback
 python3 tools/valhalla_inference/test_fate_qa_feedback_40.py
 
+# E7 algebra + corpus line affinity + FOG
+python3 tools/valhalla_inference/test_fate_algebra_corpus_v1.py
+
+# Long session memory (4 arms)
+python3 tools/valhalla_inference/test_long_memory_v1.py
+
+# Proactive idle + FOG nudge
+python3 tools/valhalla_inference/test_proactive_fate_v2.py
+
 # Context × core fusion
 python3 tools/valhalla_inference/test_context_core_fusion.py --limit 12
 
@@ -476,6 +485,7 @@ python3 scripts/run_qa.py --phase smoke
 
 | Component | Path |
 |-----------|------|
+| E7 algebra (τ, Δ, affinity) | `manifestsys/hub-f64/src/e7_algebra.rs` |
 | ValhallaBase API | `manifestsys/hub-f64/src/valhalla_base.rs` |
 | Native QA + follow-up boost | `manifestsys/hub-f64/src/native_qa.rs` |
 | Signal ingress + snapshot | `manifestsys/hub-f64/src/signal_ingress.rs` |
@@ -492,6 +502,7 @@ python3 scripts/run_qa.py --phase smoke
 | Doc | Topic |
 |-----|-------|
 | [INTRODUCTION.md](./INTRODUCTION.md) | Product intro & investor-facing summary |
+| [FATE_E7_ALGEBRA_AND_MEMORY.md](./FATE_E7_ALGEBRA_AND_MEMORY.md) | E7 algebra · line affinity · long memory · proactive v2 |
 | **This document** | Full platform: base + context + fusion + Fate |
 | [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility goal & 30-turn results |
 | [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | Quad ingress experiments |

@@ -9,6 +9,7 @@
 | **[EN_ENGINEERING_DUE_DILIGENCE.md](./EN_ENGINEERING_DUE_DILIGENCE.md)** | Due diligence — claims matrix & risks |
 | [INTRODUCTION.md](./INTRODUCTION.md) | Product introduction |
 | **[EXPERIMENT_RECORD_INFERENCE_PARADIGM.md](./EXPERIMENT_RECORD_INFERENCE_PARADIGM.md)** | **推理范式实验记录（TPI-v2 / NPPI / 复现）** |
+| **[FATE_E7_ALGEBRA_AND_MEMORY.md](./FATE_E7_ALGEBRA_AND_MEMORY.md)** | E7 τ/Δ · line affinity · long-memory · proactive v2 |
 | **[FATE_OUTPUT_GATE.md](./FATE_OUTPUT_GATE.md)** | Fate 何时输出（FOG 三道门 + v1 benchmark） |
 | [CONTEXT_FLEXIBILITY_MAX_GOAL.md](./CONTEXT_FLEXIBILITY_MAX_GOAL.md) | Context flexibility goal |
 | [FATE_INGRESS_ROUTING.md](./FATE_INGRESS_ROUTING.md) | Fate Hub ingress |
@@ -29,6 +30,9 @@
 | `context_core_fusion.json` | Multimodal core fusion QA |
 | `valhalla_inference/STEM_TILE_ORGAN_AGGREGATION_ANALYSIS_20260628.md` | Stem organ / Tile merge — mechanism & measured effect |
 | `valhalla_inference/BACKBONE_UNIVERSALITY_SUMMARY_20260628.md` | Backbone universality — Gemma / Phi-3 / Qwen trad_lm vs structure hybrid |
+| `valhalla_inference/LONG_MEMORY_OPTIMIZATION_20260628.md` | Long memory v1 · structure-first · 73/76 |
+| `valhalla_inference/proactive_fate_v2_test.json` | Proactive Fate v2 · 72/72 · PPI 0.921 |
+| `valhalla_inference/fate_algebra_corpus_v1.json` | E7 algebra + Fate corpus affinity |
 
 ## Monorepo (licensed checkout)
 
