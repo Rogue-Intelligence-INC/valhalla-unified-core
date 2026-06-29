@@ -177,22 +177,31 @@
 
     <section>
       <h2>Measured at scale</h2>
+      <p style="margin-bottom:1rem;font-size:0.85rem">ValhallaBase · updated 2026-06-30 · full JSON in <code>reports/valhalla_inference/</code></p>
       <div class="grid">
         <div class="card">
           <strong>107/107</strong>
           <span>Non-isolated universal core wins vs isolated (fair test)</span>
         </div>
         <div class="card">
-          <strong>~1.00</strong>
-          <span>Avg shared patch (non-isolated, 107 tasks)</span>
+          <strong>73/76</strong>
+          <span>Long memory (append-then-ask, production arm)</span>
+        </div>
+        <div class="card">
+          <strong>72/72</strong>
+          <span>Proactive Fate v2 · PPI-v2 0.921</span>
         </div>
         <div class="card">
           <strong>97%</strong>
           <span>Open retrieval slice (30/31, targeted context)</span>
         </div>
         <div class="card">
-          <strong>63%</strong>
-          <span>MCQ hybrid LM decode (46 tasks)</span>
+          <strong>15/15</strong>
+          <span>External holdout (no corpus leakage)</span>
+        </div>
+        <div class="card">
+          <strong>24/24</strong>
+          <span>Inference protocol suite (all <code>test_*.py</code>)</span>
         </div>
       </div>
     </section>
@@ -245,6 +254,7 @@
         proprietary Valhalla monorepo under separate license.
       </p>
       <a class="cta" href="../docs/INTRODUCTION.md">Read detailed introduction (Markdown)</a>
+      <a class="cta" href="../docs/FATE_E7_ALGEBRA_AND_MEMORY.md" style="margin-left:0.5rem;background:var(--surface);color:var(--text);border:1px solid var(--border)">E7 algebra &amp; memory</a>
       <a class="cta" href="../README.md" style="margin-left:0.5rem;background:var(--surface);color:var(--text);border:1px solid var(--border)">README</a>
     </section>
 
@@ -261,7 +271,7 @@
   </main>
 
   <footer>
-    Valhalla Unified Core · Rogue Intelligence LNC. · Protocol valhalla-unified-core-v1 · Page v1.0
+    Valhalla Unified Core · Rogue Intelligence LNC. · Protocol valhalla-unified-core-v1 · Page v1.1 · 2026-06-30
   </footer>
 </body>
 </html>
