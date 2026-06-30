@@ -1,0 +1,174 @@
+{
+  "timestamp": "2026-06-30T03:28:10.438701+00:00",
+  "protocol": "mcq-ladder-v1",
+  "phase": "test",
+  "mcq_n": 10,
+  "models": [
+    {
+      "id": "qwen_0.5b",
+      "hf_id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "params_b": 0.5
+    },
+    {
+      "id": "qwen_3b",
+      "hf_id": "Qwen/Qwen2.5-3B-Instruct",
+      "params_b": 3.0
+    }
+  ],
+  "arms": {
+    "hybrid/qwen_0.5b": {
+      "n": 10,
+      "correct": 7,
+      "accuracy": 0.7,
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": false,
+          "answer": "ANSWER: A"
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "answer": "ANSWER: B"
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": false,
+          "answer": "ANSWER: A"
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "answer": "ANSWER: D"
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": false,
+          "answer": "ANSWER: A"
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": true,
+          "answer": "ANSWER: C"
+        }
+      ],
+      "lm_model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "model_id": "qwen_0.5b",
+      "params_b": 0.5,
+      "arm": "valhalla_hybrid_lm_patch"
+    },
+    "trad/qwen_0.5b": {
+      "skipped": true,
+      "error": "No module named 'torch'"
+    },
+    "hybrid/qwen_3b": {
+      "n": 10,
+      "correct": 10,
+      "accuracy": 1.0,
+      "rows": [
+        {
+          "id": "MCQ_BIO_01",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_GEO_01",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_ECON_01",
+          "correct": true,
+          "answer": "ANSWER: B"
+        },
+        {
+          "id": "MCQ_PHIL_01",
+          "correct": true,
+          "answer": "ANSWER: B"
+        },
+        {
+          "id": "MCQ_MED_01",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_HIST_02",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_GEO_02",
+          "correct": true,
+          "answer": "ANSWER: D"
+        },
+        {
+          "id": "MCQ_F02",
+          "correct": true,
+          "answer": "ANSWER: C"
+        },
+        {
+          "id": "MCQ_F03",
+          "correct": true,
+          "answer": "ANSWER: B"
+        },
+        {
+          "id": "MCQ_F06",
+          "correct": true,
+          "answer": "ANSWER: C"
+        }
+      ],
+      "lm_model": "Qwen/Qwen2.5-3B-Instruct",
+      "model_id": "qwen_3b",
+      "params_b": 3.0,
+      "arm": "valhalla_hybrid_lm_patch"
+    },
+    "trad/qwen_3b": {
+      "skipped": true,
+      "error": "No module named 'torch'"
+    }
+  },
+  "hybrid_lm_patch_scaling": {
+    "x": "log10(params_b)",
+    "intercept": 0.8161,
+    "slope": 0.3855,
+    "r2": 1.0,
+    "points": [
+      {
+        "model_id": "qwen_0.5b",
+        "params_b": 0.5,
+        "accuracy": 0.7
+      },
+      {
+        "model_id": "qwen_3b",
+        "params_b": 3.0,
+        "accuracy": 1.0
+      }
+    ]
+  },
+  "trad_lm_scaling": null,
+  "notes": [
+    "Rust lm_patch supports sharded safetensors (Qwen 3B/7B index.json).",
+    "Gemma/Phi require bake to Qwen2 or separate architecture — not in this ladder."
+  ],
+  "verdict": "MCQ_LADDER_SCALES"
+}

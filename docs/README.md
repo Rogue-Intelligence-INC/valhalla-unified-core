@@ -33,8 +33,15 @@
 | `valhalla_inference/LONG_MEMORY_OPTIMIZATION_20260628.md` | Long memory v1 · structure-first · 73/76 |
 | `valhalla_inference/proactive_fate_v2_test.json` | Proactive Fate v2 · 72/72 · PPI 0.921 |
 | `valhalla_inference/fate_algebra_corpus_v1.json` | E7 algebra + Fate corpus affinity |
-
-## Monorepo (licensed checkout)
+| `valhalla_inference/STANDARD_BENCHMARKS_20260630.md` | **RAGTruth · Needle · LongBench-v2** third-party benchmarks |
+| `valhalla_inference/ragtruth_v1_test.json` | RAGTruth 40/40 context-grounded |
+| `valhalla_inference/needle_session_v1_test.json` | Needle recall 4/4 |
+| `valhalla_inference/longbench_v2_v1_test.json` | LongBench-v2 short MCQ 7/20 |
+| `valhalla_inference/EXPERIMENT_SUMMARY_20260630.md` | **Master summary — all recognized benchmarks** |
+| `valhalla_inference/recognized_benchmarks_summary.json` | Aggregated benchmark index |
+| `valhalla_inference/model_scaling_v1_test.json` | Scaling ladder JSON (0.5B/2B/3.8B) |
+| `valhalla_inference/MCQ_LADDER_20260630.md` | Qwen lm_patch MCQ ladder 0.5B→3B |
+| `valhalla_inference/mcq_ladder_v1_test.json` | MCQ ladder JSON · sharded safetensors |
 
 - `manifestsys/hub-f64/src/valhalla_base.rs`
 - `tools/valhalla_inference/`

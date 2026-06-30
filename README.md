@@ -77,6 +77,15 @@ base.run(follow_up_questions, append_only=True)
 | **Cross-modal fusion** (12 tasks) | Non-isolated **~1.00** vs isolated **~0.85** |
 | **Core fusion QA** (12 tasks) | **75%** vs baseline **66.7%** |
 | **MCQ hybrid** (46 tasks) | **63%** LM logprob |
+| **RAGTruth** (ACL 2024, 40 QA) | **40/40** context-grounded |
+| **Needle session** (depth 5–30) | **4/4** recall |
+| **LongBench-v2** short MCQ (20, 12k trunc) | **7/20 (35%)** |
+| **Scaling open** @ 0.5B vs trad | **100%** · **+6.5pp** premium |
+| **Scaling MCQ** @ 0.5B hybrid vs trad | **65% vs 15% (+50pp)** |
+| **MCQ ladder** (Qwen lm_patch 0.5B→3B) | **70% → 100%** · `MCQ_LADDER_SCALES` |
+| **0→1 transfer** (no LM SGD) | **87.1%** fresh · **+38.7pp** vs polluted |
+
+Scaling: [`MODEL_SCALING_20260630.md`](./reports/valhalla_inference/MODEL_SCALING_20260630.md) · MCQ ladder: [`MCQ_LADDER_20260630.md`](./reports/valhalla_inference/MCQ_LADDER_20260630.md) · **All benchmarks:** [`EXPERIMENT_SUMMARY_20260630.md`](./reports/valhalla_inference/EXPERIMENT_SUMMARY_20260630.md)
 
 Reports in [`reports/`](./reports/) · **Engineering pack:** [Whitepaper](./docs/EN_ENGINEERING_WHITEPAPER.md) · [BP](./docs/EN_ENGINEERING_BUSINESS_PLAN.md) · [DD](./docs/EN_ENGINEERING_DUE_DILIGENCE.md)
 

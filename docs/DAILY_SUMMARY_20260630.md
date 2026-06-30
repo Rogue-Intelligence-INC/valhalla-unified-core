@@ -70,4 +70,55 @@ python3 tools/valhalla_inference/test_external_holdout.py
 
 ---
 
+## 8. 公认 Benchmark 全量跑完 (2026-06-30)
+
+| Benchmark | 结果 |
+|-----------|------|
+| RAGTruth | **40/40** grounded |
+| Needle @ depth 30 | **4/4** |
+| LongBench-v2 | **7/20 (35%)** |
+| Scaling open targeted | **31/31** · +6.5pp @0.5B |
+| Scaling MCQ | **65% vs 15%** @0.5B |
+| **MCQ ladder (Qwen lm_patch)** | **0.5B 70% → 3B 100%** (n=10) |
+| Backbone universality | 87% (corpus) / **100%** (targeted) |
+| External holdout | **15/15** |
+
+**实验总结：** [`EXPERIMENT_SUMMARY_20260630.md`](../reports/valhalla_inference/EXPERIMENT_SUMMARY_20260630.md)
+
+```bash
+python3 tools/valhalla_inference/run_recognized_benchmarks.py
+```
+
+---
+
+## 7. 多 backbone 规模化 & 0→1 训练
+
+| 发现 | 数据 |
+|------|------|
+| 结构 open **backbone 无关** | Valhalla **31/31** @ targeted |
+| 小模型 **结构溢价** | 0.5B: **+6.5pp** vs trad RAG |
+| 同 scale **MCQ hybrid** | 0.5B: **65% vs 15% (+50pp)** |
+| **零权重 transfer** | 87.1% · **+38.7pp** vs polluted |
+| **MCQ ladder Qwen** | 0.5B **70%** → 3B **100%** · slope +0.39/log₁₀(params) |
+| TPI-v2 | **0.755** |
+
+详见 [`MODEL_SCALING_20260630.md`](../reports/valhalla_inference/MODEL_SCALING_20260630.md) · [`MCQ_LADDER_20260630.md`](../reports/valhalla_inference/MCQ_LADDER_20260630.md)
+
+---
+
+## 6. Qwen 分片 lm_patch ladder (2026-06-30)
+
+- **`patch_lm.rs`**：`model.safetensors.index.json` + 多分片加载（3B/7B）
+- **`test_mcq_ladder_v1.py`**：`mcq-ladder-v1` · Qwen 0.5B / 3B / 7B
+- **结果：** 0.5B **7/10** → 3B **10/10** · verdict `MCQ_LADDER_SCALES`
+- **7B：** 未下载；log-linear 投影 ~100%
+
+```bash
+RUSTFLAGS="-L /opt/cuda/lib64" cargo build -p hub-f64 --release --bin valhalla_base
+python3 tools/valhalla_inference/test_mcq_ladder_v1.py --fast
+python3 tools/valhalla_inference/download_backbone_models.py --only qwen --with-7b  # optional
+```
+
+---
+
 *Rogue Intelligence LNC. · Valhalla monorepo · 2026-06-30*
