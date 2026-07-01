@@ -1,87 +1,161 @@
 {
-  "timestamp": "2026-06-30T03:39:27.966241+00:00",
+  "timestamp": "2026-06-30T23:58:49+00:00",
+  "stack": "ValhallaBase hybrid · Qwen2.5-0.5B-Instruct",
+  "interpretation_doc": "VALID_BENCHMARKS_INTERPRETATION_20260630.md",
+  "runs_note": "Industry full run 2026-06-30 with robust download (download_utils.py)",
   "benchmarks": [
     {
       "name": "RAGTruth (ACL 2024)",
+      "tier": "A",
       "protocol": "ragtruth-v1",
+      "runs": 2,
       "n": 40,
       "result": "40/40 grounded (100%)",
       "verdict": "RAGTRUTH_STRONG",
-      "note": "Context-grounded RAG faithfulness; native citation path; no abstain on QA slice."
+      "means": "RAG context-grounded faithfulness industry-strong",
+      "because": "Session ingest + Fate retrieval + FOG abstain + hybrid decode",
+      "file": "ragtruth_v1_test.json"
+    },
+    {
+      "name": "RAGTruth expanded",
+      "tier": "A",
+      "protocol": "ragtruth-full-v1",
+      "runs": 1,
+      "n": 100,
+      "result": "100/100 grounded (100%)",
+      "verdict": "RAGTRUTH_STRONG",
+      "means": "Faithfulness on expanded mix incl. hallucination-labeled refs",
+      "because": "Same RAG pipeline; 0 abstain",
+      "file": "ragtruth_full_v1_test.json"
     },
     {
       "name": "Needle-in-haystack (session)",
+      "tier": "A",
       "protocol": "needle-session-v1",
-      "n": "depths [5, 10, 20, 30]",
+      "runs": 2,
+      "n": "depths 5–30",
       "result": "4/4 recall (100%)",
       "verdict": "NEEDLE_STRONG",
-      "note": "Session append recall @ depth 30 (62 lines); Paul Graham-style needle."
+      "means": "Session recall up to 62 lines",
+      "because": "Structural corpus indexing via append_context",
+      "file": "needle_session_v1_test.json"
     },
     {
-      "name": "LongBench-v2 (THUDM)",
-      "protocol": "longbench-v2-v1",
+      "name": "RULER-style synthetic",
+      "tier": "A",
+      "protocol": "ruler-v1",
+      "runs": 1,
       "n": 20,
-      "result": "7/20 (35%)",
-      "verdict": "LONGBENCH_V2_VIABLE",
-      "note": "Short MCQ slice; 12k context cap / 32 corpus lines; 0.5B hybrid lm_patch. Human full v2 ~53.7%."
-    },
-    {
-      "name": "Scaling open (31Q targeted)",
-      "protocol": "model-scaling-v1",
-      "n": 31,
-      "result": "31/31 (100%)",
-      "verdict": "SCALING_EVIDENCE_STRONG",
-      "note": "Valhalla open backbone-invariant; +6.5pp premium @ 0.5B vs trad RAG."
-    },
-    {
-      "name": "Scaling MCQ @ 0.5B",
-      "protocol": "model-scaling-v1",
-      "n": 20,
-      "result": "hybrid 13/20 vs trad 3/20",
-      "verdict": "HYBRID_MCQ_BEATS_TRAD",
-      "note": "Hybrid lm_patch +50pp over trad prompt MCQ at same backbone."
-    },
-    {
-      "name": "MCQ ladder (Qwen lm_patch)",
-      "protocol": "mcq-ladder-v1",
-      "n": 10,
-      "result": "0.5B 70% → 3.0B 100%",
-      "verdict": "MCQ_LADDER_SCALES",
-      "note": "Rust sharded safetensors; 0.5B→3B hybrid MCQ scaling curve."
-    },
-    {
-      "name": "Backbone universality",
-      "protocol": "backbone-universality-v1",
-      "n": 31,
-      "result": "Valhalla 27/31 (87%)",
-      "verdict": "BACKBONE_INDEPENDENT_OPEN",
-      "note": "Tier B native open vs trad_lm RAG across Qwen/Gemma/Phi."
+      "result": "20/20 recall (100%)",
+      "verdict": "NEEDLE_STRONG",
+      "means": "Deep multi-needle retrieval on Valhalla protocol",
+      "because": "Same append+retrieve as needle-session",
+      "file": "ruler_v1_test.json"
     },
     {
       "name": "External holdout",
+      "tier": "A",
       "protocol": "external-holdout-v1",
+      "runs": 1,
       "n": 15,
       "result": "15/15 (100%)",
       "verdict": "EXTERNAL_HOLDOUT_STRONG",
-      "note": "Out-of-suite generalization (complementary, not third-party corpus)."
+      "means": "Out-of-suite generalization",
+      "because": "Targeted open retrieval; no bundle overlap",
+      "file": "external_holdout_test.json"
+    },
+    {
+      "name": "MCQ ladder Qwen lm_patch",
+      "tier": "A",
+      "protocol": "mcq-ladder-v1",
+      "runs": 1,
+      "n": 46,
+      "result": "0.5B 65.2% → 3B 97.8%",
+      "verdict": "MCQ_LADDER_SCALES",
+      "means": "lm_patch scales with backbone params",
+      "because": "Sharded Qwen in Rust Candle + hybrid MCQ logprob",
+      "file": "mcq_ladder_v1_test.json"
+    },
+    {
+      "name": "MultiHop-RAG (COLM 2024)",
+      "tier": "B",
+      "protocol": "multihop-rag-v1",
+      "runs": 1,
+      "n": 25,
+      "result": "9/25 (36%)",
+      "verdict": "OPEN_QA_DEVELOPING",
+      "means": "Multi-hop open QA honest boundary",
+      "because": "Short evidence corpus + 0.5B reasoning",
+      "file": "multihop_rag_v1_test.json"
+    },
+    {
+      "name": "LongBench-v2 (THUDM)",
+      "tier": "B",
+      "protocol": "longbench-v2-v1",
+      "runs": 1,
+      "n": 20,
+      "result": "7/20 (35%)",
+      "verdict": "LONGBENCH_V2_VIABLE",
+      "means": "0.5B + 12k trunc lower bound; not SOTA",
+      "because": "Context truncation and small backbone",
+      "file": "longbench_v2_v1_test.json"
+    },
+    {
+      "name": "LaRA-style RAG vs LC",
+      "tier": "B",
+      "protocol": "lara-v1",
+      "runs": 1,
+      "n": 20,
+      "result": "Valhalla RAG 5/20 (25%) vs trad LC 14/20 (70%)",
+      "verdict": "STRUCTURE_RAG_BELOW_LC",
+      "means": "Negative: trad long context wins on inference-heavy news QA",
+      "because": "LC retains reasoning chain; Valhalla RAG corpus too short",
+      "file": "lara_v1_test.json"
+    },
+    {
+      "name": "LoCoMo (Snap ACL 2024)",
+      "tier": "B",
+      "protocol": "locomo-v1",
+      "runs": 1,
+      "n": 30,
+      "result": "1/30 (3.3%)",
+      "verdict": "OPEN_QA_DEVELOPING",
+      "means": "Not official LoCoMo score; 64-line runner cap",
+      "because": "test_locomo_v1.py max-lines=64 vs 419-line bundle",
+      "file": "locomo_v1_test.json"
+    },
+    {
+      "name": "FRAMES (Google NAACL 2025)",
+      "tier": "C",
+      "protocol": "frames-v1",
+      "runs": 0,
+      "n": 25,
+      "result": "0/25 (invalid)",
+      "verdict": "FRAMES_NEEDS_WIKI_CORPUS",
+      "means": "Do not cite; no Wikipedia extracts",
+      "because": "en.wikipedia.org unreachable; title-only corpus",
+      "file": "frames_v1_test.json"
+    },
+    {
+      "name": "Scaling open targeted",
+      "tier": "A",
+      "protocol": "model-scaling-v1",
+      "runs": 1,
+      "n": 31,
+      "result": "31/31 (100%)",
+      "verdict": "SCALING_EVIDENCE_STRONG",
+      "means": "Structure open retrieval backbone-independent",
+      "because": "Fate rerank not tied to LM size",
+      "file": "model_scaling_v1_test.json"
     }
   ],
-  "scaling_patterns": [
-    "TRAD_RAG_SCALES_WITH_PARAMS",
-    "STRUCTURE_PREMIUM_NONNEGATIVE",
-    "STRUCTURE_PREMIUM_LARGEST_AT_SMALL_BACKBONE",
-    "HYBRID_MCQ_BEATS_TRAD_AT_SAME_BACKBONE",
-    "TRAD_MCQ_SCALES_WITH_PARAMS",
-    "TIER_B_OPEN_CEILING_STABLE",
-    "MCQ_LADDER_SCALES"
-  ],
-  "report_files": [
-    "ragtruth_v1_test.json",
-    "needle_session_v1_test.json",
-    "longbench_v2_v1_test.json",
-    "model_scaling_v1_test.json",
-    "mcq_ladder_v1_test.json",
-    "backbone_universality_test.json",
-    "external_holdout_test.json"
+  "headline_tier_a": "RAGTruth 100/100 · Needle 4/4 · RULER 20/20 · Holdout 15/15 · MCQ 65%→98%",
+  "patterns": [
+    "RAG_FAITHFULNESS_STRONG",
+    "SESSION_NEEDLE_STRONG",
+    "MCQ_LADDER_SCALES",
+    "LONG_DIALOGUE_GAP",
+    "LC_BEATS_SHORT_RAG_ON_NEWS_INFERENCE",
+    "FRAMES_INVALID_NO_WIKI"
   ]
 }

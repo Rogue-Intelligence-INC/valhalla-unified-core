@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-06-30T23:58:49.854369+00:00",
+  "benchmarks": [
+    {
+      "name": "RAGTruth",
+      "protocol": "ragtruth-v1",
+      "result": "40/40 (100%)",
+      "verdict": "RAGTRUTH_STRONG",
+      "file": "ragtruth_v1_test.json"
+    },
+    {
+      "name": "RAGTruth-100",
+      "protocol": "ragtruth-full-v1",
+      "result": "100/100 (100%)",
+      "verdict": "RAGTRUTH_STRONG",
+      "file": "ragtruth_full_v1_test.json"
+    },
+    {
+      "name": "Needle session",
+      "protocol": "needle-session-v1",
+      "result": "4/4 (100%)",
+      "verdict": "NEEDLE_STRONG",
+      "file": "needle_session_v1_test.json"
+    },
+    {
+      "name": "LongBench-v2",
+      "protocol": "longbench-v2-v1",
+      "result": "7/20 (35%)",
+      "verdict": "LONGBENCH_V2_VIABLE",
+      "file": "longbench_v2_v1_test.json"
+    },
+    {
+      "name": "FRAMES",
+      "protocol": "frames-v1",
+      "result": "0/25 (invalid, no wiki)",
+      "verdict": "FRAMES_NEEDS_WIKI",
+      "file": "frames_v1_test.json"
+    },
+    {
+      "name": "MultiHop-RAG",
+      "protocol": "multihop-rag-v1",
+      "result": "9/25 (36%)",
+      "verdict": "OPEN_QA_DEVELOPING",
+      "file": "multihop_rag_v1_test.json"
+    },
+    {
+      "name": "LoCoMo",
+      "protocol": "locomo-v1",
+      "result": "1/30 (3%)",
+      "verdict": "OPEN_QA_DEVELOPING",
+      "file": "locomo_v1_test.json"
+    },
+    {
+      "name": "RULER-style",
+      "protocol": "ruler-v1",
+      "result": "20/20 (100%)",
+      "verdict": "NEEDLE_STRONG",
+      "file": "ruler_v1_test.json"
+    },
+    {
+      "name": "LaRA RAG vs LC",
+      "protocol": "lara-v1",
+      "result": "RAG 5/20 · LC 14/20",
+      "verdict": "STRUCTURE_RAG_BELOW_LC",
+      "file": "lara_v1_test.json"
+    },
+    {
+      "name": "MCQ ladder",
+      "protocol": "mcq-ladder-v1",
+      "result": "0.5B 65% → 3.0B 98%",
+      "verdict": "MCQ_LADDER_SCALES",
+      "file": "mcq_ladder_v1_test.json"
+    },
+    {
+      "name": "External holdout",
+      "protocol": "external-holdout-v1",
+      "result": "15/15 (100%)",
+      "verdict": "EXTERNAL_HOLDOUT_STRONG",
+      "file": "external_holdout_test.json"
+    }
+  ],
+  "pending": [
+    "U-NIAH multi-needle (extend ruler-v2)",
+    "RAGBench end-to-end (galileo-ai/ragbench)",
+    "FRAMES full 824Q + wiki fetch",
+    "LoCoMo full 10 conversations all QA",
+    "Qwen 7B MCQ ladder measured",
+    "RAGAS reference-free on production traces"
+  ],
+  "report_dir": "/home/jouly/AI/Valhalla/reports/valhalla_inference"
+}

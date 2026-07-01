@@ -1,0 +1,117 @@
+{
+  "timestamp": "2026-06-30T23:58:49+00:00",
+  "document": "VALID_BENCHMARKS_INTERPRETATION_20260630.md",
+  "stack": "ValhallaBase hybrid · Qwen2.5-0.5B-Instruct",
+  "download": "download_utils.py · hf-mirror.com · curl · disk cache",
+  "tiers": {
+    "A_valid_strong": [
+      {
+        "name": "RAGTruth 40Q",
+        "runs": 2,
+        "result": "40/40 (100%)",
+        "measures": "RAG context-grounded faithfulness (ACL 2024)",
+        "means": "Industry-strong RAG hallucination resistance with citations",
+        "because": "Session ingest + Fate retrieval + FOG abstain + hybrid decode",
+        "file": "ragtruth_v1_test.json"
+      },
+      {
+        "name": "RAGTruth 100Q",
+        "runs": 1,
+        "result": "100/100 (100%)",
+        "measures": "Expanded RAGTruth including hallucination-labeled refs",
+        "means": "Faithfulness holds on harder reference mix",
+        "because": "Same RAG pipeline; 0 abstain",
+        "file": "ragtruth_full_v1_test.json"
+      },
+      {
+        "name": "Needle session",
+        "runs": 2,
+        "result": "4/4 (100%) @ depth 30",
+        "measures": "Session append needle recall (NIAH-style)",
+        "means": "Reliable recall up to 62 session lines",
+        "because": "Structural corpus indexing, not raw 128K window",
+        "file": "needle_session_v1_test.json"
+      },
+      {
+        "name": "RULER-style",
+        "runs": 1,
+        "result": "20/20 (100%)",
+        "measures": "Single/multi-needle synthetic retrieval",
+        "means": "Deep multi-needle recall on Valhalla session protocol",
+        "because": "Same append+retrieve path as needle-session",
+        "file": "ruler_v1_test.json"
+      },
+      {
+        "name": "External holdout",
+        "runs": 1,
+        "result": "15/15 (100%)",
+        "measures": "Out-of-suite QA generalization",
+        "means": "No benchmark overfitting on diverse subjects",
+        "because": "Targeted open retrieval + hybrid",
+        "file": "external_holdout_test.json"
+      },
+      {
+        "name": "MCQ ladder 46Q",
+        "runs": 1,
+        "result": "0.5B 30/46 (65.2%) → 3B 45/46 (97.8%)",
+        "measures": "Fair MCQ accuracy vs Qwen backbone size",
+        "means": "lm_patch scales with params; 3B near saturation",
+        "because": "Sharded Qwen load in Rust Candle + hybrid MCQ logprob",
+        "file": "mcq_ladder_v1_test.json"
+      }
+    ],
+    "B_valid_limited": [
+      {
+        "name": "LongBench-v2",
+        "runs": 1,
+        "result": "7/20 (35%)",
+        "measures": "Short-length MCQ with 12k/32-line trunc",
+        "means": "Honest lower bound at 0.5B; not SOTA",
+        "because": "Context truncation + small backbone",
+        "file": "longbench_v2_v1_test.json",
+        "cite_with_caveat": true
+      },
+      {
+        "name": "MultiHop-RAG",
+        "runs": 1,
+        "result": "9/25 (36%)",
+        "measures": "News multi-hop open QA",
+        "means": "Multi-hop open QA developing",
+        "because": "Short evidence corpus + 0.5B reasoning",
+        "file": "multihop_rag_v1_test.json",
+        "cite_with_caveat": true
+      },
+      {
+        "name": "LaRA RAG vs LC",
+        "runs": 1,
+        "result": "RAG 25% vs LC 70%",
+        "measures": "Short RAG vs padded long-context trad LM",
+        "means": "Negative result: LC wins on inference-heavy news QA",
+        "because": "Trad long prompt retains chain; Valhalla RAG too short",
+        "file": "lara_v1_test.json",
+        "cite_with_caveat": true
+      },
+      {
+        "name": "LoCoMo",
+        "runs": 1,
+        "result": "1/30 (3.3%)",
+        "measures": "Long dialogue QA (64-line runner cap)",
+        "means": "Not official LoCoMo score; protocol-limited",
+        "because": "test_locomo_v1.py max-lines=64 vs 419-line bundle",
+        "file": "locomo_v1_test.json",
+        "cite_with_caveat": true
+      }
+    ],
+    "C_invalid": [
+      {
+        "name": "FRAMES",
+        "result": "0/25 (0%)",
+        "reason": "No Wikipedia corpus; title-only placeholders",
+        "do_not_cite": true,
+        "file": "frames_v1_test.json"
+      }
+    ]
+  },
+  "headline_tier_a": "RAGTruth 100/100 · Needle 4/4 · RULER 20/20 · Holdout 15/15 · MCQ 65%→98%",
+  "industry_run_timestamp": "2026-06-30T23:58:49.854369+00:00"
+}
