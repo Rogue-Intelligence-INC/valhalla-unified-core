@@ -200,10 +200,39 @@
           <span>External holdout (no corpus leakage)</span>
         </div>
         <div class="card">
-          <strong>24/24</strong>
-          <span>Inference protocol suite (all <code>test_*.py</code>)</span>
+          <strong>100/100</strong>
+          <span>RAGTruth context-grounded (ACL 2024 · 40+100 QA)</span>
+        </div>
+        <div class="card">
+          <strong>65%→98%</strong>
+          <span>MCQ ladder · Qwen lm_patch 0.5B→3B (46Q)</span>
+        </div>
+        <div class="card">
+          <strong>20/20</strong>
+          <span>RULER-style needle recall (single + multi)</span>
+        </div>
+        <div class="card">
+          <strong>4/4</strong>
+          <span>Needle-in-haystack @ session depth 30</span>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Third-party benchmarks</h2>
+      <p style="margin-bottom:1rem;font-size:0.85rem">External protocols · 2026-06-30 · <code>STANDARD_BENCHMARKS_20260630.md</code></p>
+      <table>
+        <thead>
+          <tr><th>Benchmark</th><th>Result</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>RAGTruth</td><td><strong style="color:var(--accent2)">100/100</strong> grounded</td><td>ACL 2024 · 0 abstain · Tier A</td></tr>
+          <tr><td>Needle + RULER</td><td><strong style="color:var(--accent2)">4/4 · 20/20</strong></td><td>Session append recall · Tier A</td></tr>
+          <tr><td>MCQ ladder</td><td><strong style="color:var(--accent2)">65%→98%</strong></td><td>Qwen 0.5B→3B · 46 fair MCQ · Tier A</td></tr>
+          <tr><td>External holdout</td><td><strong style="color:var(--accent2)">15/15</strong></td><td>Out-of-suite · Tier A</td></tr>
+          <tr><td>LongBench-v2</td><td>35% (7/20)</td><td>Short MCQ · 12k cap · Tier B</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section>

@@ -61,31 +61,40 @@ base.run(follow_up_questions, append_only=True)
 
 ---
 
-## Headline results
+## Headline results (Tier A — cite externally)
+
+| Highlight | Result |
+|-----------|--------|
+| **RAGTruth** (ACL 2024) | **100/100** context-grounded · 0 abstain |
+| **Needle + RULER** | **4/4 · 20/20** session recall |
+| **External holdout** | **15/15** |
+| **MCQ ladder** (46Q, Qwen lm_patch) | **65% → 98%** (0.5B → 3B) |
+| **Long memory** | **73/76 (96.0%)** |
+| **Follow-up native** (30-turn) | **96.7%** |
+| **Proactive Fate v2** | **72/72 · PPI 0.921** |
+| **Open retrieval** (targeted) | **31/31 (100%)** |
+
+**Interpretation:** [`VALID_BENCHMARKS_INTERPRETATION_20260630.md`](./reports/valhalla_inference/VALID_BENCHMARKS_INTERPRETATION_20260630.md) · [`EXPERIMENT_SUMMARY_20260630.md`](./reports/valhalla_inference/EXPERIMENT_SUMMARY_20260630.md)
+
+<details>
+<summary>Extended internal metrics</summary>
 
 | Capability | Result |
 |------------|--------|
-| **Zero cross-topic hallucination** | **0/48** drift probes (swap + interleave + 30-turn) |
+| **Zero cross-topic hallucination** | **0/48** drift probes |
 | **Context swap fidelity** | **12/12 (100%)** |
-| **Follow-up native** (30-turn threads) | **29/30 (96.7%)** follow-up-aware native |
-| **Long memory v1** (4 arms, append-then-ask) | **73/76 (96.0%)** |
-| **External holdout** (out-of-suite) | **15/15 (100%)** |
-| **Proactive Fate v2** | **72/72 (100%)** · PPI-v2 **0.921** |
-| **E7 algebra + Fate corpus** | Rust τ/Δ ↔ Python · affinity grows | `fate_algebra_corpus_v1.json` |
-| **Open retrieval** (targeted corpus) | **30/31 (97%)** |
-| **Universal core** (107 tasks, non-isolated) | **107/107** wins vs isolated; score **0.964** |
-| **Cross-modal fusion** (12 tasks) | Non-isolated **~1.00** vs isolated **~0.85** |
-| **Core fusion QA** (12 tasks) | **75%** vs baseline **66.7%** |
-| **MCQ hybrid** (46 tasks) | **63%** LM logprob |
-| **RAGTruth** (ACL 2024, 40 QA) | **40/40** context-grounded |
-| **Needle session** (depth 5–30) | **4/4** recall |
-| **LongBench-v2** short MCQ (20, 12k trunc) | **7/20 (35%)** |
-| **Scaling open** @ 0.5B vs trad | **100%** · **+6.5pp** premium |
-| **Scaling MCQ** @ 0.5B hybrid vs trad | **65% vs 15% (+50pp)** |
-| **MCQ ladder** (Qwen lm_patch 0.5B→3B) | **70% → 100%** · `MCQ_LADDER_SCALES` |
-| **0→1 transfer** (no LM SGD) | **87.1%** fresh · **+38.7pp** vs polluted |
+| **E7 algebra + Fate corpus** | Rust τ/Δ ↔ Python |
+| **Universal core** (107 tasks) | **107/107** vs isolated |
+| **Cross-modal fusion** (12 tasks) | Non-isolated **~1.00** vs **~0.85** |
+| **Core fusion QA** (12 tasks) | **75%** vs **66.7%** |
+| **MCQ hybrid** (46 tasks, 0.5B) | **63%** LM logprob |
+| **LongBench-v2** (short, trunc) | **7/20 (35%)** |
+| **Scaling open** @ 0.5B vs trad | **100%** · **+6.5pp** |
+| **0→1 transfer** (no LM SGD) | **87.1%** fresh |
 
-Scaling: [`MODEL_SCALING_20260630.md`](./reports/valhalla_inference/MODEL_SCALING_20260630.md) · MCQ ladder: [`MCQ_LADDER_20260630.md`](./reports/valhalla_inference/MCQ_LADDER_20260630.md) · **All benchmarks:** [`EXPERIMENT_SUMMARY_20260630.md`](./reports/valhalla_inference/EXPERIMENT_SUMMARY_20260630.md)
+</details>
+
+Scaling: [`MODEL_SCALING_20260630.md`](./reports/valhalla_inference/MODEL_SCALING_20260630.md) · MCQ ladder: [`MCQ_LADDER_20260630.md`](./reports/valhalla_inference/MCQ_LADDER_20260630.md)
 
 Reports in [`reports/`](./reports/) · **Engineering pack:** [Whitepaper](./docs/EN_ENGINEERING_WHITEPAPER.md) · [BP](./docs/EN_ENGINEERING_BUSINESS_PLAN.md) · [DD](./docs/EN_ENGINEERING_DUE_DILIGENCE.md)
 
